@@ -1,0 +1,187 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 43px);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 40px;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: bold;
+  color: #fcb040;
+}
+
+.ghost {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  transform: translateY(-20px);
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #fcb040;
+  border-radius: 50%;
+  z-index: 10;
+  animation: ghost-face 2s infinite ease-in-out;
+}
+
+.face:before,
+.face:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.face:before {
+  top: 20px;
+  left: 30px;
+  animation: eyes-move 2s infinite ease-in-out;
+}
+
+.face:after {
+  top: 20px;
+  right: 30px;
+  animation: eyes-move 2s infinite ease-in-out;
+}
+
+@keyframes ghost-face {
+  0% {
+    height: 100px;
+  }
+  50% {
+    height: 20px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+
+@keyframes eyes-move {
+  0%,
+  100% {
+    top: 20px;
+  }
+  50% {
+    top: 30px;
+  }
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position:fixed;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+table {
+  border: 2px solid #DD9C37;
+  width: 800px;
+  height: 200px;
+  margin: auto;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+td {
+  text-align: center;
+}
+
+/* Accordion container */
+.accordion {
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Accordion item */
+.accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Accordion title */
+.accordion-title {
+  cursor: pointer;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-title:hover {
+  background-color: #e0e0e0;
+}
+
+.accordion-title.open {
+  background-color: #e0e0e0;
+}
+
+/* Accordion content */
+.accordion-content {
+  padding: 16px;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  display: none;
+}
+
+.accordion-content.show {
+  display: block;
+}
