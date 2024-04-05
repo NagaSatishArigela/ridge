@@ -16,10 +16,6 @@ const menuItems = [
             link: 'projects/onGoingProjects',
             submenu: [
                 {
-                  title: 'Sunrise City',
-                  link: 'projects/sunrisecity'
-                },
-                {
                     title: 'Kshetra',
                     link: 'projects/kshetra'
                   },
@@ -36,7 +32,11 @@ const menuItems = [
                 {
                   title: 'Spring City',
                   link: 'projects/springcity'
-                }
+                },
+                {
+                    title: 'Sunrise City',
+                    link: 'projects/sunrisecity'
+                  },
             ]
           },
         ]

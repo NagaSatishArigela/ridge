@@ -152,7 +152,7 @@ td {
 
 /* Accordion item */
 .accordion-item {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #868686;
 }
 
 /* Accordion title */
@@ -171,7 +171,7 @@ td {
 }
 
 .accordion-title.open {
-  background-color: #e0e0e0;
+  background-color: #868686;
 }
 
 /* Accordion content */
@@ -184,4 +184,24 @@ td {
 
 .accordion-content.show {
   display: block;
+}
+
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow testimonials to wrap to the next line on smaller screens */
+  justify-content: space-around; /* Distribute space between testimonials */
+}
+
+.testimonial-item {
+  margin-bottom: 20px; /* Add margin between testimonials */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .testimonial-item {
+    width: 100%; /* Full width on smaller screens */
+    display: flex;
+    justify-content: center;
+  }
 }

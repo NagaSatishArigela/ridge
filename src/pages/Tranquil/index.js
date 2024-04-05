@@ -96,61 +96,61 @@ const tranquilContact = {
 
 const faqs = [
   {
-    question: "What is Ridge Tranquil Valley project and where is it Located?",
-    answer: "It is Located at Maheshwaram, Near Electronic SEZ",
+    question: "Q. What is Ridge Tranquil Valley project and where is it Located?",
+    answer: "A. It is Located at Maheshwaram, Near Electronic SEZ",
   },
   {
-    question: "What are the Location advantages of Ridge Tranquil Valley?",
+    question: "Q. What are the Location advantages of Ridge Tranquil Valley?",
     answer:
-      "20 min drive from Pharma City, Srisailam high way\n35 min drive from Financial District\n20 min drive from Rajiv Gandhi International Airport\nClose to international schools",
+      "A. 20 min drive from Pharma City, Srisailam high way\n35 min drive from Financial District\n20 min drive from Rajiv Gandhi International Airport\nClose to international schools",
   },
   {
-    question: "What is the land area of this project?",
+    question: "Q. What is the land area of this project?",
     answer:
-      "Total 30 Acres Land Phase one 12.26 Acres is developed for premium villa plots",
+      "A. Total 30 Acres Land Phase one 12.26 Acres is developed for premium villa plots",
   },
   {
-    question: "What is the size of the Plot?",
-    answer: "Ranges from 200 Sqyd to 333 Sqyd.",
+    question: "Q. What is the size of the Plot?",
+    answer: "A. Ranges from 200 Sqyd to 333 Sqyd.",
   },
   {
-    question: "How much Bank Loan Available?",
+    question: "Q. How much Bank Loan Available?",
     answer:
-      "80% Bank loan available. Project is approved by ICICI Bank and HDFC bank",
+      "A. 80% Bank loan available. Project is approved by ICICI Bank and HDFC bank",
   },
   {
-    question: "What are the amenities being provided?",
+    question: "Q. What are the amenities being provided?",
     answer:
-      "Well-designed 40 wide entry arch, 30-40’ internal CC roads, Compound wall, 100% vastu, Children park, CCTV, 24/7 security, Underground electricity, Underground drainage, Modern street lights, Water harvesting pits, avenue and Park plantation, Overhead tanks.",
+      "A. Well-designed 40 wide entry arch, 30-40’ internal CC roads, Compound wall, 100% vastu, Children park, CCTV, 24/7 security, Underground electricity, Underground drainage, Modern street lights, Water harvesting pits, avenue and Park plantation, Overhead tanks.",
   },
   {
-    question: "What is the initial booking amount?",
-    answer: "2,00,000 initial booking amount",
+    question: "Q. What is the initial booking amount?",
+    answer: "A. 2,00,000 initial booking amount",
   },
   {
-    question: "Is the Ridge Tranquil valley registered under RERA & HMDA?",
+    question: "Q. Is the Ridge Tranquil valley registered under RERA & HMDA?",
     answer:
-      "Yes, Ridge Tranquil valley is registered TS RERA:- P02400005589 HMDA:- 055926/SMD/LT/U6/HMDA/22072022",
+      "A. Yes, Ridge Tranquil valley is registered TS RERA:- P02400005589 HMDA:- 055926/SMD/LT/U6/HMDA/22072022",
   },
   {
     question:
-      "What are the organizations/companies near Ridge Tranquil Valley?",
+      "Q. What are the organizations/companies near Ridge Tranquil Valley?",
     answer:
-      "Wipro, Malabar Gold, Capsgold, Cygni Energy limited, Orient Electric, Nile-cycle.",
+      "A. Wipro, Malabar Gold, Capsgold, Cygni Energy limited, Orient Electric, Nile-cycle.",
   },
   {
-    question: "Which Schools and Colleges are Near Ridge Tranquil Valley?",
+    question: "Q. Which Schools and Colleges are Near Ridge Tranquil Valley?",
     answer:
-      "Yes, they have international schools and colleges Near Ridge Tranquil Valley:\n- Raintree international school\n- Manchester global school.",
+      "A. Yes, they have international schools and colleges Near Ridge Tranquil Valley:\n- Raintree international school\n- Manchester global school.",
   },
   {
-    question: "Are there any retail stores near Ridge Tranquil Valley?",
-    answer: "Yes, Reliance Retail Store, within 2 Kms.",
+    question: "Q. Are there any retail stores near Ridge Tranquil Valley?",
+    answer: "A. Yes, Reliance Retail Store, within 2 Kms.",
   },
   {
-    question: "Why is Maheshwaram an Excellent choice to purchase Property?",
+    question: "Q. Why is Maheshwaram an Excellent choice to purchase Property?",
     answer:
-      "a. Adjacent to Electronic SEZ\nb. Good quality infrastructure, being developed, including Metro up to Shamshabad Airport, which is a 30-minute drive\nc. Near to ORR\nd. Good potential for Rate on Investment. Past record, rate doubled in 3 years.",
+      "A. Adjacent to Electronic SEZ\nb. Good quality infrastructure, being developed, including Metro up to Shamshabad Airport, which is a 30-minute drive\nc. Near to ORR\nd. Good potential for Rate on Investment. Past record, rate doubled in 3 years.",
   },
 ];
 
@@ -240,18 +240,18 @@ function Tranquil() {
         <table>
           <thead>
             <tr>
-              <th>Type</th>
-              <th>Area</th>
-              <th>Price</th>
+              <th style={{ borderRight: '2px solid #DD9C37' }}>Type</th>
+              <th style={{ borderRight: '2px solid #DD9C37' }}>Area</th>
+              <th style={{ borderRight: '2px solid #DD9C37' }}>Price</th>
             </tr>
           </thead>
           <tbody>
             {data.map((val, key) => {
               return (
-                <tr key={key}>
-                  <td>{val.name}</td>
-                  <td>{val.age}</td>
-                  <td>
+                <tr key={key} style={{border: '2px solid #DD9C37'}}>
+                  <td style={{ borderRight: '2px solid #DD9C37' }}>{val.name}</td>
+                  <td style={{ borderRight: '2px solid #DD9C37' }}>{val.age}</td>
+                  <td style={{ borderRight: '2px solid #DD9C37' }}>
                     <button
                       style={{
                         border: "none",
