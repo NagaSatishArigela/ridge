@@ -34,17 +34,17 @@ const rightImage = {
 const data = [
   {
     name: "East & West Facing",
-    age: "200 Square yard",
+    age: "400 Square yards",
     gender: "Unlock Price",
   },
   {
     name: "East & West Facing",
-    age: "250 Square yard",
+    age: "500 Square yards",
     gender: "Unlock Price",
   },
   {
     name: "East & West Facing",
-    age: "333 Square yard",
+    age: "600 Square yards",
     gender: "Unlock Price",
   },
 ];
@@ -186,23 +186,23 @@ function Kshetra() {
       <button className="pdfDownload" onClick={onButtonClick}>
         <i className="fa fa-download"></i> Brochure
       </button>
-      <div style={{ overflow: "auto", maxWidth: "1200px", margin: "auto" }}>
+      {/* <div style={{ overflow: "auto", maxWidth: "1200px", margin: "auto" }}>
         <h2>Price sheet:</h2>
         <table>
           <thead>
             <tr>
-              <th>Type</th>
-              <th>Area</th>
-              <th>Price</th>
+              <th style={{ borderRight: '2px solid #DD9C37' }}>Type</th>
+              <th style={{ borderRight: '2px solid #DD9C37' }}>Area</th>
+              <th style={{ borderRight: '2px solid #DD9C37' }}>Price</th>
             </tr>
           </thead>
           <tbody>
             {data.map((val, key) => {
               return (
-                <tr key={key}>
-                  <td>{val.name}</td>
-                  <td>{val.age}</td>
-                  <td>
+                <tr key={key} style={{ borderRight: '2px solid #DD9C37' }}>
+                  <td style={{ borderRight: '2px solid #DD9C37' }}>{val.name}</td>
+                  <td style={{ borderRight: '2px solid #DD9C37' }}>{val.age}</td>
+                  <td style={{ borderRight: '2px solid #DD9C37' }}>
                     <button
                       style={{
                         border: "none",
@@ -223,7 +223,7 @@ function Kshetra() {
             })}
           </tbody>
         </table>
-      </div>
+      </div> */}
       <HighlightText data={highlightPoints} highlightImage={Kshetra3} />
       <div className="map-bottom">
         <iframe

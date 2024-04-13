@@ -96,7 +96,8 @@ const tranquilContact = {
 
 const faqs = [
   {
-    question: "Q. What is Ridge Tranquil Valley project and where is it Located?",
+    question:
+      "Q. What is Ridge Tranquil Valley project and where is it Located?",
     answer: "A. It is Located at Maheshwaram, Near Electronic SEZ",
   },
   {
@@ -183,17 +184,17 @@ function Tranquil() {
   const data = [
     {
       name: "East & West Facing",
-      age: "200 Square yard",
+      age: "200 Square yards",
       gender: "Unlock Price",
     },
     {
       name: "East & West Facing",
-      age: "250 Square yard",
+      age: "250 Square yards",
       gender: "Unlock Price",
     },
     {
       name: "East & West Facing",
-      age: "333 Square yard",
+      age: "333 Square yards",
       gender: "Unlock Price",
     },
   ];
@@ -240,18 +241,22 @@ function Tranquil() {
         <table>
           <thead>
             <tr>
-              <th style={{ borderRight: '2px solid #DD9C37' }}>Type</th>
-              <th style={{ borderRight: '2px solid #DD9C37' }}>Area</th>
-              <th style={{ borderRight: '2px solid #DD9C37' }}>Price</th>
+              <th style={{ borderRight: "2px solid #DD9C37" }}>Type</th>
+              <th style={{ borderRight: "2px solid #DD9C37" }}>Area</th>
+              <th style={{ borderRight: "2px solid #DD9C37" }}>Price</th>
             </tr>
           </thead>
           <tbody>
             {data.map((val, key) => {
               return (
-                <tr key={key} style={{border: '2px solid #DD9C37'}}>
-                  <td style={{ borderRight: '2px solid #DD9C37' }}>{val.name}</td>
-                  <td style={{ borderRight: '2px solid #DD9C37' }}>{val.age}</td>
-                  <td style={{ borderRight: '2px solid #DD9C37' }}>
+                <tr key={key} style={{ border: "2px solid #DD9C37" }}>
+                  <td style={{ borderRight: "2px solid #DD9C37" }}>
+                    {val.name}
+                  </td>
+                  <td style={{ borderRight: "2px solid #DD9C37" }}>
+                    {val.age}
+                  </td>
+                  <td style={{ borderRight: "2px solid #DD9C37" }}>
                     <button
                       style={{
                         border: "none",
@@ -274,26 +279,30 @@ function Tranquil() {
         </table>
       </div>
       <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
-      <div style={{maxWidth: "1200px", margin: "auto" }}>
+      <div style={{ maxWidth: "1200px", margin: "auto" }}>
         <h2>Gallery</h2>
-      <PhotoProvider>
-        <div className="container-m">
-          {images.map((item, index) => (
-            <PhotoView
-              key={index}
-              src={item}
-              width={elementSize}
-              height={elementSize}
-            >
-              <img
+        <PhotoProvider>
+          <div className="container-m">
+            {images.map((item, index) => (
+              <PhotoView
+                key={index}
                 src={item}
-                alt=""
-                style={{ objectFit: "cover", height: "200px", padding: "8px" }}
-              />
-            </PhotoView>
-          ))}
-        </div>
-      </PhotoProvider>
+                width={elementSize}
+                height={elementSize}
+              >
+                <img
+                  src={item}
+                  alt=""
+                  style={{
+                    objectFit: "cover",
+                    height: "200px",
+                    padding: "8px",
+                  }}
+                />
+              </PhotoView>
+            ))}
+          </div>
+        </PhotoProvider>
       </div>
       <div className="container-m">
         <h2>FAQ's</h2>
@@ -307,6 +316,11 @@ function Tranquil() {
                 onClick={() => toggleAccordion(index)}
               >
                 {faq.question}
+                {openAccordion[index] ? (
+                  <span className="text-end">&#9660;</span> // Down arrow when open
+                ) : (
+                  <span className="arrow">&#9658;</span> // Right arrow when closed
+                )}
               </div>
               <div
                 className={`accordion-content ${

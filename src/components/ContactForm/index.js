@@ -193,6 +193,7 @@ function HomeContactForm(props) {
     //       console.log(error.text);
     // });
   };
+  
   return (
     <>
       <div className="contact-form">

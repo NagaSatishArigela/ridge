@@ -83,8 +83,8 @@ function Home() {
 
       <HomeSections />
       <h3 className="title">Testimonials</h3>
-      <div class="container">
-        <Slider {...settings}>
+      {/* <div class="container"> */}
+        {/* <Slider {...settings}>
           <div>
             <div class="box">
               <div class="imgBox">
@@ -133,10 +133,10 @@ function Home() {
               </p>
             </div>
           </div>
-        </Slider>
+        </Slider> */}
         {/* <TestiMonials></TestiMonials> */}
         {/* <TestiMonials/> */}
-      </div>
+      {/* </div> */}
       <div className="testimonial-list">
         {youtubeData.map((ydata) => (
           <div key={ydata.id} className="testimonial-item">
