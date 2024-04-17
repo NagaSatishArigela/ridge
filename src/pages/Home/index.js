@@ -137,7 +137,7 @@ function Home() {
         {/* <TestiMonials></TestiMonials> */}
         {/* <TestiMonials/> */}
       {/* </div> */}
-      <div className="testimonial-list">
+      <div className="grid">
         {youtubeData.map((ydata) => (
           <div key={ydata.id} className="testimonial-item">
             <YoutubeTestimonial videoId={ydata.yid} />

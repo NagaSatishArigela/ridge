@@ -127,8 +127,9 @@ function Header() {
   return (
       <div className="main-menu">
         <div className="container-m">
-        <div className="logo">
+        <div className="logo" style={{display: "inline-flex"}}>
             <Link to="/"><img src={logo} alt="logo"/></Link>
+            <p style={{color:"#fff", fontSize: '12px', display: 'flex', alignItems: 'center'}}>&nbsp;ISO <span style={{color:"#DD9C37"}}>&nbsp;Certified</span></p>
         </div>
         <i class="fa fa-bars" onClick={handleMenu}></i>
         {isMobile && menuChecked && 

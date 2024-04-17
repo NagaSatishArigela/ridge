@@ -79,8 +79,8 @@ function AllProjects() {
                                 :
                                 <>
                                     <p>{item?.text}</p>
-                                    <p><b style={{fontFamily: 'cursive'}}>{item?.hmda}</b></p>
-                                    <p><b style={{fontFamily: 'cursive'}}>{item?.rera}</b></p>
+                                    <p><b>{item?.hmda}</b></p>
+                                    <p><b>{item?.rera}</b></p>
                                     <Link to={`/${item?.link}`}>Read More</Link>
                                 </>
                             }

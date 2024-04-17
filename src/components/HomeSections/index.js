@@ -195,10 +195,10 @@ function HomeSections() {
                   <h3>{item?.title}</h3>
                   <p>{item?.text}</p>
                   <p>
-                    <b style={{ fontFamily: "cursive" }}>{item?.hmda}</b>
+                    <b>{item?.hmda}</b>
                   </p>
                   <p>
-                    <b style={{ fontFamily: "cursive" }}>{item?.rera}</b>
+                    <b>{item?.rera}</b>
                   </p>
                   <Link to={`/${item?.link}`}>Read More</Link>
                 </Link>

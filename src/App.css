@@ -153,6 +153,12 @@ td {
 /* Accordion item */
 .accordion-item {
   border-bottom: 1px solid #868686;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  right: 10px;
 }
 
 /* Accordion title */
@@ -205,3 +211,29 @@ td {
     justify-content: center;
   }
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column by default */
+  gap: 1rem; /* Adjust the gap as needed */
+  justify-items: center; /* Center items horizontally */
+}
+
+/* Medium devices (tablets, etc.) */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+/* Large devices (desktops, etc.) */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  }
+}
+
+/* .testimonial-container {
+  padding-top: 40px;
+  padding-bottom: 80px;
+} */

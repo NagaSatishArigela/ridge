@@ -317,7 +317,7 @@ function Tranquil() {
               >
                 {faq.question}
                 {openAccordion[index] ? (
-                  <span className="text-end">&#9660;</span> // Down arrow when open
+                  <span className="arrow">&#9660;</span> // Down arrow when open
                 ) : (
                   <span className="arrow">&#9658;</span> // Right arrow when closed
                 )}
