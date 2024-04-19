@@ -182,7 +182,7 @@ function HomeSections() {
       </div>
       <section>
         {/* <TilesSection data={bannerNext}/> */}
-        <div className="container-m">
+        <div style={{margin: 'auto'}}>
           <div className="banner-next-section">
             {bannerNext.map((item) => (
               <div

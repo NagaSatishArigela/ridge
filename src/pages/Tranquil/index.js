@@ -50,6 +50,7 @@ import TranquilPDF from "../../assets/Tranquil Valley_FinalFirst-9.pdf";
 import WhatsAppLink from "../../components/WhatsappLink";
 import "react-photo-view/dist/react-photo-view.css";
 import { PhotoProvider, PhotoView } from "react-photo-view";
+import UnlockModal from "../../components/unlockModal";
 
 const rightImage = {
   heading: "Tranquil Valley",
@@ -173,6 +174,7 @@ const images = [
 function Tranquil() {
   const [isPDF, setIsPDF] = useState(false);
   const inTouchRef = useRef(null);
+  const [showForm, setShowForm] = useState(false);
   const [openAccordion, setOpenAccordion] = useState(
     Array(faqs.length).fill(false)
   );
@@ -204,6 +206,14 @@ function Tranquil() {
     );
   };
   const elementSize = 400;
+
+  const openModal = () => {
+    setShowForm(true);
+  };
+
+  const closeModal = () => {
+    setShowForm(false);
+  };
   return (
     <>
       <Helmet>
@@ -263,11 +273,7 @@ function Tranquil() {
                         backgroundColor: "#f4f4f4",
                         cursor: "pointer",
                       }}
-                      onClick={() =>
-                        inTouchRef.current.scrollIntoView({
-                          behavior: "smooth",
-                        })
-                      }
+                      onClick={openModal}
                     >
                       {val.gender}
                     </button>
@@ -277,6 +283,7 @@ function Tranquil() {
             })}
           </tbody>
         </table>
+        {showForm && <UnlockModal isOpen={showForm} onClose={closeModal}/>}
       </div>
       <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
       <div style={{ maxWidth: "1200px", margin: "auto" }}>

@@ -42,10 +42,11 @@ const menuItems = [
         ]
 },
     //  {title: "About Us" , link: "about-us"},
-    {title: "About Us" , link: "https://ridgehomes.in/about-us/"},
+    {title: "About Us" , link: "about-us/"},
     {title: "Contact Us" , link: "contactus"},
-    {title: "Blog" , link: "https://ridgehomes.in/blog/"},
-    {title: "Careers", link: "https://ridgehomes.in/careers/"},
+    {title: "Blog" , link: "blog/"},
+    {title: "Careers", link: "careers/"},
+    { title: "ISO Certified", link: "#" }
 ];
 
 const Dropdown = ({ submenus, dropdown, depthLevel }) => {
@@ -104,13 +105,9 @@ const MenuItems = ({ items, depthLevel, setMenuChecked, isMobile }) => {
          dropdown={dropdown}
         />
     </> :
-    
-        items.title === 'About Us' || items.title === 'Blog'  || items.title === 'Careers' ?
-        // items.title === 'Blog' ?
-        
-        <a href={`${items.link}`}>{items.title}</a> 
-        :
-        <NavLink onClick={closeDropdown} activeClassName="active" to={`/${items.link}`}>{items.title}</NavLink>
+     items.title === 'ISO Certified' ?
+     <span style={{marginTop: '15px'}}>{items.title}</span> // Render "ISO Certified" as plain text
+     : <NavLink onClick={closeDropdown} activeClassName="active" to={`/${items.link}`}>{items.title}</NavLink>
         
 
     }
@@ -129,7 +126,6 @@ function Header() {
         <div className="container-m">
         <div className="logo" style={{display: "inline-flex"}}>
             <Link to="/"><img src={logo} alt="logo"/></Link>
-            <p style={{color:"#fff", fontSize: '12px', display: 'flex', alignItems: 'center'}}>&nbsp;ISO <span style={{color:"#DD9C37"}}>&nbsp;Certified</span></p>
         </div>
         <i class="fa fa-bars" onClick={handleMenu}></i>
         {isMobile && menuChecked && 

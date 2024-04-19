@@ -21,6 +21,7 @@ import TranquilLanding from "./pages/TranquilLanding";
 import SunRiseLanding from "./pages/SunriseLanding";
 import { Helmet } from "react-helmet";
 import PageNotFound from "./pages/Error/PageNotFound.js";
+import SiteMaintenance from "./utils/SiteMaintenance.js";
 
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
       </Helmet>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/aboutus" element={<Home />} />
+        <Route path="/about-us" element={<SiteMaintenance />} />
+        <Route path="/careers" element={<SiteMaintenance />} />
         <Route path="/vision" element={<ComingSoon />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/kshetra" element={<Navigate to="/projects/kshetra" />} />
@@ -54,7 +56,8 @@ function App() {
         <Route path="/projects" element={<AllProjects />} />
         <Route path="/projects/completedProjects" element={<CompletedProjects />} />
         <Route path="/projects/onGoingProjects" element={<OnGoingProjects />} />
-        <Route path="/blog1" element={<Blog1 />} />
+        <Route path="/ongoing-projects" element={<SiteMaintenance />} />
+        <Route path="/blog" element={<SiteMaintenance />} />
         <Route path="/blog2" element={<Blog2 />} />
         <Route path="/blog3" element={<Blog3 />} />
         <Route path="*" element={<PageNotFound setPageState={setPageState}/>} />

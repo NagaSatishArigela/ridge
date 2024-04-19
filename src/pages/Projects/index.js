@@ -60,8 +60,8 @@ function AllProjects() {
           {/* <label><img src={Elivation} /></label> */}
         </div>
       </div>
-            <div className="container-m projects">
-                <h3>Projects</h3>
+            <div style={{margin: 'auto', padding: '100px 0'}}>
+                <h3 style={{fontSize: '23px', textAlign: 'center'}}>Projects</h3>
             <div className="banner-next-section">
                 {
                     bannerNext.map(item => 
