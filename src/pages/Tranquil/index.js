@@ -51,6 +51,7 @@ import WhatsAppLink from "../../components/WhatsappLink";
 import "react-photo-view/dist/react-photo-view.css";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import UnlockModal from "../../components/unlockModal";
+import './index.css';
 
 const rightImage = {
   heading: "Tranquil Valley",
@@ -171,6 +172,69 @@ const images = [
   tranquil12,
 ];
 
+const formattedImages = [
+  { 
+    title: "Title 1", 
+    description: "Description 1", 
+    image: images[0] 
+  },
+  { 
+    title: "Title 2", 
+    description: "Description 2", 
+    image: images[1] 
+  },
+  { 
+    title: "Title 3", 
+    description: "Description 3", 
+    image: images[2] 
+  },
+  { 
+    title: "Title 4", 
+    description: "Description 3", 
+    image: images[3] 
+  },
+  { 
+    title: "Title 5", 
+    description: "Description 3", 
+    image: images[4] 
+  },
+  { 
+    title: "Title 6", 
+    description: "Description 3", 
+    image: images[5] 
+  },
+  { 
+    title: "Title 7", 
+    description: "Description 3", 
+    image: images[6] 
+  },
+  { 
+    title: "Title 8", 
+    description: "Description 3", 
+    image: images[7] 
+  },
+  { 
+    title: "Title 9", 
+    description: "Description 3", 
+    image: images[8] 
+  },
+  { 
+    title: "Title 10", 
+    description: "Description 3", 
+    image: images[9] 
+  },
+  { 
+    title: "Title 11", 
+    description: "Description 3", 
+    image: images[10] 
+  },
+  { 
+    title: "Title 12", 
+    description: "Description 3", 
+    image: images[11] 
+  },
+];
+
 function Tranquil() {
   const [isPDF, setIsPDF] = useState(false);
   const inTouchRef = useRef(null);
@@ -214,6 +278,18 @@ function Tranquil() {
   const closeModal = () => {
     setShowForm(false);
   };
+
+  function CustomCard({ image, title, description }) {
+    return (
+      <div className="card">
+        <img src={image} alt={title} className="card-image" />
+        <div className="card-content">
+          <h5 className="card-title">{title}</h5>
+          <p className="card-description">{description}</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <>
       <Helmet>
@@ -283,33 +359,21 @@ function Tranquil() {
             })}
           </tbody>
         </table>
-        {showForm && <UnlockModal isOpen={showForm} onClose={closeModal}/>}
+        {showForm && <UnlockModal isOpen={showForm} onClose={closeModal} page="Tranquil"/>}
       </div>
       <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
-      <div style={{ maxWidth: "1200px", margin: "auto" }}>
-        <h2>Gallery</h2>
-        <PhotoProvider>
-          <div className="container-m">
-            {images.map((item, index) => (
-              <PhotoView
-                key={index}
-                src={item}
-                width={elementSize}
-                height={elementSize}
-              >
-                <img
-                  src={item}
-                  alt=""
-                  style={{
-                    objectFit: "cover",
-                    height: "200px",
-                    padding: "8px",
-                  }}
-                />
-              </PhotoView>
-            ))}
-          </div>
-        </PhotoProvider>
+      <div>
+        <h2 style={{ padding: "0 0 30px 130px", margin: "auto" }}>Gallery</h2>
+        <div className="card-container">
+      {formattedImages.map((image, index) => (
+        <CustomCard
+          key={index}
+          image={image.image}
+          title={image.title}
+          description={image.description}
+        />
+      ))}
+    </div>
       </div>
       <div className="container-m">
         <h2>FAQ's</h2>

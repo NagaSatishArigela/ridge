@@ -15,7 +15,7 @@ function Footer() {
         <div className="container-m">
         <div className="logo" style={{display: 'inline-flex'}}>
             <Link to="/"><img src={logo} alt="logo" /></Link>
-            <p style={{color:"#fff", fontSize: '12px', display: 'flex', alignItems: 'center'}}>&nbsp;ISO <span style={{color:"#DD9C37"}}>&nbsp;Certified</span></p>
+            <p style={{color:"#fff", fontSize: '12px', display: 'flex', alignItems: 'center', paddingBottom: '26px'}}>&nbsp;ISO <span style={{color:"#DD9C37"}}>&nbsp;Certified</span></p>
         </div>
         <div className="footer-links">
             <h3>RIDGE HOMES</h3>

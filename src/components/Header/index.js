@@ -106,7 +106,7 @@ const MenuItems = ({ items, depthLevel, setMenuChecked, isMobile }) => {
         />
     </> :
      items.title === 'ISO Certified' ?
-     <span style={{marginTop: '15px'}}>{items.title}</span> // Render "ISO Certified" as plain text
+     <span style={{marginTop: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#DD9c37', fontWeight: '600'}}>{items.title}</span> // Render "ISO Certified" as plain text
      : <NavLink onClick={closeDropdown} activeClassName="active" to={`/${items.link}`}>{items.title}</NavLink>
         
 
