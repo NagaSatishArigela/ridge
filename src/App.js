@@ -38,7 +38,7 @@ function App() {
       </Helmet>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<SiteMaintenance />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/careers" element={<SiteMaintenance />} />
         <Route path="/vision" element={<ComingSoon />} />
         <Route path="/contactus" element={<ContactUs />} />
