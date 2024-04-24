@@ -30,7 +30,6 @@ h2 {
 p {
   font-size: 16px;
   line-height: 1.6;
-  text-align: justify;
 }
 
 .mission-vision {
@@ -84,8 +83,14 @@ p {
 
 .teamMembers {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, minmax(350px, 1fr));
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .teamMembers {
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Show one card */
+  }
 }
 
 .teamMember {
@@ -140,4 +145,14 @@ p {
 
 .socialLinks a:hover {
   color: #DD9C37; /* Change the color on hover */
+}
+
+.description {
+  max-height: 250px; /* Limit to 10 lines of text */
+  overflow: hidden;
+  transition: max-height 0.5s ease; /* Smooth transition */
+}
+
+.description.expanded {
+  max-height: none; /* Expand to show full text */
 }
