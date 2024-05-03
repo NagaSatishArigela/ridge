@@ -291,7 +291,7 @@ section.banner img {
 
 .banner-next-section img {
     height: 160px;
-    width: 100%;
+    width: 75%;
     object-fit: contain;
 }
 

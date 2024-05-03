@@ -22,6 +22,7 @@ import SunRiseLanding from "./pages/SunriseLanding";
 import { Helmet } from "react-helmet";
 import PageNotFound from "./pages/Error/PageNotFound.js";
 import SiteMaintenance from "./utils/SiteMaintenance.js";
+import Blogs from "./pages/Blogs/index.js";
 
 
 function App() {
@@ -57,7 +58,7 @@ function App() {
         <Route path="/projects/completedProjects" element={<CompletedProjects />} />
         <Route path="/projects/onGoingProjects" element={<OnGoingProjects />} />
         <Route path="/ongoing-projects" element={<SiteMaintenance />} />
-        <Route path="/blog" element={<SiteMaintenance />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog2" element={<Blog2 />} />
         <Route path="/blog3" element={<Blog3 />} />
         <Route path="*" element={<PageNotFound setPageState={setPageState}/>} />

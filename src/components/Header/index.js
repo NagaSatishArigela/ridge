@@ -44,7 +44,7 @@ const menuItems = [
     //  {title: "About Us" , link: "about-us"},
     {title: "About Us" , link: "about-us/"},
     {title: "Contact Us" , link: "contactus"},
-    {title: "Blog" , link: "blog/"},
+    {title: "Blog" , link: "blogs/"},
     {title: "Careers", link: "careers/"},
     { title: "ISO Certified", link: "#" }
 ];
