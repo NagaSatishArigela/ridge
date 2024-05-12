@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b05478dc.css",
-    "main.js": "/static/js/main.1578e71d.js",
+    "main.css": "/static/css/main.345185f2.css",
+    "main.js": "/static/js/main.4aea8098.js",
     "static/media/Kshetra Digital Brochure.pdf": "/static/media/Kshetra Digital Brochure.5d00eef1a9723a59201f.pdf",
     "static/media/kshetra2.png": "/static/media/kshetra2.2310fe3de13b7937dd80.png",
     "static/media/Tranquil Valley_FinalFirst-9.pdf": "/static/media/Tranquil Valley_FinalFirst-9.9f42a42d0f9c2179d6ab.pdf",
@@ -29,11 +29,13 @@
     "static/media/springc2.jpeg": "/static/media/springc2.fcdcc51542e70df77336.jpeg",
     "static/media/ridge blog2.png": "/static/media/ridge blog2.18f905fcf5ef852089e0.png",
     "static/media/Tranquil valley banner.jpg": "/static/media/Tranquil valley banner.0fac7056d239c03ead1f.jpg",
+    "static/media/Graph.jpg": "/static/media/Graph.e67455678d41f9c5c1f8.jpg",
     "static/media/kshetra b3.png": "/static/media/kshetra b3.fe564b48b505b542ac72.png",
     "static/media/kshetra page second section.png": "/static/media/kshetra page second section.9a57d11d7c8a0219e360.png",
     "static/media/springc4.jpeg": "/static/media/springc4.146bc40b90a1d35b8b4e.jpeg",
     "static/media/kshetra b2.png": "/static/media/kshetra b2.7dba4daa3f7ef7bf5002.png",
     "static/media/9.jpeg": "/static/media/9.7dcb78ea5ee0e456b443.jpeg",
+    "static/media/maintenance.jpg": "/static/media/maintenance.2fef0d53631ca700ec27.jpg",
     "static/media/7.jpeg": "/static/media/7.8cf04d8bdc85d73ed174.jpeg",
     "static/media/1.jpeg": "/static/media/1.ab7a157b2a053ae295af.jpeg",
     "static/media/kshetra b5.png": "/static/media/kshetra b5.4f3a9042cf50ed8bea0a.png",
@@ -42,6 +44,7 @@
     "static/media/springb1.jpeg": "/static/media/springb1.f59832f930d7396b1c1f.jpeg",
     "static/media/SUNEISE-CITY-banner.jpg": "/static/media/SUNEISE-CITY-banner.e9efa3cc2e02f45e4a19.jpg",
     "static/media/springc5.jpeg": "/static/media/springc5.a82c8581ebc7699fecfa.jpeg",
+    "static/media/raghu-sir-ridge.jpg": "/static/media/raghu-sir-ridge.96a4b77e6e9a678d3436.jpg",
     "static/media/3.jpeg": "/static/media/3.fd4b185aa387627a79cf.jpeg",
     "static/media/springlogo.png": "/static/media/springlogo.207162f0fd3a6742bec8.png",
     "static/media/Ramesh Reddy BHEL Employee.jpeg": "/static/media/Ramesh Reddy BHEL Employee.56eee64e60cb7797a094.jpeg",
@@ -50,10 +53,13 @@
     "static/media/georgiai.woff": "/static/media/georgiai.d033b5cc2005867959c4.woff",
     "static/media/georgiab.woff": "/static/media/georgiab.53de6d160d8b7e9cd373.woff",
     "static/media/sunriseCity-high.jpg": "/static/media/sunriseCity-high.a9f1ce14da877b530e86.jpg",
+    "static/media/Kalyan-01.jpg": "/static/media/Kalyan-01.8344a37174890bd9c402.jpg",
+    "static/media/p-hema-00.jpg": "/static/media/p-hema-00.8a287aa47524d9b10771.jpg",
     "static/media/2.jpeg": "/static/media/2.9926517475c7d248d343.jpeg",
     "static/media/Gagan IT EMPLOYEE.jpeg": "/static/media/Gagan IT EMPLOYEE.d689c8d9fa90d51b1763.jpeg",
     "static/media/8.jpeg": "/static/media/8.acd8bebe23cc20f31c04.jpeg",
     "static/media/sunrise_city.jpeg": "/static/media/sunrise_city.72c5602571f12fe68ac2.jpeg",
+    "static/media/raju.jpg": "/static/media/raju.1bc8a131e0cd6738e6ac.jpg",
     "static/media/Gordita Black Italic.woff": "/static/media/Gordita Black Italic.82fa19038b630276123f.woff",
     "static/media/Gordita Ultra Italic.woff": "/static/media/Gordita Ultra Italic.f5a84deca43c0bc32fc6.woff",
     "static/media/Gordita Regular Italic.woff": "/static/media/Gordita Regular Italic.dab08be05a421ca98de7.woff",
@@ -62,6 +68,8 @@
     "static/media/Gordita Black.woff": "/static/media/Gordita Black.c5b41ca92efee21d50a2.woff",
     "static/media/Gordita Thin Italic.woff": "/static/media/Gordita Thin Italic.6cf25a15e2e3cb9edfac.woff",
     "static/media/ridge blog1.jpg": "/static/media/ridge blog1.72ff218f38370d5d5801.jpg",
+    "static/media/amarnath.jpg": "/static/media/amarnath.823bccb638ac4853069c.jpg",
+    "static/media/surya-ridge-homes.jpg": "/static/media/surya-ridge-homes.86adaf83c66f562e7e66.jpg",
     "static/media/Gordita Light Italic.woff": "/static/media/Gordita Light Italic.3af785f6d2c6c27e0228.woff",
     "static/media/Gordita Bold.woff": "/static/media/Gordita Bold.162fc0c81c4880cb73f9.woff",
     "static/media/Gordita Medium.woff": "/static/media/Gordita Medium.8667baffc43f0db04fc3.woff",
@@ -86,11 +94,11 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.b05478dc.css.map": "/static/css/main.b05478dc.css.map",
-    "main.1578e71d.js.map": "/static/js/main.1578e71d.js.map"
+    "main.345185f2.css.map": "/static/css/main.345185f2.css.map",
+    "main.4aea8098.js.map": "/static/js/main.4aea8098.js.map"
   },
   "entrypoints": [
-    "static/css/main.b05478dc.css",
-    "static/js/main.1578e71d.js"
+    "static/css/main.345185f2.css",
+    "static/js/main.4aea8098.js"
   ]
 }

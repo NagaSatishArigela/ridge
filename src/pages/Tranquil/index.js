@@ -41,6 +41,7 @@ import tranquil9 from "../../assets/images/tranquil/9.jpeg";
 import tranquil10 from "../../assets/images/tranquil/10.jpeg";
 import tranquil11 from "../../assets/images/tranquil/11.jpeg";
 import tranquil12 from "../../assets/images/tranquil/12.jpeg";
+import graph from "../../assets/images/Graph.jpg";
 import RightImageLeftText from "../../components/RightImageLeftText";
 import "../../components/Styles/styles.css";
 import HighlightText from "../../components/HighlightText";
@@ -362,7 +363,7 @@ function Tranquil() {
         {showForm && <UnlockModal isOpen={showForm} onClose={closeModal} page="Tranquil"/>}
       </div>
       <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
-      <div>
+      {/* <div>
         <h2 style={{ padding: "0 0 30px 130px", margin: "auto" }}>Gallery</h2>
         <div className="card-container">
       {formattedImages.map((image, index) => (
@@ -374,6 +375,12 @@ function Tranquil() {
         />
       ))}
     </div>
+      </div> */}
+      <div className="container-m">
+        <h2>Graph</h2>
+        <div style={{objectFit: 'contain'}}>
+          <img src={graph} alt="Maheswaram" style={{height: '400px'}}/>
+        </div>
       </div>
       <div className="container-m">
         <h2>FAQ's</h2>

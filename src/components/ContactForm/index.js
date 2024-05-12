@@ -148,13 +148,14 @@ function HomeContactForm(props) {
     // formdata.append("queryid", "45647");
     formdata.append("notes", note);
     const api_key = "qHzq2IAp6Fyr2ztLLqyuv3ty3t";
+    const api_key2 = '9a18874a712cc3d4e63c6f34df1587d1';
     const app_name = "wLNpB";
     console.log(formdata.project, "formD");
     const url = `https://paramantra.us/paramantra/API/genLead_v2.php?API_Key=${api_key}&action=${app_name}&customername=${name}&customerPhone=${number}&customeremail=${email}&leadNotes=${note}&leadProject=${encodeURIComponent(lead)}&channel=${page}`;
-
+const url2 = `https://app.sell.do/api/leads/create?sell_do[form][lead][name]=${name}&sell_do[form][lead][email]=${email}&sell_do[form][lead][phone]=${number}&api_key=${api_key2}&sell_do[form][note][content]=${note}&sell_do[campaign][srd]=${page};`
     const username = "paramantra";
     const password = "paramantra_101";
-
+console.log(url2, 'url2')
     const headers_data = {
       "Content-Type": "application/json",
 
@@ -170,6 +171,17 @@ function HomeContactForm(props) {
 
     axios
       .post(url, {}, { headers: headers_data })
+      .then((response) => {
+        console.log(response.data);
+        // Process the response data here
+      })
+      .catch((error) => {
+        console.error(error);
+        // Handle the error here
+      });
+
+      axios
+      .post(url2, {})
       .then((response) => {
         console.log(response.data);
         // Process the response data here

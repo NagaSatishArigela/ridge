@@ -137,7 +137,7 @@ const UnlockModal = (props) => {
     formdata.append("channel_id", page);
     formdata.append("subject", "Lead from Website");
     let lead;
-    if (page === "Tranquil") {
+    if (page === "Tranquil" ) {
       lead = "Ridge Homes Tranquil Valley";
     } else if (page === "Kshetra") {
       lead = "Ridge Homes Kshetra";

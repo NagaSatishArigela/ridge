@@ -237,3 +237,28 @@ td {
   padding-top: 40px;
   padding-bottom: 80px;
 } */
+
+.custom-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; /* Adjust width and height as needed */
+  height: 80px; /* Adjust width and height as needed */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  border-radius: 50%; /* Rounded shape */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.custom-play-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent; /* Size of the play icon */
+  border-bottom: 20px solid transparent; /* Size of the play icon */
+  border-left: 30px solid #000; /* Color of the play icon */
+}
