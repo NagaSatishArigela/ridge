@@ -243,7 +243,7 @@ function Kshetra() {
         srd="66448b49e11487ddcac7b45a"
       />
       {isPDF && (
-        <DialogForm page="kshetra" setIsPDF={setIsPDF} pdfUrl={KeshtraPDF} />
+        <DialogForm page="kshetra" setIsPDF={setIsPDF} pdfUrl={KeshtraPDF} srd="66470c0b58f1e76f51f0e831"/>
       )}
       <WhatsAppLink whatsappLink="https://wa.me/917775857777?text=" />
     </>

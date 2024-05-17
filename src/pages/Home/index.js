@@ -144,7 +144,7 @@ function Home() {
           </div>
         ))}
       </div>
-      <HomeContact page="Home" banner={ContactBanner} />
+      <HomeContact page="Home" banner={ContactBanner} srd="664456705d8deffd47ff9b89"/>
       <WhatsAppLink />
     </>
   );

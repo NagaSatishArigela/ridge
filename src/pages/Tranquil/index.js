@@ -431,7 +431,7 @@ function Tranquil() {
         srd="66448b2d5d8def3216097f69"
       />
       {isPDF && (
-        <DialogForm page="Tranquil" setIsPDF={setIsPDF} pdfUrl={TranquilPDF} />
+        <DialogForm page="Tranquil" setIsPDF={setIsPDF} pdfUrl={TranquilPDF} srd="66470be4735dafb67e848e32"/>
       )}
       <WhatsAppLink whatsappLink="https://wa.me/918886033333?text=" />
     </>

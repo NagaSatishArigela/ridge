@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 function DialogForm(props) {
-    const {pdfUrl, setIsPDF, page} = props;
+    const {pdfUrl, setIsPDF, page, srd} = props;
     const form = useRef();
     const [send, setSend] = useState(false);
 console.log(page, 'pa');
@@ -45,9 +45,11 @@ console.log(page, 'pa');
     formdata.append("Message", `${page} Brochure`);
     // formdata.append("Project",`Ridge ${page}`);
     const api_key = "qHzq2IAp6Fyr2ztLLqyuv3ty3t";
+    const api_key2 = "9a18874a712cc3d4e63c6f34df1587d1";
     const app_name = "wLNpB";
     console.log(formdata.project, "formD");
     const url = `https://paramantra.us/paramantra/API/genLead_v2.php?API_Key=${api_key}&action=${app_name}&customername=${name}&customerPhone=${number}&customeremail=${email}&leadNotes=${note}&leadProject=${encodeURIComponent(lead)}&channel=${page}`;
+    const url2 = `https://app.sell.do/api/leads/create?sell_do[form][lead][name]=${name}&sell_do[form][lead][email]=${email}&sell_do[form][lead][phone]=${number}&api_key=${api_key2}&sell_do[form][note][content]=${note}&sell_do[campaign][srd]=${srd};`;
     const username = "paramantra";
     const password = "paramantra_101";
 
@@ -77,6 +79,16 @@ console.log(page, 'pa');
         // Handle the error here
       });
       console.log(form.current,'g');
+      axios
+      .post(url2)
+      .then((response) => {
+        console.log(response.data);
+        // Process the response data here
+      })
+      .catch((error) => {
+        console.error(error);
+        // Handle the error here
+      });
     emailjs.sendForm('service_pn8vf29', templateId, form.current, 'RIdumvJqbANv7cRbb')
       .then((result) => {
           if(result) {

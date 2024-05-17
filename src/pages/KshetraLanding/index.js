@@ -168,7 +168,7 @@ function KshetraLanding() {
         </div>
         <HomeContact noContact={true} page="Kshetra Landing" contactDetails={kshetraCOntact} banner={ContactBanner} />
         {
-           isPDF&& <DialogForm setIsPDF={setIsPDF} pdf="Kshetra Digital Brochure.pdf" />
+           isPDF&& <DialogForm setIsPDF={setIsPDF} pdf="Kshetra Digital Brochure.pdf" srd=""/>
         }
         
         <WhatsAppLink whatsappLink="https://wa.me/917775857777?text=" />
