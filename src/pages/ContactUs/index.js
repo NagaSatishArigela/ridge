@@ -14,7 +14,7 @@ function ContactUs() {
       <meta name="description" content="Ridge Homes: where passionate people create homes for conscious living. We care for your well-being. Contact us for open plots, villa plots, and more." /> 
     </Helmet>
      <div className="contactus">
-        <HomeContact page="Contact Us" banner={ContactBanner} />
+        <HomeContact page="Contact Us" srd="664456705d8deffd47ff9b89" banner={ContactBanner} />
         
         <WhatsAppLink />
         </div>

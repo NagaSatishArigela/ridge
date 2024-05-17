@@ -7,7 +7,7 @@ import TopHeader from '../TopHeader';
 
 
 function HomeContact(props) {
-    const { banner, contactDetails, noContact, page } = props;
+    const { banner, contactDetails, noContact, page, srd } = props;
   return (
     <>
     <TopHeader />
@@ -44,7 +44,7 @@ Mandal, Hyderabad, Telangana 500081</p>
                 </div>
 
                 <div className='contact-r'>
-                    <HomeContactForm page={page} />
+                    <HomeContactForm page={page} srd={srd} />
                 </div>
                 
            </div>

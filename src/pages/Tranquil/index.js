@@ -428,6 +428,7 @@ function Tranquil() {
         noContact={true}
         contactDetails={tranquilContact}
         banner={ContactBanner}
+        srd="66448b2d5d8def3216097f69"
       />
       {isPDF && (
         <DialogForm page="Tranquil" setIsPDF={setIsPDF} pdfUrl={TranquilPDF} />

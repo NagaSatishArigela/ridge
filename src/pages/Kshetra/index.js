@@ -240,6 +240,7 @@ function Kshetra() {
         page="Kshetra"
         contactDetails={kshetraCOntact}
         banner={ContactBanner}
+        srd="66448b49e11487ddcac7b45a"
       />
       {isPDF && (
         <DialogForm page="kshetra" setIsPDF={setIsPDF} pdfUrl={KeshtraPDF} />

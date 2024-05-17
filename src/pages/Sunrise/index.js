@@ -110,7 +110,7 @@ function SunRise() {
 </li>
 </ul>
         </div>
-        <HomeContact page="Sunrise" noContact={true} contactDetails={sunriseContact} banner={ContactBanner} />
+        <HomeContact page="Sunrise" noContact={true} contactDetails={sunriseContact} banner={ContactBanner} srd="66448bb4a3d8554d457632ce" />
         <WhatsAppLink whatsappLink="https://wa.me/919059059392?text=" />
 
      </>
