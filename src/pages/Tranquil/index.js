@@ -52,7 +52,7 @@ import WhatsAppLink from "../../components/WhatsappLink";
 import "react-photo-view/dist/react-photo-view.css";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import UnlockModal from "../../components/unlockModal";
-import './index.css';
+import "./index.css";
 
 const rightImage = {
   heading: "Tranquil Valley",
@@ -174,65 +174,65 @@ const images = [
 ];
 
 const formattedImages = [
-  { 
-    title: "Title 1", 
-    description: "Description 1", 
-    image: images[0] 
+  {
+    title: "Title 1",
+    description: "Description 1",
+    image: images[0],
   },
-  { 
-    title: "Title 2", 
-    description: "Description 2", 
-    image: images[1] 
+  {
+    title: "Title 2",
+    description: "Description 2",
+    image: images[1],
   },
-  { 
-    title: "Title 3", 
-    description: "Description 3", 
-    image: images[2] 
+  {
+    title: "Title 3",
+    description: "Description 3",
+    image: images[2],
   },
-  { 
-    title: "Title 4", 
-    description: "Description 3", 
-    image: images[3] 
+  {
+    title: "Title 4",
+    description: "Description 3",
+    image: images[3],
   },
-  { 
-    title: "Title 5", 
-    description: "Description 3", 
-    image: images[4] 
+  {
+    title: "Title 5",
+    description: "Description 3",
+    image: images[4],
   },
-  { 
-    title: "Title 6", 
-    description: "Description 3", 
-    image: images[5] 
+  {
+    title: "Title 6",
+    description: "Description 3",
+    image: images[5],
   },
-  { 
-    title: "Title 7", 
-    description: "Description 3", 
-    image: images[6] 
+  {
+    title: "Title 7",
+    description: "Description 3",
+    image: images[6],
   },
-  { 
-    title: "Title 8", 
-    description: "Description 3", 
-    image: images[7] 
+  {
+    title: "Title 8",
+    description: "Description 3",
+    image: images[7],
   },
-  { 
-    title: "Title 9", 
-    description: "Description 3", 
-    image: images[8] 
+  {
+    title: "Title 9",
+    description: "Description 3",
+    image: images[8],
   },
-  { 
-    title: "Title 10", 
-    description: "Description 3", 
-    image: images[9] 
+  {
+    title: "Title 10",
+    description: "Description 3",
+    image: images[9],
   },
-  { 
-    title: "Title 11", 
-    description: "Description 3", 
-    image: images[10] 
+  {
+    title: "Title 11",
+    description: "Description 3",
+    image: images[10],
   },
-  { 
-    title: "Title 12", 
-    description: "Description 3", 
-    image: images[11] 
+  {
+    title: "Title 12",
+    description: "Description 3",
+    image: images[11],
   },
 ];
 
@@ -360,7 +360,14 @@ function Tranquil() {
             })}
           </tbody>
         </table>
-        {showForm && <UnlockModal isOpen={showForm} onClose={closeModal} page="Tranquil"/>}
+        {showForm && (
+          <UnlockModal
+            isOpen={showForm}
+            onClose={closeModal}
+            page="Tranquil"
+            srd="66470be4735dafb67e848e32"
+          />
+        )}
       </div>
       <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
       {/* <div>
@@ -378,8 +385,8 @@ function Tranquil() {
       </div> */}
       <div className="container-m">
         <h2>Graph</h2>
-        <div style={{objectFit: 'contain'}}>
-          <img src={graph} alt="Maheswaram" style={{height: '400px'}}/>
+        <div style={{ objectFit: "contain" }}>
+          <img src={graph} alt="Maheswaram" style={{ height: "400px" }} />
         </div>
       </div>
       <div className="container-m">
@@ -431,7 +438,12 @@ function Tranquil() {
         srd="66448b2d5d8def3216097f69"
       />
       {isPDF && (
-        <DialogForm page="Tranquil" setIsPDF={setIsPDF} pdfUrl={TranquilPDF} srd="66470be4735dafb67e848e32"/>
+        <DialogForm
+          page="Tranquil"
+          setIsPDF={setIsPDF}
+          pdfUrl={TranquilPDF}
+          srd="66470be4735dafb67e848e32"
+        />
       )}
       <WhatsAppLink whatsappLink="https://wa.me/918886033333?text=" />
     </>

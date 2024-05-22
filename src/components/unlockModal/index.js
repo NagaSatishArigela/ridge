@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import axios from "axios";
 
 const UnlockModal = (props) => {
-  const { isOpen, onClose, page } = props;
+  const { isOpen, onClose, page, srd } = props;
   const [send, setSend] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -153,10 +153,13 @@ const UnlockModal = (props) => {
     // formdata.append("queryid", "45647");
     formdata.append("notes", formData.message);
     const api_key = "qHzq2IAp6Fyr2ztLLqyuv3ty3t";
+    const api_key2 = "9a18874a712cc3d4e63c6f34df1587d1";
     const app_name = "wLNpB";
     const url = `https://paramantra.us/paramantra/API/genLead_v2.php?API_Key=${api_key}&action=${app_name}&customername=${formData.name}&customerPhone=${formData.phone}&customeremail=${formData.email}&leadNotes=${formData.message}&leadProject=${encodeURIComponent(
       lead
     )}&channel=${page}`;
+
+    const url2 = `https://app.sell.do/api/leads/create?sell_do[form][lead][name]=${formData.name}&sell_do[form][lead][email]=${formData.email}&sell_do[form][lead][phone]=${formData.phone}&api_key=${api_key2}&sell_do[form][note][content]=${formData.message}&sell_do[campaign][srd]=${srd};`;
 
     const headers_data = {
       "Content-Type": "application/json",
@@ -181,6 +184,18 @@ const UnlockModal = (props) => {
         console.error(error);
         // Handle the error here
       });
+
+      axios
+      .post(url2)
+      .then((response) => {
+        console.log(response.data);
+        // Process the response data here
+      })
+      .catch((error) => {
+        console.error(error);
+        // Handle the error here
+      });
+      
     onClose();
   };
 

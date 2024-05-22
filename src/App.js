@@ -25,10 +25,14 @@ import SiteMaintenance from "./utils/SiteMaintenance.js";
 import Blogs from "./pages/Blogs/index.js";
 import BlogContent from "./pages/BlogContent/index.js";
 import { blogs1 } from "./utils/constants.js";
+import CareersPage from "./pages/Careers/index.js";
+import CategoryBlogs from "./pages/Blogs/categoryBlogs.js";
 
 function App() {
   const [pageState, setPageState] = React.useState(false);
   const [blogs, setBlogs] = React.useState([]);
+  const [categories, setCategories] = React.useState([]);
+
   async function getApi(url) {
     try {
       const response = await fetch(url);
@@ -48,6 +52,10 @@ function App() {
   useEffect(() => {
     getApi("https://blog.ridgehomes.in/api/blogs")
       .then((data) => setBlogs(data))
+      .catch((error) => console.error("Error:", error));
+
+    getApi("https://blog.ridgehomes.in/api/categories")
+      .then((data) => setCategories(data))
       .catch((error) => console.error("Error:", error));
   }, []);
 
@@ -70,7 +78,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/careers" element={<SiteMaintenance />} />
+        {/* <Route path="/careers" element={<SiteMaintenance />} /> */}
         <Route path="/vision" element={<ComingSoon />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/kshetra" element={<Navigate to="/projects/kshetra" />} />
@@ -104,9 +112,11 @@ function App() {
         <Route path="/projects/onGoingProjects" element={<OnGoingProjects />} />
         <Route path="/ongoing-projects" element={<SiteMaintenance />} />
         {/* <Blogs Blogs={blogs1} /> */}
+        {/* <Route path="/blogs" element={<SiteMaintenance />}/> */}
         <Route path="/blogs" element={<Blogs Blogs={blogs} />} />
-        <Route path="/blog/:id" element={<BlogContent blogs={blogs} />} />
-        <Route path="/blog2" element={<Blog2 />} />
+        <Route path="/blog/:blogID" element={<BlogContent blogs={blogs} categories={categories}/>} />
+        <Route path="/blog/category/:categoryName" element={<CategoryBlogs blogs={blogs} categories={categories}/>}/>
+        <Route path="/careers" element={<CareersPage />} />
         <Route path="/blog3" element={<Blog3 />} />
         <Route
           path="*"
