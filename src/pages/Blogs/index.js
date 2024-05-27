@@ -1,7 +1,9 @@
 import React from "react";
 import Header from "../../components/TopHeader";
 import homes from "../../assets/images/ridge homes.jpeg";
+import defaultPic from "../../assets/images/heroImage.jpg";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const Blogs = ({Blogs}) => {
   
@@ -31,19 +33,22 @@ const Blogs = ({Blogs}) => {
       >
         <div className="blog-grid">
           {Blogs.map((blog) => (
-            <a key={blog.blogID} href={`/blog/${blog.blogID}`} className="blog-card">
+            <Link key={blog.blogID} to={`/blog/${blog.blogID}`} className="blog-card">
               <div className="blog-card-inner">
                 <img
                   className="blog-cover"
-                  src={`${blog.bannerImage}`}
+                  src={blog?.bannerImage ? blog.bannerImage : defaultPic}
                   alt="Blog Cover"
                 />
                 <div className="blog-content">
-                  <h3 className="blog-title">{blog.title}</h3>
+                  <h6 className="blog-title">{blog.title}</h6>
                   <p className="blog-description">{blog.description}</p>
                 </div>
+                <div style={{padding: '30px'}}>
+                <Link to={`/blog/${blog.blogID}`} style={{color: '#FCB13E', textDecoration: 'none', fontWeight: 700}}><p>READ MORE...</p></Link>
+                </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

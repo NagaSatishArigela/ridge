@@ -1,0 +1,58 @@
+.sticky-form {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #eaeaea; /* Match the color from the screenshot */
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.sticky-container {
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+form input {
+  margin-right: 10px;
+  width: 280px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #dd9c37; /* Match the button color */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.sticky-icons {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #4b0082;
+  padding: 10px;
+  justify-content: space-around;
+  /* z-index: 99999999; */
+}
+
+.sticky-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .sticky-container {
+    display: none !important;
+  }
+
+  .sticky-icons {
+    display: flex !important;
+  }
+}

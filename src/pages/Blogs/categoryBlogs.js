@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import homes from "../../assets/images/ridge homes.jpeg";
+import defaultPic from "../../assets/images/heroImage.jpg";
 import Header from "../../components/TopHeader";
 import "./index.css";
 
@@ -59,12 +60,15 @@ const CategoryBlogs = ({ blogs, categories }) => {
               <div className="blog-card-inner">
                 <img
                   className="blog-cover"
-                  src={`${blog.bannerImage}`}
+                  src={blog?.bannerImage ? blog.bannerImage : defaultPic}
                   alt="Blog Cover"
                 />
                 <div className="blog-content">
                   <h3 className="blog-title">{blog.title}</h3>
                   <p className="blog-description">{blog.description}</p>
+                </div>
+                <div style={{padding: '30px'}}>
+                <Link to={`/blog/${blog.blogID}`} style={{color: '#FCB13E', textDecoration: 'none', fontWeight: 700}}><p>READ MORE...</p></Link>
                 </div>
               </div>
             </a>

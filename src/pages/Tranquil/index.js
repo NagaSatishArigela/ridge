@@ -369,6 +369,12 @@ function Tranquil() {
           />
         )}
       </div>
+      <div className="container-m">
+        <h2>Graph</h2>
+        <div style={{ objectFit: "contain" }}>
+          <img src={graph} alt="Maheswaram" style={{ height: "400px", objectFit: "contain", width: '350px'}} />
+        </div>
+      </div>
       <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
       {/* <div>
         <h2 style={{ padding: "0 0 30px 130px", margin: "auto" }}>Gallery</h2>
@@ -383,12 +389,6 @@ function Tranquil() {
       ))}
     </div>
       </div> */}
-      <div className="container-m">
-        <h2>Graph</h2>
-        <div style={{ objectFit: "contain" }}>
-          <img src={graph} alt="Maheswaram" style={{ height: "400px" }} />
-        </div>
-      </div>
       <div className="container-m">
         <h2>FAQ's</h2>
         <div className="accordion">

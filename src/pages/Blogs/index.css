@@ -4,6 +4,7 @@
     gap: 2rem;
     padding: 0 2rem;
     margin: auto;
+    max-width: 1260px;
   }
   
   @media (max-width: 1024px) {
@@ -30,9 +31,12 @@
   
   .blog-card-inner {
     background-color: #fff;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
+    border: 10px solid #879D34;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    min-height: 100%;
+    position: relative;
   }
   
   .blog-cover {
@@ -47,13 +51,18 @@
   
   .blog-title {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0;
+    color: #000;
   }
   
   .blog-description {
     color: #718096;
     font-size: 1.25rem;
     margin: 0;
+    max-height: 4.5em;
+    overflow: hidden;
+    line-height: 1.5em;
+    padding-top: 5px;
   }
   

@@ -27,6 +27,7 @@ import BlogContent from "./pages/BlogContent/index.js";
 import { blogs1 } from "./utils/constants.js";
 import CareersPage from "./pages/Careers/index.js";
 import CategoryBlogs from "./pages/Blogs/categoryBlogs.js";
+import StickyForm from "./components/StickyForm/index.js";
 
 function App() {
   const [pageState, setPageState] = React.useState(false);
@@ -123,6 +124,7 @@ function App() {
           element={<PageNotFound setPageState={setPageState} />}
         />
       </Routes>
+      <StickyForm/>
       <Footer />
     </>
   );
