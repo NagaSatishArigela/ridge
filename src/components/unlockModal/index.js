@@ -22,7 +22,7 @@ const UnlockModal = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
-    console.log(formData);
+    console.log(formData, page, srd);
     let payload;
     // Close the modal after form submission
     switch (page) {
@@ -38,7 +38,7 @@ const UnlockModal = (props) => {
           template_name: "home_page_enquiry",
         };
         break;
-      case "Sunrise":
+      case "sunrisecity":
         payload = {
           parameters: [
             {
@@ -50,7 +50,7 @@ const UnlockModal = (props) => {
           template_name: "home_page_enquiry",
         };
         break;
-      case "Tranquil":
+      case "tranquilvalley":
         payload = {
           parameters: [
             {
@@ -62,7 +62,7 @@ const UnlockModal = (props) => {
           template_name: "tranquilvalley_form",
         };
         break;
-      case "Kshetra":
+      case "kshetra":
         payload = {
           parameters: [
             {
@@ -74,7 +74,7 @@ const UnlockModal = (props) => {
           template_name: "kshetra_form",
         };
         break;
-      case "Spring City":
+      case "springcity":
         payload = {
           parameters: [
             {
@@ -137,11 +137,11 @@ const UnlockModal = (props) => {
     formdata.append("channel_id", page);
     formdata.append("subject", "Lead from Website");
     let lead;
-    if (page === "Tranquil" ) {
+    if (page === "tranquilvalley" ) {
       lead = "Ridge Homes Tranquil Valley";
-    } else if (page === "Kshetra") {
+    } else if (page === "kshetra") {
       lead = "Ridge Homes Kshetra";
-    } else if (page === "Sunrise") {
+    } else if (page === "sunrisecity") {
       lead = "Ridge Homes Sunrise City";
     } else {
       lead = "Lead from Website";
@@ -196,7 +196,7 @@ const UnlockModal = (props) => {
         // Handle the error here
       });
       
-    onClose();
+     onClose();
   };
 
   return (

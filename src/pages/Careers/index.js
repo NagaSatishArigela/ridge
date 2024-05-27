@@ -59,7 +59,7 @@ const CareersPage = () => {
   }
 
   useEffect(() => {
-    getApi("http://localhost:5003/api/careers")
+    getApi("https://blog.ridgehomes.in/api/careers")
       .then((data) => setCareersData(data))
       .catch((error) => console.error("Error:", error));
   }, []);
@@ -98,7 +98,7 @@ const CareersPage = () => {
         <section className="current-openings">
           <h2 className="section-title">CURRENT OPENINGS</h2>
           <div className="jobs-grid">
-            {careersData.map((job, index) => (
+            {careersData && careersData?.map((job, index) => (
               <div key={index} className="job-card">
                 <img src={job.cardImage} alt={job.jobTitle} className="job-image" />
                 <div className="job-content">
