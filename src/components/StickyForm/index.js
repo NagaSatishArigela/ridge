@@ -138,6 +138,7 @@ const StickyForm = () => {
         console.log(err);
       });
     let templateId = "template_rolhn2e";
+    console.log(form.current, 'current')
     emailjs
       .sendForm(
         "service_pn8vf29",
@@ -194,7 +195,7 @@ const StickyForm = () => {
       lead
     )}&channel=${pageName}`;
 
-    const url2 = `https://app.sell.do/api/leads/create?sell_do[form][lead][name]=${formData.name}&sell_do[form][lead][email]=${formData.email}&sell_do[form][lead][phone]=${formData.phone}&api_key=${api_key2}&sell_do[form][note][content]=${formData.message}&sell_do[campaign][srd]=66470c55735daf1c2ba4514d};`;
+    const url2 = `https://app.sell.do/api/leads/create?sell_do[form][lead][name]=${formData.name}&sell_do[form][lead][email]=${formData.email}&sell_do[form][lead][phone]=${formData.phone}&api_key=${api_key2}&sell_do[form][note][content]=${formData.message}&sell_do[campaign][srd]=66470c55735daf1c2ba4514d`;
 
     const headers_data = {
       "Content-Type": "application/json",
@@ -267,6 +268,13 @@ const StickyForm = () => {
             placeholder="Email"
             style={{ marginRight: "10px" }}
           />
+          <input
+            type="pageName"
+            name="pageName"
+            value={getPageName(location.pathname)}
+            placeholder="pageName"
+            className="hide"
+          />
           <button
             type="submit"
             style={{
@@ -282,7 +290,7 @@ const StickyForm = () => {
       </form>
       <div className="sticky-icons">
         <a
-          href="tel:917775857777"
+          href="tel:919000888152"
           style={{ textDecoration: "none", color: "white" }}
         >
           {/* <img src={call} alt="Call" /> */}

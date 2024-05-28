@@ -137,7 +137,7 @@ const UnlockModal = (props) => {
     formdata.append("channel_id", page);
     formdata.append("subject", "Lead from Website");
     let lead;
-    if (page === "tranquilvalley" ) {
+    if (page === "tranquilvalley") {
       lead = "Ridge Homes Tranquil Valley";
     } else if (page === "kshetra") {
       lead = "Ridge Homes Kshetra";
@@ -155,7 +155,11 @@ const UnlockModal = (props) => {
     const api_key = "qHzq2IAp6Fyr2ztLLqyuv3ty3t";
     const api_key2 = "9a18874a712cc3d4e63c6f34df1587d1";
     const app_name = "wLNpB";
-    const url = `https://paramantra.us/paramantra/API/genLead_v2.php?API_Key=${api_key}&action=${app_name}&customername=${formData.name}&customerPhone=${formData.phone}&customeremail=${formData.email}&leadNotes=${formData.message}&leadProject=${encodeURIComponent(
+    const url = `https://paramantra.us/paramantra/API/genLead_v2.php?API_Key=${api_key}&action=${app_name}&customername=${
+      formData.name
+    }&customerPhone=${formData.phone}&customeremail=${
+      formData.email
+    }&leadNotes=${formData.message}&leadProject=${encodeURIComponent(
       lead
     )}&channel=${page}`;
 
@@ -185,7 +189,7 @@ const UnlockModal = (props) => {
         // Handle the error here
       });
 
-      axios
+    axios
       .post(url2)
       .then((response) => {
         console.log(response.data);
@@ -195,14 +199,14 @@ const UnlockModal = (props) => {
         console.error(error);
         // Handle the error here
       });
-      
-     onClose();
+
+    onClose();
   };
 
   return (
     <div className={`modal ${isOpen ? "open" : ""}`}>
       <div className="modal-content">
-      {send && (
+        {send && (
           <div className="toast">
             <i className="fa fa-check-circle"></i> Information Sent
           </div>
@@ -241,6 +245,13 @@ const UnlockModal = (props) => {
               onChange={handleChange}
               required
             />
+            <input
+              type="pageName"
+              name="pageName"
+              value={page}
+              placeholder="pageName"
+              className="hide"
+            />
           </div>
           <div className="form-group">
             <label>Message:</label>
@@ -251,7 +262,17 @@ const UnlockModal = (props) => {
               required
             ></textarea>
           </div>
-          <button type="submit" style={{backgroundColor: '#DD9C37', color: '#fff', fontSize: '16px', fontWeight: 'bold'}}>Submit</button>
+          <button
+            type="submit"
+            style={{
+              backgroundColor: "#DD9C37",
+              color: "#fff",
+              fontSize: "16px",
+              fontWeight: "bold",
+            }}
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
