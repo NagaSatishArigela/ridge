@@ -37,7 +37,6 @@
     height: 100%;
     object-fit: cover;
   }
-  
  
   .banner-text h1 {
     font-size: 2.5rem;
@@ -47,6 +46,19 @@
   .banner-text p {
     font-size: 1.25rem;
     margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .banner-text {
+      width: 278px;
+    }
+    .banner-text h1 {
+      font-size: 1.5em;
+    }
+  
+    .banner-text p {
+      font-size: 1em;
+    }
   }
   
   .current-openings {

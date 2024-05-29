@@ -248,7 +248,7 @@ const UnlockModal = (props) => {
             <input
               type="pageName"
               name="pageName"
-              value={page}
+              value={page ? page : "Home"}
               placeholder="pageName"
               className="hide"
             />

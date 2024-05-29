@@ -1,10 +1,17 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
   const form = useRef();
+  const location = useLocation();
   const [send, setSend] = useState(false);
-
+  const getPageName = (path) => {
+    const pathSegments = path.split("/").filter(Boolean);
+    return pathSegments.length > 0 && pathSegments[0] === "blog"
+      ? pathSegments[0]
+      : pathSegments[pathSegments.length - 1];
+  };
   const sendEmail = (e) => {
     e.preventDefault();
     let templateId = "template_rolhn2e";
@@ -14,7 +21,6 @@ const Contact = () => {
         templateId,
         form.current,
         "RIdumvJqbANv7cRbb",
-        "blog"
       )
       .then(
         (result) => {
@@ -117,6 +123,13 @@ const Contact = () => {
             fontFamily: 'sans-serif',
           }}
         />
+         <input
+              type="pageName"
+              name="pageName"
+              value={getPageName(location.pathname) ? getPageName(location.pathname) : "Home"}
+              placeholder="pageName"
+              className="hide"
+            />
         {/* <button className='btn'>Send Message</button> */}
         <input
           className="btn"
