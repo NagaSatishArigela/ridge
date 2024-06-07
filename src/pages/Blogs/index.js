@@ -6,6 +6,7 @@ import "./index.css";
 import { Link } from "react-router-dom";
 
 const Blogs = ({ Blogs }) => {
+  console.log(Blogs, 'blogs')
   return (
     <>
       <Header />
@@ -56,13 +57,13 @@ const Blogs = ({ Blogs }) => {
           {Blogs.map((blog) => (
             <Link
               key={blog.blogID}
-              to={`/blog/${blog.blogID}`}
+              to={`/blog/${blog.id}`}
               className="blog-card"
             >
               <div className="blog-card-inner">
                 <img
                   className="blog-cover"
-                  src={blog?.bannerImage ? blog.bannerImage : defaultPic}
+                  src={blog?.bannerImage.url ? blog.bannerImage.url : defaultPic}
                   alt="Blog Cover"
                 />
                 <div className="blog-content">
@@ -70,7 +71,7 @@ const Blogs = ({ Blogs }) => {
                   <p className="blog-description">{blog.description}</p>
                   <div style={{ position: 'absolute', bottom: '0px', }}>
                   <Link
-                    to={`/blog/${blog.blogID}`}
+                    to={`/blog/${blog.id}`}
                     style={{
                       color: "#FCB13E",
                       textDecoration: "none",

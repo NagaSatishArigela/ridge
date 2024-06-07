@@ -28,36 +28,37 @@ import { blogs1 } from "./utils/constants.js";
 import CareersPage from "./pages/Careers/index.js";
 import CategoryBlogs from "./pages/Blogs/categoryBlogs.js";
 import StickyForm from "./components/StickyForm/index.js";
-
+import { grahcms, QUERY_SLUG_CATEGORIES, QUERY_SLUG_POSTS } from "./utils/Queries.js";
 function App() {
   const [pageState, setPageState] = React.useState(false);
-  const [blogs, setBlogs] = React.useState([]);
+  const [posts, setPosts] = React.useState([]);
   const [categories, setCategories] = React.useState([]);
 
-  async function getApi(url) {
-    try {
-      const response = await fetch(url);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error:", error);
-      return null;
-    }
-  }
 
   useEffect(() => {
-    getApi("https://blog.ridgehomes.in/api/blogs")
-      .then((data) => setBlogs(data))
-      .catch((error) => console.error("Error:", error));
+    const fetchCategories = async () => {
+      try {
+        const data = await grahcms.request(QUERY_SLUG_CATEGORIES);
+        setCategories(data.categories);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
 
-    getApi("https://blog.ridgehomes.in/api/categories")
-      .then((data) => setCategories(data))
-      .catch((error) => console.error("Error:", error));
+    fetchCategories();
+  }, []); // Empty dependency array ensures this runs only once
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const data = await grahcms.request(QUERY_SLUG_POSTS);
+        setPosts(data.posts);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      }
+    };
+
+    fetchPosts();
   }, []);
 
   return (
@@ -79,7 +80,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
-        {/* <Route path="/careers" element={<SiteMaintenance />} /> */}
+        <Route path="/careers" element={<SiteMaintenance />} />
         <Route path="/vision" element={<ComingSoon />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/kshetra" element={<Navigate to="/projects/kshetra" />} />
@@ -114,10 +115,10 @@ function App() {
         <Route path="/ongoing-projects" element={<SiteMaintenance />} />
         {/* <Blogs Blogs={blogs1} /> */}
         {/* <Route path="/blogs" element={<SiteMaintenance />}/> */}
-        <Route path="/blogs" element={<Blogs Blogs={blogs} />} />
-        <Route path="/blog/:blogID" element={<BlogContent blogs={blogs} categories={categories}/>} />
-        <Route path="/blog/category/:categoryName" element={<CategoryBlogs blogs={blogs} categories={categories}/>}/>
-        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/blogs" element={<Blogs Blogs={posts} />} />
+        <Route path="/blog/:blogID" element={<BlogContent blogs={posts} categories={categories}/>} />
+        <Route path="/blog/category/:name" element={<CategoryBlogs posts={posts} categories={categories}/>}/>
+        {/* <Route path="/careers" element={<CareersPage />} /> */}
         <Route path="/blog3" element={<Blog3 />} />
         <Route
           path="*"

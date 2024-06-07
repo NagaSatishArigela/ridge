@@ -5,17 +5,28 @@ import defaultPic from "../../assets/images/heroImage.jpg";
 import Header from "../../components/TopHeader";
 import "./index.css";
 
-const CategoryBlogs = ({ blogs, categories }) => {
-  const { categoryName } = useParams();
+const CategoryBlogs = ({ posts, categories }) => {
+  const { name } = useParams();
+  console.log(posts, 'posts', categories, 'ldd', name)
   const [filteredBlogs, setFilteredBlogs] = useState([]);
 
   useEffect(() => {
-    if (blogs) {
-      const filtered = blogs.filter((blog) => blog.category === categoryName);
-      setFilteredBlogs(filtered);
+    if (posts && categories) {
+      // Find the category ID based on the category name from the URL parameter
+      const category = categories.find(cat => cat.name === name);
+      console.log(category, 'djk')
+      if (category) {
+        const filtered = posts.filter((post) => 
+          post.categories.some(cat => cat.id === category.id)
+        );
+        console.log(filtered, 'filddv')
+        setFilteredBlogs(filtered);
+      } else {
+        setFilteredBlogs([]);
+      }
     }
-  }, [categoryName, blogs]);
-
+  }, [name, posts, categories]);
+console.log(filteredBlogs, 'fil')
   return (
     <>
       <Header />
@@ -49,18 +60,18 @@ const CategoryBlogs = ({ blogs, categories }) => {
           flexDirection: 'column',
         }}
       >
-        <h1 className="category-title">{categoryName}</h1>
+        <h1 className="category-title">{name}</h1>
         <div className="blog-grid">
           {filteredBlogs.map((blog) => (
             <a
-              key={blog.blogID}
-              href={`/blog/${blog.blogID}`}
+              key={blog.id}
+              href={`/blog/${blog.id}`}
               className="blog-card"
             >
               <div className="blog-card-inner">
                 <img
                   className="blog-cover"
-                  src={blog?.bannerImage ? blog.bannerImage : defaultPic}
+                  src={blog.bannerImage?.url || defaultPic}
                   alt="Blog Cover"
                 />
                 <div className="blog-content">
@@ -68,7 +79,9 @@ const CategoryBlogs = ({ blogs, categories }) => {
                   <p className="blog-description">{blog.description}</p>
                 </div>
                 <div style={{padding: '30px'}}>
-                <Link to={`/blog/${blog.blogID}`} style={{color: '#FCB13E', textDecoration: 'none', fontWeight: 700}}><p>READ MORE...</p></Link>
+                  <Link to={`/blog/${blog.id}`} style={{color: '#FCB13E', textDecoration: 'none', fontWeight: 700}}>
+                    <p>READ MORE...</p>
+                  </Link>
                 </div>
               </div>
             </a>

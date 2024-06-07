@@ -8,18 +8,17 @@ import "react-multi-carousel/lib/styles.css";
 
 const BlogContent = ({ blogs, categories }) => {
   const { blogID } = useParams();
-  console.log(blogs, "test", blogID, "blogs", categories);
   const [blog, setBlog] = useState({});
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
     if (blogs) {
-      const currentBlog = blogs.find((blog) => blog.blogID === blogID);
+      const currentBlog = blogs.find((blog) => blog.id === blogID);
       setBlog(currentBlog);
 
       if (currentBlog) {
         const related = blogs.filter(
-          (b) => b.categoryId === currentBlog.categoryId && b.blogID !== blogID
+          (b) => b.categories.some((cat) => currentBlog.categories.map((ccat) => ccat.id).includes(cat.id)) && b.id !== blogID
         );
         setRelatedPosts(related);
       }
@@ -49,21 +48,20 @@ const BlogContent = ({ blogs, categories }) => {
     <>
       <Header />
       <div className="w-full pb-10 bg-gray-100">
-        <div className="containerl mx-auto">
+        <div className="container mx-auto">
           <div className="grid-container">
             {/* First Column */}
             <div className="blog-content">
               <img
                 className="cover-image"
-                src={`${blog?.bannerImage}`}
+                src={`${blog?.bannerImage?.url}`}
                 alt="Blog Cover"
               />
               <h1 className="font-bold text-2xl my-1 pt-5">{blog?.title}</h1>
               <div
                 className="pt-5"
-                dangerouslySetInnerHTML={{ __html: blog?.content }}
+                dangerouslySetInnerHTML={{ __html: blog?.content?.html }}
               >
-                {/* <ReactMarkdown className="line-break">{blog.attributes.blogContent}</ReactMarkdown> */}
               </div>
             </div>
 
@@ -75,10 +73,10 @@ const BlogContent = ({ blogs, categories }) => {
                 {categories?.map((category, index) => (
                   <li key={index} className="category-list">
                     <Link
-                      to={`/blog/category/${category?.category}`}
+                      to={`/blog/category/${category?.name}`}
                       className="category-link"
                     >
-                      {category?.category}
+                      {category?.name}
                     </Link>
                   </li>
                 ))}
@@ -92,15 +90,14 @@ const BlogContent = ({ blogs, categories }) => {
                 <Carousel responsive={responsive}>
                   {relatedPosts.map((post) => (
                     <Link
-                      key={post.blogID}
-                      to={`/blog/${post.blogID}`}
-                      target="_blank"
+                      key={post.id}
+                      to={`/blog/${post.id}`}
                       style={{ textDecoration: "none", color: "#000" }}
                     >
                       <div className="related-post-card">
                         {post.bannerImage && (
                           <img
-                            src={post.bannerImage}
+                            src={post.bannerImage.url}
                             alt={post.title}
                             className="related-post-image"
                           />
@@ -111,17 +108,17 @@ const BlogContent = ({ blogs, categories }) => {
                   ))}
                 </Carousel>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{marginBottom: '50px'}}>
                   {relatedPosts.map((post) => (
                     <Link
-                      key={post.blogID}
-                      to={`/blog/${post.blogID}`}
-                      target="_blank"
+                      key={post.id}
+                      to={`/blog/${post.id}`}
+                      style={{ textDecoration: "none", color: "#000" }}
                     >
-                      <div key={post.blogID} className="related-post-card">
+                      <div key={post.id} className="related-post-card">
                         {post.bannerImage && (
                           <img
-                            src={post.bannerImage}
+                            src={post.bannerImage.url}
                             alt={post.title}
                             className="related-post-image"
                           />
