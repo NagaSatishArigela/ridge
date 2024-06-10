@@ -16,7 +16,7 @@ const TeamMemberCard = ({ member }) => {
           style={{
             fontFamily: "sans-serif",
             fontSize: "35px",
-            fontWeight: "900",
+            fontWeight: "600",
             margin: "25px 0px",
           }}
         >

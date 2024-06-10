@@ -25,6 +25,10 @@ const youtubeData = [
     id: 2,
     yid: "QHApRArUdyc?si=fL8976jkQkrz0082",
   },
+  {
+    id: 3,
+    yid: "3vQY-oZ6-aA?si=y00Ad-AxxI6_EyrC",
+  }
 ];
 
 function Home() {

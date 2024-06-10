@@ -81,12 +81,12 @@ const projectHightlights = [
 ];
 
 const highlightPoints = [
-  { text: "15 Mins Drive to Exit 14 thukkuguda" },
-  { text: "15 mins Drive to Exit 15 Pedda Golonda" },
+  { text: "15 Mins Drive to Exit 14 Thukkuguda" },
+  { text: "15 Mins Drive to Exit 15 Pedda Golonda" },
   { text: "15 Mins Drive to Statue of Equality" },
   { text: "10 Mins Drive to Srisailam Highway" },
   { text: "10 Mins Drive to Bangalore Highway" },
-  { text: "30 Mins Drive to international Airport" },
+  { text: "30 Mins Drive to International Airport" },
   { text: "30 Mins Drive TCS Adibatla" },
   { text: "45 Mins Drive to Mindspace" },
   { text: "50 Mins Drive to Hitech City" },
@@ -101,60 +101,75 @@ const faqs = [
   {
     question:
       "Q. What is Ridge Tranquil Valley project and where is it Located?",
-    answer: "A. It is Located at Maheshwaram, Near Electronic SEZ",
+    answer: "A. Ridge Tranquil Valley is a prestigious villa plot development located in the serene environs of Maheshwaram, right next to the bustling Electronic SEZ",
   },
   {
     question: "Q. What are the Location advantages of Ridge Tranquil Valley?",
     answer:
-      "A. 20 min drive from Pharma City, Srisailam high way\n35 min drive from Financial District\n20 min drive from Rajiv Gandhi International Airport\nClose to international schools",
+      "A. Just a 20-minute drive from Pharma City via Srisailam Highway\n Only 35 minutes to the Financial District, making your commute a breeze\n A quick 20-minute drive from Rajiv Gandhi International Airport, perfect for frequent flyers\n Close to top-tier international schools, ensuring quality education for your children",
   },
   {
     question: "Q. What is the land area of this project?",
     answer:
-      "A. Total 30 Acres Land Phase one 12.26 Acres is developed for premium villa plots",
+      "A. The expansive Ridge Tranquil Valley covers 30 acres, with the first phase developed over 12.26 acres featuring premium villa plots",
   },
   {
     question: "Q. What is the size of the Plot?",
-    answer: "A. Ranges from 200 Sqyd to 333 Sqyd.",
+    answer: "A. Choose from a range of plot sizes, from 200 square yards to 333 square yards, perfect for building your dream villa",
   },
   {
     question: "Q. How much Bank Loan Available?",
     answer:
-      "A. 80% Bank loan available. Project is approved by ICICI Bank and HDFC bank",
+      "A. Up to 80% of the loan value is available, with approvals from leading banks like ICICI and HDFC",
   },
   {
     question: "Q. What are the amenities being provided?",
     answer:
-      "A. Well-designed 40 wide entry arch, 30-40’ internal CC roads, Compound wall, 100% vastu, Children park, CCTV, 24/7 security, Underground electricity, Underground drainage, Modern street lights, Water harvesting pits, avenue and Park plantation, Overhead tanks.",
-  },
+      "A. grand 40' wide entry archway welcoming you home\n" +
+      "* Smooth 30-40’ internal concrete roads for easy navigation\n" +
+      "* Secure compound wall surrounding the community\n" +
+      "* 100% Vastu-compliant plots for peace and prosperity\n" +
+      "* A fun-filled children's park for endless play\n" +
+      "* State-of-the-art CCTV surveillance and 24/7 security for your peace of mind\n" +
+      "* Modern underground electricity and drainage systems\n" +
+      "* Stylish street lights illuminating the community\n" +
+      "* Water harvesting pits promoting sustainability\n" +
+      "* Lush avenue and park plantation enhancing the green cover\n" +
+      "* Overhead water tanks ensuring a steady water supply",
+},
   {
     question: "Q. What is the initial booking amount?",
-    answer: "A. 2,00,000 initial booking amount",
+    answer: "A. Secure your spot in this premium community with an initial booking amount of just ₹2,00,000.",
   },
   {
     question: "Q. Is the Ridge Tranquil valley registered under RERA & HMDA?",
     answer:
-      "A. Yes, Ridge Tranquil valley is registered TS RERA:- P02400005589 HMDA:- 055926/SMD/LT/U6/HMDA/22072022",
+      "A. Absolutely, Ridge Tranquil Valley is officially registered with TS RERA (P02400005589) and HMDA (055926/SMD/LT/U6/HMDA/22072022), ensuring transparency and trust",
   },
   {
     question:
       "Q. What are the organizations/companies near Ridge Tranquil Valley?",
     answer:
-      "A. Wipro, Malabar Gold, Capsgold, Cygni Energy limited, Orient Electric, Nile-cycle.",
+      "A. The project is strategically located near prominent companies like Wipro, Malabar Gold, Capsgold, Cygni Energy Limited, Orient Electric, and Nile Cycle, making it ideal for professionals",
   },
   {
     question: "Q. Which Schools and Colleges are Near Ridge Tranquil Valley?",
     answer:
-      "A. Yes, they have international schools and colleges Near Ridge Tranquil Valley:\n- Raintree international school\n- Manchester global school.",
+      "A. Top educational institutions nearby include"+
+      "Raintree International School"+
+      "Manchester Global School Providing an excellent education environment for your children",
   },
   {
     question: "Q. Are there any retail stores near Ridge Tranquil Valley?",
-    answer: "A. Yes, Reliance Retail Store, within 2 Kms.",
+    answer: "A. Yes, convenience is key with a Reliance Retail Store located just 2 kilometres away.",
   },
   {
     question: "Q. Why is Maheshwaram an Excellent choice to purchase Property?",
     answer:
-      "A. Adjacent to Electronic SEZ\nb. Good quality infrastructure, being developed, including Metro up to Shamshabad Airport, which is a 30-minute drive\nc. Near to ORR\nd. Good potential for Rate on Investment. Past record, rate doubled in 3 years.",
+      "A.	Proximity to the Electronic SEZ enhances investment potential"+
+      "Ongoing high-quality infrastructure development, including a metro extension to Shamshabad Airport, only 30 minutes away"+
+      "Easy access to the Outer Ring Road (ORR) for seamless travel"+
+      "Proven track record of property value doubling in just three years, promising great returns on investment",
   },
 ];
 
@@ -368,12 +383,6 @@ function Tranquil() {
             srd="66470be4735dafb67e848e32"
           />
         )}
-      </div>
-      <div className="container-m">
-        <h2>Graph</h2>
-        <div style={{ objectFit: "contain" }}>
-          <img src={graph} alt="Maheswaram" style={{ height: "400px", objectFit: "contain", width: '350px'}} />
-        </div>
       </div>
       <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
       {/* <div>

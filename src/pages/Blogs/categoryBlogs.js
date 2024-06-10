@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import homes from "../../assets/images/ridge homes.jpeg";
+import homes from "../../assets/images/blogBanner.jpg";
 import defaultPic from "../../assets/images/heroImage.jpg";
 import Header from "../../components/TopHeader";
 import "./index.css";
@@ -30,7 +30,7 @@ console.log(filteredBlogs, 'fil')
   return (
     <>
       <Header />
-      <div
+      {/* <div
         className="banner-container"
         style={{
           height: "500px",
@@ -48,19 +48,27 @@ console.log(filteredBlogs, 'fil')
             objectFit: "cover",
           }}
         />
-      </div>
+      </div> */}
+        <header className="bannerb">
+          <div className="banner-overlay">
+            <img src={homes} alt="blogs" className="banner-image" />
+            <div className="banner-text">
+              <h1>{name}</h1>
+            </div>
+          </div>
+        </header>
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
           position: "relative",
-          paddingTop: "15px",
+          paddingTop: "65px",
           alignItems: "center",
           paddingBottom: "40px",
           flexDirection: 'column',
         }}
       >
-        <h1 className="category-title">{name}</h1>
+        {/* <h1 className="category-title">{name}</h1> */}
         <div className="blog-grid">
           {filteredBlogs.map((blog) => (
             <a

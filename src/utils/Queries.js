@@ -29,7 +29,7 @@ export const QUERY_SLUG_CATEGORIES = gql`
 
 export const QUERY_SLUG_POSTS = gql`
   {
-    posts {
+    posts(first: 100) {
       ${post}
       categories {
         ${category}

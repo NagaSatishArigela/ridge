@@ -10,15 +10,16 @@ const BlogContent = ({ blogs, categories }) => {
   const { blogID } = useParams();
   const [blog, setBlog] = useState({});
   const [relatedPosts, setRelatedPosts] = useState([]);
-
+  
   useEffect(() => {
     if (blogs) {
       const currentBlog = blogs.find((blog) => blog.id === blogID);
       setBlog(currentBlog);
 
       if (currentBlog) {
+        const currentBlogCategoryIds = currentBlog.categories.map((ccat) => ccat.id);
         const related = blogs.filter(
-          (b) => b.categories.some((cat) => currentBlog.categories.map((ccat) => ccat.id).includes(cat.id)) && b.id !== blogID
+          (b) => b.categories.some((cat) => currentBlogCategoryIds.includes(cat.id)) && b.id !== blogID
         );
         setRelatedPosts(related);
       }

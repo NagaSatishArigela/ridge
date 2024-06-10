@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import aboutUs from "../../assets/images/tranquil1.png";
+import aboutUs from "../../assets/images/ridgeNewLogo.png";
 import surya from "../../assets/images/surya-ridge-homes.jpg";
 import raju from "../../assets/images/raju.jpg";
 import amar from "../../assets/images/amarnath.jpg";
@@ -123,7 +123,7 @@ const AboutUs = () => {
             customers. With an appreciation for nature, art and culture, Ridge
             is on a path to revolutionizing living spaces.
           </p>
-          <div className="mission-vision">
+          {/* <div className="mission-vision">
             <div className="mission">
               <h3>Our Mission</h3>
               <p>
@@ -138,7 +138,7 @@ const AboutUs = () => {
                 cumque repudiandae! Mi dignissim, molestie officia.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="teamSection">

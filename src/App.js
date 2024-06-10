@@ -29,6 +29,7 @@ import CareersPage from "./pages/Careers/index.js";
 import CategoryBlogs from "./pages/Blogs/categoryBlogs.js";
 import StickyForm from "./components/StickyForm/index.js";
 import { grahcms, QUERY_SLUG_CATEGORIES, QUERY_SLUG_POSTS } from "./utils/Queries.js";
+import ISOCertified from "./pages/ISO/index.js";
 function App() {
   const [pageState, setPageState] = React.useState(false);
   const [posts, setPosts] = React.useState([]);
@@ -120,12 +121,12 @@ function App() {
         <Route path="/blog/category/:name" element={<CategoryBlogs posts={posts} categories={categories}/>}/>
         {/* <Route path="/careers" element={<CareersPage />} /> */}
         <Route path="/blog3" element={<Blog3 />} />
+        <Route path="/iso-certified" element={<ISOCertified/>} />
         <Route
           path="*"
           element={<PageNotFound setPageState={setPageState} />}
         />
       </Routes>
-      <StickyForm/>
       <Footer />
     </>
   );
