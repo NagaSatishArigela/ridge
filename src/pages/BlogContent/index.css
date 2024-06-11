@@ -172,6 +172,12 @@
     }
   }
 
+  @media (max-width: 600px) {
+    .blog-content h1 {
+        font-size: 18px;
+    }
+}
+
   .related-posts {
     margin-top: 40px;
 }

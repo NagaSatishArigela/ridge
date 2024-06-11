@@ -82,3 +82,22 @@
       font-size: 1rem;
     }
   }
+
+  #page-numbers {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+  #page-numbers li {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    list-style-type: none;
+  }
+  
+  #page-numbers li.active {
+    background-color: #FCB13E;
+    color: white;
+  }

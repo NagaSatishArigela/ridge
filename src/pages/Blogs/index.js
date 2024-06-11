@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/TopHeader";
 import homes from "../../assets/images/blogBanner.jpg";
 import defaultPic from "../../assets/images/heroImage.jpg";
@@ -6,7 +6,21 @@ import "./index.css";
 import { Link } from "react-router-dom";
 
 const Blogs = ({ Blogs }) => {
-  console.log(Blogs, 'blogs')
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;
+
+  const handleClick = (event) => {
+    setCurrentPage(Number(event.target.id));
+  };
+
+  const pages = [];
+  for (let i = 1; i <= Math.ceil(Blogs.length / itemsPerPage); i++) {
+    pages.push(i);
+  }
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = Blogs.slice(indexOfFirstItem, indexOfLastItem);
   return (
     <>
       <Header />
@@ -51,10 +65,11 @@ const Blogs = ({ Blogs }) => {
           paddingTop: "85px",
           alignItems: "center",
           paddingBottom: "40px",
+          flexDirection: "column",
         }}
       >
         <div className="blog-grid">
-          {Blogs.map((blog) => (
+          {currentItems.map((blog) => (
             <Link
               key={blog.blogID}
               to={`/blog/${blog.id}`}
@@ -86,6 +101,18 @@ const Blogs = ({ Blogs }) => {
             </Link>
           ))}
         </div>
+        <ul id="page-numbers">
+        {pages.map((number) => (
+          <li
+            key={number}
+            id={number}
+            onClick={handleClick}
+            className={currentPage === number ? "active" : null}
+          >
+            {number}
+          </li>
+        ))}
+      </ul>
       </div>
     </>
   );
