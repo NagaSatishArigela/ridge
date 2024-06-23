@@ -73,7 +73,7 @@ console.log(filteredBlogs, 'fil')
           {filteredBlogs.map((blog) => (
             <a
               key={blog.id}
-              href={`/blog/${blog.id}`}
+              href={`/blog/${blog.slug}`}
               className="blog-card"
             >
               <div className="blog-card-inner">
@@ -87,7 +87,7 @@ console.log(filteredBlogs, 'fil')
                   <p className="blog-description">{blog.description}</p>
                 </div>
                 <div style={{padding: '30px'}}>
-                  <Link to={`/blog/${blog.id}`} style={{color: '#FCB13E', textDecoration: 'none', fontWeight: 700}}>
+                  <Link to={`/blog/${blog.slug}`} style={{color: '#FCB13E', textDecoration: 'none', fontWeight: 700}}>
                     <p>READ MORE...</p>
                   </Link>
                 </div>

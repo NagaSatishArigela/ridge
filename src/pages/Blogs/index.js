@@ -72,7 +72,7 @@ const Blogs = ({ Blogs }) => {
           {currentItems.map((blog) => (
             <Link
               key={blog.blogID}
-              to={`/blog/${blog.id}`}
+              to={`/blog/${blog.slug}`}
               className="blog-card"
             >
               <div className="blog-card-inner">
@@ -86,7 +86,7 @@ const Blogs = ({ Blogs }) => {
                   <p className="blog-description">{blog.description}</p>
                   <div style={{ position: 'absolute', bottom: '0px', }}>
                   <Link
-                    to={`/blog/${blog.id}`}
+                    to={`/blog/${blog.slug}`}
                     style={{
                       color: "#FCB13E",
                       textDecoration: "none",

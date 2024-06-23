@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
-import Banner from "../../assets/images/Tranquil valley banner.jpg";
+// import Banner from "../../assets/images/Tranquil valley banner.jpg";
 import ContactBanner from "../../assets/images/contactBackground.png";
+import Banner from "../../assets/images/1800 x 600 tv banner-01 (1)[1].jpg";
 import Tranquil1 from "../../assets/images/tranquil1.png";
 import Tranquil2 from "../../assets/images/tranquil2.jpeg";
 import Image1 from "../../assets/images/tranq1.png";
@@ -385,8 +386,8 @@ function Tranquil() {
         )}
       </div>
       <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
-      {/* <div>
-        <h2 style={{ padding: "0 0 30px 130px", margin: "auto" }}>Gallery</h2>
+      <div className="container-m">
+        <h2 style={{ padding: "0 0 30px 0", margin: "auto" }}>Gallery</h2>
         <div className="card-container">
       {formattedImages.map((image, index) => (
         <CustomCard
@@ -397,7 +398,7 @@ function Tranquil() {
         />
       ))}
     </div>
-      </div> */}
+      </div>
       <div className="container-m">
         <h2>FAQ's</h2>
         <div className="accordion">

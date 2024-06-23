@@ -5,6 +5,7 @@ export const grahcms = new GraphQLClient('https://api-ap-south-1.hygraph.com/v2/
 const category = `
   id
   name
+  slug
 `;
 
 const post = `
@@ -17,6 +18,7 @@ const post = `
     html 
   }
   description
+  slug
 `;
 
 export const QUERY_SLUG_CATEGORIES = gql`

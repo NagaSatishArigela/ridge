@@ -8,9 +8,9 @@ import BannerNext4 from "../../assets/images/springlogo.png";
 import videoNext1 from "../../assets/images/legacy copy.png";
 import videoNext2 from "../../assets/images/2 image.png";
 import videoNext3 from "../../assets/images/3 images.png";
-import blog1 from "../../assets/images/ridge blog1.jpg";
-import blog2 from "../../assets/images/ridge blog2.png";
-import blog3 from "../../assets/images/ridge blog1.png";
+import blog1 from "../../assets/images/ISO  1280 x 720-01.jpg";
+import blog2 from "../../assets/images/TV  1280 x 720-01.jpg";
+import blog3 from "../../assets/images/kshetra  1280 x 720-01.jpg";
 import backImage from "../../assets/images/contact-form-backside-image.png";
 
 import "../Styles/styles.css";
@@ -61,24 +61,24 @@ const videoNext = [
 const blogSec = [
   {
     image: blog1,
-    title: "Overall Market",
+    title: "ISO Certified",
     description:
-      "Initially limited to Hyderabad's downtown, real estate activity expanded as the city experienced a boom",
-    link: "https://ridgehomes.in/blog/uncategorized/auto-draft/",
+      "Ridge Homes is proudly ISO certified, which proves our commitment to quality construction, efficient processes, and exceptional customer service. Choose Ridge Homes - where peace of mind is your standard.",
+    link: "/iso-certified",
   },
   {
     image: blog2,
-    title: "Focused in West Hyderabad",
+    title: "Tranquil valley",
     description:
-      "It is no secret that the cost of real estate in Hyderabad is not just rising but also exploding.",
-    link: "https://ridgehomes.in/blog/uncategorized/focused-in-west-hyderabad-mokila-shankarpally-mominpet/",
+      "Welcome to Tranquil Valley, a nature-centric Premium Villa Plots in Maheshwaram, identified by application number (here comes the number). This project resembles our commitment to innovation, quality, and sustainable development. With its serene surroundings, tranquil valley promises a lifestyle of peace and convenience where we transform vision into reality, enriching communities.",
+    link: "/projects/tranquilvalley",
   },
   {
     image: blog3,
-    title: "Focused in south Hyderabad",
+    title: "Kshetra",
     description:
-      "The southern half of the city's real estate market has just begun to pick up, particularly ",
-    link: "https://ridgehomes.in/blog/uncategorized/focused-in-south-hyderabad-airport-maheswaram-pharmacity/",
+      "Welcome to Kshetra, a theme based villa project in Shankarpally identified by application number (here comes the number). Kshetra is about uplifting the traditions with the theme - Nature, Culture, and Art. This theme based project restores ancient practices in its surroundings and amenities. With its rich cultural heritage, Kshetra promises a lifestyle of tradition and comfort, where we make your dreams into reality, nurturing vibrant resort communities. ",
+    link: "/projects/kshetra",
   },
 ];
 
@@ -127,7 +127,7 @@ function TilesSection(props) {
                   ) : item.title ? (
                     <>
                       <h3>{item?.title}</h3>
-                      <p>{item?.description}</p>
+                      <p className="truncate-description">{item?.description}</p>
                       <a href={`${item.link}`}>Read More</a>
                     </>
                   ) : (

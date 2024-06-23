@@ -117,7 +117,7 @@ function App() {
         {/* <Blogs Blogs={blogs1} /> */}
         {/* <Route path="/blogs" element={<SiteMaintenance />}/> */}
         <Route path="/blogs" element={<Blogs Blogs={posts} />} />
-        <Route path="/blog/:blogID" element={<BlogContent blogs={posts} categories={categories}/>} />
+        <Route path="/blog/:slug" element={<BlogContent blogs={posts} categories={categories}/>} />
         <Route path="/blog/category/:name" element={<CategoryBlogs posts={posts} categories={categories}/>}/>
         {/* <Route path="/careers" element={<CareersPage />} /> */}
         <Route path="/blog3" element={<Blog3 />} />

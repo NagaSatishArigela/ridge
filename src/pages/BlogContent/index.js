@@ -7,24 +7,25 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const BlogContent = ({ blogs, categories }) => {
-  const { blogID } = useParams();
+  const { slug } = useParams();
   const [blog, setBlog] = useState({});
   const [relatedPosts, setRelatedPosts] = useState([]);
   
   useEffect(() => {
     if (blogs) {
-      const currentBlog = blogs.find((blog) => blog.id === blogID);
+      const currentBlog = blogs.find((blog) => blog.slug === slug);
       setBlog(currentBlog);
 
       if (currentBlog) {
         const currentBlogCategoryIds = currentBlog.categories.map((ccat) => ccat.id);
         const related = blogs.filter(
-          (b) => b.categories.some((cat) => currentBlogCategoryIds.includes(cat.id)) && b.id !== blogID
+          (b) => b.categories.some((cat) => currentBlogCategoryIds.includes(cat.id)) && b.slug !== slug
         );
         setRelatedPosts(related);
       }
     }
-  }, [blogID, blogs]);
+    window.scrollTo(0, 0);
+  }, [slug, blogs]);
 
   const responsive = {
     superLargeDesktop: {
@@ -92,7 +93,7 @@ const BlogContent = ({ blogs, categories }) => {
                   {relatedPosts.map((post) => (
                     <Link
                       key={post.id}
-                      to={`/blog/${post.id}`}
+                      to={`/blog/${post.slug}`}
                       style={{ textDecoration: "none", color: "#000" }}
                     >
                       <div className="related-post-card">
@@ -113,7 +114,7 @@ const BlogContent = ({ blogs, categories }) => {
                   {relatedPosts.map((post) => (
                     <Link
                       key={post.id}
-                      to={`/blog/${post.id}`}
+                      to={`/blog/${post.slug}`}
                       style={{ textDecoration: "none", color: "#000" }}
                     >
                       <div key={post.id} className="related-post-card">
