@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Helmet } from "react-helmet";
-import Banner from "../../assets/images/kshetrabanner1.png";
+import Banner from "../../assets/images/1800 x 600 kshetra-01.jpg";
 import ContactBanner from "../../assets/images/contact-form-backside-image.png";
 import Kshetra2 from "../../assets/images/kshetra2.png";
 import KshetraImage1 from "../../assets/images/kshetra b1.png";

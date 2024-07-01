@@ -44,36 +44,36 @@ const teamMembers = [
     linkedin: "#",
     twitter: "#",
   },
-  {
-    image: raghu,
-    name: "Raghu Raj Kumar Balaraju",
-    title: "PROJECT DIRECTOR & ADVISOR",
-    description:
-      "Raghu is a highly experienced Partner and Project Director in the real estate and hospitality industry, with over 40 years of experience. He has a wealth of knowledge and expertise in managing and executing large-scale real estate projects and hospitality ventures. Raghu’s leadership skills and strategic thinking have been instrumental in successfully delivering many high-profile projects at Ridge. He has a keen eye for identifying new business opportunities and has a track record of creating innovative solutions that drive business growth.",
-    facebook: "#",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    image: kalyan,
-    name: "M Kalyan chakaravathy",
-    title: "AGM SALES & OPERATIONS",
-    description:
-      "Experienced AGM in Sales & Operations with 9 years of proven expertise. Proficient in driving revenue growth, optimizing operational efficiency, and leading high-performing teams. Adept at strategic planning, client relationship management, and achieving targets in dynamic markets. Demonstrated ability to streamline processes, enhance customer satisfaction, and deliver results in competitive industries.",
-    facebook: "#",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    image: hema,
-    name: "P Hema",
-    title: "AGM FINANCE",
-    description:
-      "Accomplished AGM in Finance with a decade of extensive experience. Demonstrated proficiency in financial management, budgeting, and strategic planning. Proven track record of optimizing financial performance, reducing costs, and maximizing profitability. Skilled in team leadership, regulatory compliance, and risk management. Adept at leveraging financial insights to drive informed business decisions and achieve organizational objectives.",
-    facebook: "#",
-    linkedin: "#",
-    twitter: "#",
-  },
+  // {
+  //   image: raghu,
+  //   name: "Raghu Raj Kumar Balaraju",
+  //   title: "PROJECT DIRECTOR & ADVISOR",
+  //   description:
+  //     "Raghu is a highly experienced Partner and Project Director in the real estate and hospitality industry, with over 40 years of experience. He has a wealth of knowledge and expertise in managing and executing large-scale real estate projects and hospitality ventures. Raghu’s leadership skills and strategic thinking have been instrumental in successfully delivering many high-profile projects at Ridge. He has a keen eye for identifying new business opportunities and has a track record of creating innovative solutions that drive business growth.",
+  //   facebook: "#",
+  //   linkedin: "#",
+  //   twitter: "#",
+  // },
+  // {
+  //   image: kalyan,
+  //   name: "M Kalyan chakaravathy",
+  //   title: "AGM SALES & OPERATIONS",
+  //   description:
+  //     "Experienced AGM in Sales & Operations with 9 years of proven expertise. Proficient in driving revenue growth, optimizing operational efficiency, and leading high-performing teams. Adept at strategic planning, client relationship management, and achieving targets in dynamic markets. Demonstrated ability to streamline processes, enhance customer satisfaction, and deliver results in competitive industries.",
+  //   facebook: "#",
+  //   linkedin: "#",
+  //   twitter: "#",
+  // },
+  // {
+  //   image: hema,
+  //   name: "P Hema",
+  //   title: "AGM FINANCE",
+  //   description:
+  //     "Accomplished AGM in Finance with a decade of extensive experience. Demonstrated proficiency in financial management, budgeting, and strategic planning. Proven track record of optimizing financial performance, reducing costs, and maximizing profitability. Skilled in team leadership, regulatory compliance, and risk management. Adept at leveraging financial insights to drive informed business decisions and achieve organizational objectives.",
+  //   facebook: "#",
+  //   linkedin: "#",
+  //   twitter: "#",
+  // },
 ];
 
 const AboutUs = () => {
