@@ -30,18 +30,15 @@ import T3 from "../../assets/images/t3.jpg";
 import T4 from "../../assets/images/t4.jpg";
 import T5 from "../../assets/images/t5.jpg";
 import T6 from "../../assets/images/t6.jpg";
-import tranquil1 from "../../assets/images/tranquil/1.jpeg";
-import tranquil2 from "../../assets/images/tranquil/2.jpeg";
-import tranquil3 from "../../assets/images/tranquil/3.jpeg";
-import tranquil4 from "../../assets/images/tranquil/4.jpeg";
-import tranquil5 from "../../assets/images/tranquil/5.jpeg";
-import tranquil6 from "../../assets/images/tranquil/6.jpeg";
-import tranquil7 from "../../assets/images/tranquil/7.jpeg";
-import tranquil8 from "../../assets/images/tranquil/8.jpeg";
-import tranquil9 from "../../assets/images/tranquil/9.jpeg";
-import tranquil10 from "../../assets/images/tranquil/10.jpeg";
-import tranquil11 from "../../assets/images/tranquil/11.jpeg";
-import tranquil12 from "../../assets/images/tranquil/12.jpeg";
+import tranquil1 from "../../assets/images/tranquil/Water Tank.jpg";
+import tranquil2 from "../../assets/images/tranquil/Road watering.jpeg";
+import tranquil3 from "../../assets/images/tranquil/CC Roads.jpg";
+import tranquil4 from "../../assets/images/tranquil/Park Area.jpg";
+import tranquil5 from "../../assets/images/tranquil/Park Grills.jpg";
+import tranquil6 from "../../assets/images/tranquil/Roads Rolling.jpg";
+import tranquil7 from "../../assets/images/tranquil/Site Office.jpg";
+import tranquil8 from "../../assets/images/tranquil/trees translocation.jpg";
+import tranquil9 from "../../assets/images/tranquil/Electrical Transformer.jpg";
 import graph from "../../assets/images/Graph.jpg";
 import RightImageLeftText from "../../components/RightImageLeftText";
 import "../../components/Styles/styles.css";
@@ -184,71 +181,44 @@ const images = [
   tranquil7,
   tranquil8,
   tranquil9,
-  tranquil10,
-  tranquil11,
-  tranquil12,
 ];
 
 const formattedImages = [
   {
-    title: "Title 1",
-    description: "Description 1",
+    title: "Water Tank",
     image: images[0],
   },
   {
-    title: "Title 2",
-    description: "Description 2",
+    title: "Road watering",
     image: images[1],
   },
   {
-    title: "Title 3",
-    description: "Description 3",
+    title: "CC Roads",
     image: images[2],
   },
   {
-    title: "Title 4",
-    description: "Description 3",
+    title: "Park Area",
     image: images[3],
   },
   {
-    title: "Title 5",
-    description: "Description 3",
+    title: "Park Grills",
     image: images[4],
   },
   {
-    title: "Title 6",
-    description: "Description 3",
+    title: "Roads Rolling",
     image: images[5],
   },
   {
-    title: "Title 7",
-    description: "Description 3",
+    title: "Site Office",
     image: images[6],
   },
   {
-    title: "Title 8",
-    description: "Description 3",
+    title: "trees translocation",
     image: images[7],
   },
   {
-    title: "Title 9",
-    description: "Description 3",
+    title: "Electrical Transformer",
     image: images[8],
-  },
-  {
-    title: "Title 10",
-    description: "Description 3",
-    image: images[9],
-  },
-  {
-    title: "Title 11",
-    description: "Description 3",
-    image: images[10],
-  },
-  {
-    title: "Title 12",
-    description: "Description 3",
-    image: images[11],
   },
 ];
 
@@ -301,8 +271,8 @@ function Tranquil() {
       <div className="card">
         <img src={image} alt={title} className="card-image" />
         <div className="card-content">
-          <h5 className="card-title">{title}</h5>
-          <p className="card-description">{description}</p>
+          <h5 className="card-title" style={{textAlign: 'center'}}>{title}</h5>
+          {description && <p className="card-description">{description}</p>}
         </div>
       </div>
     );

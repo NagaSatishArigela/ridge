@@ -11,6 +11,7 @@ const Blogs = ({ Blogs }) => {
 
   const handleClick = (event) => {
     setCurrentPage(Number(event.target.id));
+    window.scrollTo(0, 0);
   };
 
   const pages = [];
