@@ -121,7 +121,7 @@ function TilesSection(props) {
               {item.title ? (
                 <>
                   {" "}
-                  <img src={item?.image} alt="blog image" />
+                  <img src={item?.image} alt="blog image" className="banBorder" />
                   {item.heading ? (
                     <h3>{item?.heading}</h3>
                   ) : item.title ? (
