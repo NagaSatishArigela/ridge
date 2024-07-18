@@ -1,6 +1,8 @@
 import { GraphQLClient, gql } from "graphql-request";
 
-export const grahcms = new GraphQLClient('https://api-ap-south-1.hygraph.com/v2/clx1p27gj02r707uqpglxbfpq/master')
+export const grahcms = new GraphQLClient(
+  "https://api-ap-south-1.hygraph.com/v2/clx1p27gj02r707uqpglxbfpq/master"
+);
 
 const category = `
   id
@@ -22,6 +24,18 @@ const post = `
   slug
 `;
 
+const career = `
+  image {
+      url
+      createdAt
+    }
+    title
+    location
+    jobDescription {
+      html
+    }
+  `;
+
 export const QUERY_SLUG_CATEGORIES = gql`
   {
     categories {
@@ -37,6 +51,14 @@ export const QUERY_SLUG_POSTS = gql`
       categories {
         ${category}
       }
+    }
+  }
+`;
+
+export const QUERY_SLUG_CAREERS = gql`
+  {
+    careers {
+      ${career}
     }
   }
 `;

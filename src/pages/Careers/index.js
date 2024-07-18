@@ -3,6 +3,7 @@ import "./index.css";
 import careerBanner from "../../assets/images/07012020_VE_Real-Estate_-Linkedin-Background_07152020-min.png";
 import Header from "../../components/TopHeader";
 import JobModal from "../../components/JobModal";
+import { QUERY_SLUG_CAREERS, grahcms } from "../../utils/Queries";
 
 const CareersPage = () => {
   const [careersData, setCareersData] = useState([]);
@@ -42,26 +43,17 @@ const CareersPage = () => {
     },
   ];
 
-  async function getApi(url) {
-    try {
-      const response = await fetch(url);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error:", error);
-      return null;
-    }
-  }
-
   useEffect(() => {
-    getApi("https://blog.ridgehomes.in/api/careers")
-      .then((data) => setCareersData(data))
-      .catch((error) => console.error("Error:", error));
+    const fetchCareers = async () => {
+      try {
+        const data = await grahcms.request(QUERY_SLUG_CAREERS);
+        setCareersData(data.careers);
+      } catch (error) {
+        console.error('Error fetching careers:', error);
+      }
+    };
+
+    fetchCareers();
   }, []);
 
   const openModal = (job) => {
@@ -100,10 +92,10 @@ const CareersPage = () => {
           <div className="jobs-grid">
             {careersData && careersData?.map((job, index) => (
               <div key={index} className="job-card">
-                <img src={job.cardImage} alt={job.jobTitle} className="job-image" />
+                <img src={job.image.url} alt={job.title} className="job-image" />
                 <div className="job-content">
-                  <h3 className="job-title">{job.jobTitle}</h3>
-                  <p className="job-details">Job Title: {job.jobTitle}</p>
+                  <h3 className="job-title">{job.title}</h3>
+                  <p className="job-details">Job Title: {job.title}</p>
                   <p className="job-details">Location: {job.location}</p>
                   <button className="know-more-button" onClick={() => openModal(job)}>Know More</button>
                 </div>

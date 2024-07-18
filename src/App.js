@@ -81,7 +81,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/careers" element={<SiteMaintenance />} />
+        {/* <Route path="/careers" element={<SiteMaintenance />} /> */}
         <Route path="/vision" element={<ComingSoon />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/kshetra" element={<Navigate to="/projects/kshetra" />} />
@@ -119,7 +119,7 @@ function App() {
         <Route path="/blogs" element={<Blogs Blogs={posts} />} />
         <Route path="/blog/:slug" element={<BlogContent blogs={posts} categories={categories}/>} />
         <Route path="/blog/category/:name" element={<CategoryBlogs posts={posts} categories={categories}/>}/>
-        {/* <Route path="/careers" element={<CareersPage />} /> */}
+        <Route path="/careers" element={<CareersPage />} />
         <Route path="/blog3" element={<Blog3 />} />
         <Route path="/iso-certified" element={<ISOCertified/>} />
         <Route
