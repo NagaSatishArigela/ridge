@@ -210,7 +210,7 @@ function HomeContactForm(props) {
   return (
     <>
       <div className="contact-form">
-        <h3>Get in touch</h3>
+        <h3>Book Your Site Visit Now</h3>
         {send && (
           <div className="toast">
             <i className="fa fa-check-circle"></i> Information Sent

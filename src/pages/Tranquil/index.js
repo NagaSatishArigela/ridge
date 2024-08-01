@@ -189,35 +189,35 @@ const formattedImages = [
     image: images[0],
   },
   {
-    title: "Road watering",
+    title: "Watering the Roads",
     image: images[1],
   },
   {
     title: "CC Roads",
     image: images[2],
   },
+  // {
+  //   title: "Park Area",
+  //   image: images[3],
+  // },
   {
     title: "Park Area",
-    image: images[3],
-  },
-  {
-    title: "Park Grills",
     image: images[4],
   },
   {
-    title: "Roads Rolling",
+    title: "Work in progress",
     image: images[5],
   },
   {
-    title: "Site Office",
+    title: "Site View",
     image: images[6],
   },
   {
-    title: "trees translocation",
+    title: "Trees Translocation",
     image: images[7],
   },
   {
-    title: "Electrical Transformer",
+    title: "Transformer",
     image: images[8],
   },
 ];
@@ -291,7 +291,7 @@ function Tranquil() {
         />
       </Helmet>
       <HomeBanner bannerImage={Banner} />
-      <RightImageLeftText data={rightImage} />
+      {/* <RightImageLeftText data={rightImage} /> */}
       {/* <HomeBanner bannerImage={Kshetra2}/> */}
       <section className="tImages">
         <div className="container-m">
@@ -357,7 +357,7 @@ function Tranquil() {
       </div>
       <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
       <div className="container-m">
-        <h2 style={{ padding: "0 0 30px 0", margin: "auto" }}>Gallery</h2>
+        <h2 style={{ padding: "0 0 30px 0", margin: "auto" }}>Developments</h2>
         <div className="card-container">
       {formattedImages.map((image, index) => (
         <CustomCard

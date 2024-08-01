@@ -72,11 +72,11 @@ const CareersPage = () => {
       <div className="careers-page">
         <header className="bannerc">
           <div className="banner-overlay">
-            <img
+            {/* <img
               src={careerBanner}
               alt="Career Opportunities"
               className="banner-image"
-            />
+            /> */}
             <div className="banner-text">
               <h1>Career Opportunities</h1>
               <p>
