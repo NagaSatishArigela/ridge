@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 // import Banner from "../../assets/images/Tranquil valley banner.jpg";
 import ContactBanner from "../../assets/images/contactBackground.png";
 import Banner from "../../assets/images/1800 x 600 tv banner-01 (1)[1].jpg";
-import Tranquil1 from "../../assets/images/tranquil1.png";
+import Tranquil1 from "../../assets/images/Tranquil Valley  images-06.jpg";
 import Tranquil2 from "../../assets/images/tranquil2.jpeg";
 import Image1 from "../../assets/images/tranq1.png";
 import Image2 from "../../assets/images/tranq2.png";
@@ -291,7 +291,7 @@ function Tranquil() {
         />
       </Helmet>
       <HomeBanner bannerImage={Banner} />
-      {/* <RightImageLeftText data={rightImage} /> */}
+      <RightImageLeftText data={rightImage} />
       {/* <HomeBanner bannerImage={Kshetra2}/> */}
       <section className="tImages">
         <div className="container-m">
