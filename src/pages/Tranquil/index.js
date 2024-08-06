@@ -2,8 +2,8 @@ import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
 // import Banner from "../../assets/images/Tranquil valley banner.jpg";
 import ContactBanner from "../../assets/images/contactBackground.png";
-import Banner from "../../assets/images/1800 x 600 tv banner-01 (1)[1].jpg";
-import Tranquil1 from "../../assets/images/Tranquil Valley  images-06.jpg";
+import Banner from "../../assets/images/1800 x 600 tv banner 2-01.jpg";
+import Tranquil1 from "../../assets/images/tranquil1.png";
 import Tranquil2 from "../../assets/images/tranquil2.jpeg";
 import Image1 from "../../assets/images/tranq1.png";
 import Image2 from "../../assets/images/tranq2.png";
@@ -24,7 +24,7 @@ import Image16 from "../../assets/images/Footpath Tiles (1).png";
 import Image17 from "../../assets/images/Harvesting pits.png";
 import HomeBanner from "../../components/HomeBanner";
 import HomeContact from "../../components/HomeContact";
-import T1 from "../../assets/images/t1.jpg";
+import T1 from "../../assets/images/Tranquil Valley  images-06.jpg";
 import T2 from "../../assets/images/t2.jpg";
 import T3 from "../../assets/images/t3.jpg";
 import T4 from "../../assets/images/t4.jpg";
@@ -53,7 +53,7 @@ import UnlockModal from "../../components/unlockModal";
 import "./index.css";
 
 const rightImage = {
-  heading: "Tranquil Valley",
+  heading: "Invest in Your Happiness, Future & Tranquility Villa Plots @ Maheswaram",
   description:
     "A project that gives you the best of both worlds. The proximity to industrial hubs ensures easy access while experiencing the serenity of nature simultaneously.  Located in Maheshwaram, Tranquil Valley stays true to its name. The serene surroundings make the project a great choice for families looking to settle down. Apart from being an excellent location for housing purposes, Tranquil is also a great investment opportunity for those looking to diversify. Tranquil Valley is the final product of years of industry research. Equipped with contemporary villas, and spacious plots, Tranquil Valley is yet another accomplishment in the world of Ridge.",
   image: Tranquil1,

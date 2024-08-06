@@ -11,9 +11,9 @@ function RightImageLeftText(props) {
                     <img src={data.image} alt="right image" />
                 </div> 
                 <div className='left-text'>
-                    <h3>{data?.heading}</h3> 
+                    <h3 style={{fontSize: '24px'}}>{data?.heading}</h3> 
                     {data?.elivation && <p className='elivation'>{data?.elivation}</p>}
-                    <p>{data?.description}</p>
+                    <p style={{textAlign: 'justify'}}>{data?.description}</p>
                     {data.lists && 
                     <ul>   
                     {data.lists.map(item => <li>{item.list}</li>)}
