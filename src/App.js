@@ -84,8 +84,9 @@ function App() {
         {/* <Route path="/careers" element={<SiteMaintenance />} /> */}
         <Route path="/vision" element={<ComingSoon />} />
         <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/kshetra" element={<Navigate to="/projects/kshetra" />} />
-        <Route path="/projects/kshetra" element={<Kshetra />} />
+        <Route path="/kshetra" element={<Navigate to="/open-plots-in-shankarpally/kshetra" />} />
+        <Route path="/projects/kshetra" element={<Navigate to="/open-plots-in-shankarpally/kshetra" />} />
+        <Route path="/open-plots-in-shankarpally/kshetra" element={<Kshetra />} />
         <Route path="/plots-in-shankarpally" element={<KshetraLanding />} />
         <Route path="/plots-in-maheshwaram" element={<TranquilLanding />} />
         <Route
@@ -94,14 +95,22 @@ function App() {
         />
         <Route
           path="/tranquilvalley"
-          element={<Navigate to="/projects/tranquilvalley" />}
+          element={<Navigate to="/open-plots-in-maheshwaram/tranquilvalley" />}
         />
-        <Route path="/projects/tranquilvalley" element={<Tranquil />} />
+        <Route
+          path="/projects/tranquilvalley"
+          element={<Navigate to="/open-plots-in-maheshwaram/tranquilvalley" />}
+        />
+        <Route path="/open-plots-in-maheshwaram/tranquilvalley" element={<Tranquil />} />
         <Route
           path="/sunrisecity"
-          element={<Navigate to="/projects/sunrisecity" />}
+          element={<Navigate to="/plots-in-sultanpur-hyderabad/sunrisecity" />}
         />
-        <Route path="/projects/sunrisecity" element={<SunRise />} />
+        <Route
+          path="/projects/sunrisecity"
+          element={<Navigate to="/plots-in-sultanpur-hyderabad/sunrisecity" />}
+        />
+        <Route path="/plots-in-sultanpur-hyderabad/sunrisecity" element={<SunRise />} />
         <Route
           path="/springcity"
           element={<Navigate to="/projects/springcity" />}

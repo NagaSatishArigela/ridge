@@ -16,11 +16,11 @@ const menuItems = [
         submenu: [
           {
             title: "Kshetra",
-            link: "projects/kshetra",
+            link: "open-plots-in-shankarpally/kshetra",
           },
           {
             title: "Tranquil Valley",
-            link: "projects/tranquilvalley",
+            link: "open-plots-in-maheshwaram/tranquilvalley",
           },
         ],
       },
@@ -34,7 +34,7 @@ const menuItems = [
           },
           {
             title: "Sunrise City",
-            link: "projects/sunrisecity",
+            link: "plots-in-sultanpur-hyderabad/sunrisecity",
           },
         ],
       },
