@@ -41,7 +41,7 @@ import tranquil8 from "../../assets/images/tranquil/trees translocation.jpg";
 import tranquil9 from "../../assets/images/tranquil/Electrical Transformer.jpg";
 import tranquil10 from "../../assets/images/tranquil/overhead tank.jpg";
 import tranquil11 from "../../assets/images/tranquil/harvesting pits.jpg";
-import tranquil12 from "../../assets/images/tranquil/Site Office.jpg";
+import tranquil12 from "../../assets/images/tranquil/Site office .jpg";
 import tranquil13 from "../../assets/images/tranquil/Site View.jpg";
 import tranquil14 from "../../assets/images/tranquil/Under ground water pipe line.jpg";
 import tranquil15 from "../../assets/images/tranquil/Underground drainage system.jpg";
@@ -196,14 +196,14 @@ const images = [
 ];
 
 const formattedImages = [
-  {
-    title: "Water Tank",
-    image: images[0],
-  },
-  {
-    title: "Watering the Roads",
-    image: images[1],
-  },
+  // {
+  //   title: "Water Tank",
+  //   image: images[0],
+  // },
+  // {
+  //   title: "Watering the Roads",
+  //   image: images[1],
+  // },
   {
     title: "CC Roads",
     image: images[2],
@@ -216,22 +216,22 @@ const formattedImages = [
     title: "Park Area",
     image: images[4],
   },
-  {
-    title: "Work in progress",
-    image: images[5],
-  },
-  {
-    title: "Site View",
-    image: images[6],
-  },
-  {
-    title: "Trees Translocation",
-    image: images[7],
-  },
-  {
-    title: "Transformer",
-    image: images[8],
-  },
+  // {
+  //   title: "Work in progress",
+  //   image: images[5],
+  // },
+  // {
+  //   title: "Site View",
+  //   image: images[6],
+  // },
+  // {
+  //   title: "Trees Translocation",
+  //   image: images[7],
+  // },
+  // {
+  //   title: "Transformer",
+  //   image: images[8],
+  // },
   {
     title: "Overhead Tank",
     image: images[9],
@@ -244,10 +244,10 @@ const formattedImages = [
     title: "Site Office",
     image: images[11],
   },
-  // {
-  //   title: "Site View",
-  //   image: images[12],
-  // },
+  {
+    title: "Site View",
+    image: images[12],
+  },
   {
     title: "Underground Water Pipeline",
     image: images[13],
