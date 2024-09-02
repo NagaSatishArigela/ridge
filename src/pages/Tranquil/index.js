@@ -39,6 +39,12 @@ import tranquil6 from "../../assets/images/tranquil/Roads Rolling.jpg";
 import tranquil7 from "../../assets/images/tranquil/Site Office.jpg";
 import tranquil8 from "../../assets/images/tranquil/trees translocation.jpg";
 import tranquil9 from "../../assets/images/tranquil/Electrical Transformer.jpg";
+import tranquil10 from "../../assets/images/tranquil/overhead tank.jpg";
+import tranquil11 from "../../assets/images/tranquil/harvesting pits.jpg";
+import tranquil12 from "../../assets/images/tranquil/Site Office.jpg";
+import tranquil13 from "../../assets/images/tranquil/Site View.jpg";
+import tranquil14 from "../../assets/images/tranquil/Under ground water pipe line.jpg";
+import tranquil15 from "../../assets/images/tranquil/Underground drainage system.jpg";
 import graph from "../../assets/images/Graph.jpg";
 import RightImageLeftText from "../../components/RightImageLeftText";
 import "../../components/Styles/styles.css";
@@ -181,6 +187,12 @@ const images = [
   tranquil7,
   tranquil8,
   tranquil9,
+  tranquil10,
+  tranquil11,
+  tranquil12,
+  tranquil13,
+  tranquil14,
+  tranquil15
 ];
 
 const formattedImages = [
@@ -219,6 +231,30 @@ const formattedImages = [
   {
     title: "Transformer",
     image: images[8],
+  },
+  {
+    title: "Overhead Tank",
+    image: images[9],
+  },
+  {
+    title: "Harvesting Pits",
+    image: images[10],
+  },
+  {
+    title: "Site Office",
+    image: images[11],
+  },
+  // {
+  //   title: "Site View",
+  //   image: images[12],
+  // },
+  {
+    title: "Underground Water Pipeline",
+    image: images[13],
+  },
+  {
+    title: "Underground Drainage System",
+    image: images[14],
   },
 ];
 
