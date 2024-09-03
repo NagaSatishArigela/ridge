@@ -74,7 +74,7 @@ const projectHightlights = [
   { text: "Yoga", image: Image6 },
   { text: "Sports children's park", image: Image7 },
   { text: "24/7 SECURITY", image: Image8 },
-  { text: "cricket Nets & Badminton", image: Image9 },
+  // { text: "cricket Nets & Badminton", image: Image9 },
   { text: "Under Ground Electricity & Modern street lights", image: Image10 },
   { text: "Underground drainage system", image: Image11 },
   { text: "Overhead water tank with waterlines", image: Image12 },
