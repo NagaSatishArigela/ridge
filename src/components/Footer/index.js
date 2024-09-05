@@ -27,7 +27,7 @@ function Footer() {
                     <Link to="/projects">Projects</Link>
                 </li>
                 <li>
-                    <Link to="/aboutus">About us</Link>
+                    <Link to="/about-us">About us</Link>
                     {/* <a href="https://ridgehomes.in/about-us/">About us</a> */}
                 </li>
                 <li>
