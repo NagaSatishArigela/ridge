@@ -11,10 +11,10 @@ function Blog1() {
         <div className="container-m">
           <ul>
             <li>
-                <a href='tel:7775857777'><i class="fa fa-phone"></i> +91 7775857777</a>
+                <a href='tel:7775857777'><i className="fa fa-phone"></i> +91 7775857777</a>
             </li>
             <li>
-            <a href='mailto:info@ridgehomes.in'><i class="fa fa-envelope"></i> info@ridgehomes.in</a>
+            <a href='mailto:info@ridgehomes.in'><i className="fa fa-envelope"></i> info@ridgehomes.in</a>
             
             </li>
           </ul>

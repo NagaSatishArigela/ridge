@@ -3,10 +3,7 @@ import TestiMonialsDetails from '../TestiMonialsDetails/TestiMonialsDetails'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-// import userPic from '../../image/user-one.png';
 import Testimonials1 from '../../assets/images/Gagan IT EMPLOYEE.jpeg';
-import Testimonials2 from '../../assets/images/Ramireddy Business.jpeg';
-import Testimonials3 from '../../assets/images/Ramesh Reddy BHEL Employee.jpeg';
 import './TestiMonials.css';
 
 const TestiMonials = () => {
@@ -73,13 +70,13 @@ const TestiMonials = () => {
                         <OwlCarousel id="customer-testimonoals" className="owl-carousel owl-theme" {...options}>
                             {
                                 testiMonials.length === 0 ?
-                                    <div class="item">
-                                        <div class="shadow-effect">
-                                            <img class="img-circle" src={Testimonials1} />
+                                    <div className="item">
+                                        <div className="shadow-effect">
+                                            <img className="img-circle" alt='testimonial' src={Testimonials1} loading='lazy'/>
 
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                                         </div>
-                                        <div class="testimonial-name">
+                                        <div className="testimonial-name">
                                             <h5>Rajon Rony</h5>
                                             <small>ITALY</small>
                                         </div>

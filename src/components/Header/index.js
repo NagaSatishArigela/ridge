@@ -122,7 +122,6 @@ const MenuItems = ({ items, depthLevel, setMenuChecked, isMobile }) => {
       ) : (
         <NavLink
           onClick={closeDropdown}
-          activeClassName="active"
           to={`/${items.link}`}
         >
           {items.title}
@@ -145,7 +144,7 @@ function Header() {
             <img src={logo} alt="logo" />
           </Link>
         </div>
-        <i class="fa fa-bars" onClick={handleMenu}></i>
+        <i className="fa fa-bars" onClick={handleMenu}></i>
         {isMobile && menuChecked && (
           <div className="menu">
             <ul>

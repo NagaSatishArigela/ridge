@@ -11,7 +11,7 @@ import videoNext3 from "../../assets/images/3 images.png";
 import blog1 from "../../assets/images/ISO  1280 x 720-01.jpg";
 import blog2 from "../../assets/images/TV  1280 x 720-01.jpg";
 import blog3 from "../../assets/images/kshetra  1280 x 720-01.jpg";
-import backImage from "../../assets/images/contact-form-backside-image.png";
+import "./banner.css";
 
 import "../Styles/styles.css";
 import HomeBanner from "../HomeBanner";
@@ -117,17 +117,25 @@ function TilesSection(props) {
               className={
                 item.title ? "banner-next banner-next-title" : "banner-next"
               }
+              key={item.title}
             >
               {item.title ? (
                 <>
                   {" "}
-                  <img src={item?.image} alt="blog image" className="banBorder" />
+                  <img
+                    src={item?.image}
+                    alt="blog image"
+                    className="banBorder"
+                    loading="lazy"
+                  />
                   {item.heading ? (
                     <h3>{item?.heading}</h3>
                   ) : item.title ? (
                     <>
                       <h3>{item?.title}</h3>
-                      <p className="truncate-description">{item?.description}</p>
+                      <p className="truncate-description">
+                        {item?.description}
+                      </p>
                       <a href={`${item.link}`}>Read More</a>
                     </>
                   ) : (
@@ -139,7 +147,7 @@ function TilesSection(props) {
                 </>
               ) : (
                 <Link to={item?.link}>
-                  <img src={item?.image} alt="blog image" />
+                  <img src={item?.image} alt="blog image" loading="lazy" />
                   {item.heading ? (
                     <h3>{item?.heading}</h3>
                   ) : item.title ? (
@@ -180,33 +188,41 @@ function HomeSections() {
           </span>
         </div>
       </div>
-      <section>
-        {/* <TilesSection data={bannerNext}/> */}
-        <div style={{margin: 'auto'}}>
-          <div className="banner-next-section">
-            {bannerNext.map((item) => (
-              <div
-                className={
-                  item.title ? "banner-next banner-next-title" : "banner-next"
-                }
-              >
-                <Link to={`/${item?.link}`}>
-                  <img src={item?.image} alt="blog" />
-                  <h3>{item?.title}</h3>
-                  <p>{item?.text}</p>
-                  <p>
-                    <b>{item?.hmda}</b>
-                  </p>
-                  <p>
-                    <b>{item?.rera}</b>
-                  </p>
-                  <Link to={`/${item?.link}`}>Read More</Link>
-                </Link>
-              </div>
-            ))}
-          </div>
+      <div style={{ margin: "auto" }}>
+        <div className="project-banner-next-section">
+          {bannerNext.map((item) => (
+            <div
+              className={
+                item.title
+                  ? "project-banner-next banner-next-title"
+                  : "project-banner-next"
+              }
+              key={item.link}
+            >
+              <Link to={`/${item?.link}`}>
+                <img
+                  src={item?.image}
+                  alt="blog"
+                  loading="lazy"
+                  width="200px"
+                  height="100px"
+                />
+                <h3>{item?.title}</h3>
+                <p>
+                  <b>{item?.text}</b>
+                </p>
+                <p>
+                  <b>{item?.hmda}</b>
+                </p>
+                <p>
+                  <b>{item?.rera}</b>
+                </p>
+                <p className="read">Read More</p>
+              </Link>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
       {/* <section className="video-section">
       <div className="container-m">
@@ -217,7 +233,7 @@ function HomeSections() {
       {/* <TilesSection data={videoNext} /> */}
 
       <section className="blog-section">
-        <h1 class="latestnews">Latest News</h1>
+        <h1 className="latestnews">Latest News</h1>
         <TilesSection data={blogSec} />
       </section>
     </>

@@ -30,10 +30,10 @@ function Header() {
         <div className="container-m">
           <ul>
             <li>
-                <a href={`tel:${contactDetails ? contactDetails.mobile : '9000888152'}`}><i class="fa fa-phone"></i> +91 {contactDetails ? contactDetails.mobile : '9000888152'}</a>
+                <a href={`tel:${contactDetails ? contactDetails.mobile : '9000888152'}`}><i className="fa fa-phone"></i> +91 {contactDetails ? contactDetails.mobile : '9000888152'}</a>
             </li>
             <li>
-            <a href={`mailto:${contactDetails ? contactDetails.email : 'info@ridgehomes.in'}`}><i class="fa fa-envelope"></i> {contactDetails ? contactDetails.email : 'info@ridgehomes.in'}</a>
+            <a href={`mailto:${contactDetails ? contactDetails.email : 'info@ridgehomes.in'}`}><i className="fa fa-envelope"></i> {contactDetails ? contactDetails.email : 'info@ridgehomes.in'}</a>
             
             </li>
           </ul>

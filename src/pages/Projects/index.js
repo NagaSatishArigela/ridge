@@ -50,10 +50,10 @@ function AllProjects() {
         <div className="container-m">
           <ul>
             <li>
-                <a href='tel:9000888152'><i class="fa fa-phone"></i> +91 9000888152</a>
+                <a href='tel:9000888152'><i className="fa fa-phone"></i> +91 9000888152</a>
             </li>
             <li>
-            <a href='mailto:info@ridgehomes.in'><i class="fa fa-envelope"></i> info@ridgehomes.in</a>
+            <a href='mailto:info@ridgehomes.in'><i className="fa fa-envelope"></i> info@ridgehomes.in</a>
             
             </li>
           </ul>

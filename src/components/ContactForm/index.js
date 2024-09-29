@@ -8,14 +8,26 @@ function HomeContactForm(props) {
   const { page, srd } = props;
   const form = useRef();
   const [send, setSend] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    pageName: page,
+  });
+
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
     let payload;
-    let name = e.target[0].value;
-    let email = e.target[1].value;
-    let number = e.target[2].value;
-    let note = e.target[3].value;
+    let { name, email, phone: number, message: note } = formData;
     console.log(page, "c");
     switch (page) {
       case "Home":
@@ -100,9 +112,6 @@ function HomeContactForm(props) {
         console.log(err);
       });
     let templateId = "template_rolhn2e";
-    // if(page === 'Tranquil') {
-    //     templateId = 'template_xev4rbc';
-    // }
     emailjs
       .sendForm(
         "service_pn8vf29",
@@ -119,6 +128,7 @@ function HomeContactForm(props) {
               setSend(false);
             }, 2000);
             form.current.reset();
+            setFormData({ name: '', email: '', phone: '', message: '', pageName: page });
           }
         },
         (error) => {
@@ -127,8 +137,6 @@ function HomeContactForm(props) {
       );
     var formdata = new FormData();
     formdata.append("phonefax", number);
-    // formdata.append("rep_id", "donald");
-    // formdata.append("channel_id", "Helpdesk");
     formdata.append("channel_id", page);
     formdata.append("subject", "Lead from Website");
     let lead;
@@ -141,11 +149,8 @@ function HomeContactForm(props) {
     } else {
       lead = "Lead from Website";
     }
-    // formdata.append("email", "donald@gmail.com");
     formdata.append("email", email);
     formdata.append("f_name", name);
-    // formdata.append("subject", "Lead from Google Campaign");
-    // formdata.append("queryid", "45647");
     formdata.append("notes", note);
     const api_key = "qHzq2IAp6Fyr2ztLLqyuv3ty3t";
     const api_key2 = "9a18874a712cc3d4e63c6f34df1587d1";
@@ -191,20 +196,6 @@ function HomeContactForm(props) {
         console.error(error);
         // Handle the error here
       });
-
-    // emailjs.sendForm('service_pn8vf29', templateId, form.current, 'RIdumvJqbANv7cRbb')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //       if(result) {
-    //         setSend(true);
-    //         setTimeout(() => {
-    //             setSend(false);
-    //         }, 2000);
-    //         form.current.reset();
-    //       }
-    //   }, (error) => {
-    //       console.log(error.text);
-    // });
   };
 
   return (
@@ -217,19 +208,42 @@ function HomeContactForm(props) {
           </div>
         )}
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="text" name="phone" placeholder="Phone" required />
-          <textarea name="message" placehoder="message"></textarea>
           <input
-            type="pageName"
-            name="pageName"
-            value={page}
-            placeholder="pageName"
-            className="hide"
+            type="text"
+            name="name"
+            placeholder="Name"
             required
+            value={formData.name}
+            onChange={handleChange}
           />
-          {/* <button className='btn'>Send Message</button> */}
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone"
+            required
+            value={formData.phone}
+            onChange={handleChange}
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            value={formData.message}
+            onChange={handleChange}
+          />
+          <input
+            type="hidden"
+            name="pageName"
+            value={formData.pageName}
+            readOnly
+          />
           <input className="btn" type="submit" value="Send Message" />
         </form>
       </div>

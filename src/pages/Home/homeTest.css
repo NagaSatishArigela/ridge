@@ -1,0 +1,21 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap to the next row if they don’t fit */
+    justify-content: space-between; /* Adjust spacing between items */
+    gap: 20px; /* Optional, for gap between items */
+    padding: 20px;
+  }
+  
+  .testimonial-item {
+    
+    max-width: 300px; /* Limit the width to 300px per item */
+    box-sizing: border-box;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .testimonial-item {
+      flex: 1 1 100%; /* On smaller screens, items take full width */
+      max-width: 100%; /* Ensure they don’t exceed the container’s width */
+    }
+  }
+  

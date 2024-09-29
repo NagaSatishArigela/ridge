@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../App.css";
 
 const PageNotFound = ({setPageState}) => {
-    React.useEffect(() => {
+    useEffect(() => {
         setPageState(true);
-    })
+    }, [])
   return (
     <div className="page-not-found">
       <div className="wrapper">

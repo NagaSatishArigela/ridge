@@ -11,9 +11,9 @@ function HomeBanner(props) {
 
   return (
     <section className="banner">
-        <img src={bannerImage} alt="banner image"/>
+        <img src={bannerImage} alt="banner image" loading='lazy'/>
         {landing && 
-          <div class="landing-ads">
+          <div className="landing-ads">
             <HomeContactForm srd="664456705d8deffd47ff9b89" />
           </div>
         }

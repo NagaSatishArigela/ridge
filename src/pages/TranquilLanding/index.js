@@ -87,14 +87,14 @@ function TranquilLanding() {
         {/* <HomeBanner bannerImage={Kshetra2}/> */}
         <section className="tImages">
         <div className="container-m">
-            <img src={T1} />
-            <img src={T2} />
-            <img src={T3} />
+            <img src={T1} alt="t1"/>
+            <img src={T2} alt="t1"/>
+            <img src={T3} alt="t1"/>
         </div>
         <div className="container-m">
-            <img src={T4} />
-            <img src={T5} />
-            <img src={T6} />
+            <img src={T4} alt="t1"/>
+            <img src={T5} alt="t1"/>
+            <img src={T6} alt="t1"/>
         </div>
         </section>
         <ProjectHightlights data={projectHightlights} />

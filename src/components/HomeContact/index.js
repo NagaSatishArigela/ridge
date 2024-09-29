@@ -12,7 +12,7 @@ function HomeContact(props) {
     <>
     <TopHeader />
       <section className="home-contact" style={{backgroundImage: `url(${banner})`}}>
-           <div className="container-m">
+           <div className="container-mc">
                 <div className="contact-l">
                     <h3>Contact Us</h3>
                     { !noContact &&

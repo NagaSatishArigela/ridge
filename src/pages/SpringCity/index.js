@@ -81,14 +81,14 @@ function SpringCity() {
         {/* <HomeBanner bannerImage={Kshetra2}/> */}
         <section className="tImages">
         <div className="container-m">
-            <img src={T1} />
-            <img src={T2} />
-            <img src={T3} />
+            <img src={T1} alt="t1"/>
+            <img src={T2} alt="t2"/>
+            <img src={T3} alt="t3"/>
         </div>
         <div className="container-m">
-            <img src={T4} />
-            <img src={T5} />
-            <img src={T6} />
+            <img src={T4} alt="t4"/>
+            <img src={T5} alt="t5"/>
+            <img src={T6} alt="t6"/>
         </div>
         </section>
         <ProjectHightlights data={projectHightlights} />

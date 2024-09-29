@@ -1,0 +1,62 @@
+/* Project Banner Next Section */
+.project-banner-next-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Display in one row on desktop */
+    gap: 20px;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .project-banner-next-section {
+      grid-template-columns: repeat(2, 1fr); /* Display in two columns on tablets */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .project-banner-next-section {
+      grid-template-columns: 1fr; /* Stack items vertically on mobile */
+    }
+  }
+  
+  /* Individual Project Banner */
+  .project-banner-next {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Adjusting Text Color */
+  .project-banner-next h3, 
+  .project-banner-next p {
+    color: #333; /* Darker text color for better contrast */
+    margin: 10px 0;
+  }
+  
+  .project-banner-next img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area properly */
+  }
+  
+  /* Link Styling with Better Contrast */
+  .project-banner-next a {
+    text-decoration: none;
+    color: #f9ae3a; /* Ensuring link color is visible */
+    font-weight: bold;
+  }
+  
+  .project-banner-next a:hover {
+    color: #e07b1a; /* Add hover state for links */
+  }
+  
+  .read {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f9ae3a !important;
+  }
+  
+  /* Fixing Hover Effects */
+  .read:hover {
+    color: #e07b1a;
+  }
+  

@@ -53,7 +53,7 @@ function Footer() {
             <h3>CONTACT US</h3>
             <ul>
                 <li>
-                    <a href="tel:9000888152"><i class="fa fa-phone"></i>+91 9000888152</a>
+                    <a href="tel:9000888152"><i className="fa fa-phone"></i>+91 9000888152</a>
                 </li>
                 <li>
                     <a href='mailto:info@ridgehomes.in'>info@ridgehomes.in</a>

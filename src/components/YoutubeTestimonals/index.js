@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
-import ReactPlayer from 'react-player/lazy';
+import React from 'react';
 
 const YoutubeTestimonial = ({ videoId }) => {
-  const [showVideo, setShowVideo] = useState(false);
 
-  const handlePlayButtonClick = () => {
-    setShowVideo(true);
-  };
   return (
     <div className="testimonial-container">
     
@@ -15,7 +10,6 @@ const YoutubeTestimonial = ({ videoId }) => {
           height="320px"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
           title="YouTube Video"
-          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>

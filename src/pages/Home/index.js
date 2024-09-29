@@ -1,17 +1,12 @@
 import React from "react";
-import Slider from "react-slick";
 import { Helmet } from "react-helmet";
 import HomeContact from "../../components/HomeContact";
 import HomeSections from "../../components/HomeSections";
 import ContactBanner from "../../assets/images/contactBackground.png";
-import Testimonials1 from "../../assets/images/Gagan IT EMPLOYEE.jpeg";
-import Testimonials2 from "../../assets/images/Ramireddy Business.jpeg";
-import Testimonials3 from "../../assets/images/Ramesh Reddy BHEL Employee.jpeg";
 import "../../components/Styles/styles.css";
 import WhatsAppLink from "../../components/WhatsappLink";
 import YoutubeTestimonial from "../../components/YoutubeTestimonals";
-// import TestiMonials from "../../components/TestiMonials/TestiMonials";
-
+import './homeTest.css';
 const youtubeData = [
   {
     id: 0,
@@ -86,67 +81,15 @@ function Home() {
       </Helmet>
 
       <HomeSections />
+      <div className="testimonials-yt">
       <h3 className="title">Testimonials</h3>
-      {/* <div class="container"> */}
-        {/* <Slider {...settings}>
-          <div>
-            <div class="box">
-              <div class="imgBox">
-                <img src={Testimonials1} alt="testimonials" />
-              </div>
-              <p>
-                {" "}
-                Being an IT professional, I do quite a bit of research on
-                Realestate asset class in order to build a good portfolio for me
-                and my family. I look for specially differentiated products with
-                ample room for growth.{" "}
-              </p>
-              <p>
-                When someone introduced me to Ridge last year, I knew they were
-                just the thing I was looking for. The team is passionate about
-                their products. They go out of their way to design products and
-                fulfill their commitment to customers. One of the finest
-                upcoming players in the space.
-              </p>
-            </div>
-          </div>
-          <div>
-            <div class="box">
-              <div class="imgBox">
-                <img src={Testimonials2} alt="testimonials" />
-              </div>
-              <p>
-                I came across Ridge when I was looking to buy a housing plot
-                from a reliable source. The prime location and growth potential
-                of Tranquil is what attracted me to their venture. They made the
-                whole process simple and hassle-free. I never realized buying
-                land could be this easy
-              </p>
-            </div>
-          </div>
-          <div>
-            <div class="box">
-              <div class="imgBox">
-                <img src={Testimonials3} alt="testimonials" />
-              </div>
-              <p>
-                When I was looking for housing plots with a good offbeat
-                location and access to industrial hubs, I was referred to Ridge.
-                Kshetra's proximity to nature was definitely the selling point
-                for me. They were the perfect choice. Thank you Ridge!
-              </p>
-            </div>
-          </div>
-        </Slider> */}
-        {/* <TestiMonials></TestiMonials> */}
-        {/* <TestiMonials/> */}
-      {/* </div> */}
-      <div className="grid">
+      <div className="flex-container">
         {youtubeData.map((ydata) => (
           <div key={ydata.id} className="testimonial-item">
             <YoutubeTestimonial videoId={ydata.yid} />
           </div>
         ))}
+      </div>
       </div>
       <HomeContact page="Home" banner={ContactBanner} srd="664456705d8deffd47ff9b89"/>
       <WhatsAppLink />
