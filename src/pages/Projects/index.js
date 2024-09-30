@@ -3,10 +3,10 @@ import {
   Link
 } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import BannerNext1 from '../../assets/images/sun-rise-grey-logo.png';
-import BannerNext2 from '../../assets/images/kshetraLogo.jpg';
-import BannerNext3 from '../../assets/images/Tranquil-Valley-300x207.png';
-import BannerNext4 from '../../assets/images/springlogo.png';
+import BannerNext1 from "../../assets/webp/open-plots-for-sale-in-maheshwaram  .webp";
+import BannerNext2 from "../../assets/webp/kshetraLogo.webp";
+import BannerNext3 from "../../assets/webp/hmda-approved-layouts-in-maheshwaram  _1.webp";
+import BannerNext4 from "../../assets/webp/plots in hyderabad.webp";
 import WhatsAppLink from "../../components/WhatsappLink";
 import '../../components/Styles/styles.css';
 
