@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Banner from "../../assets/images/banner.jpeg";
-import BannerNext1 from "../../assets/images/sun-rise-grey-logo.png";
-import BannerNext2 from "../../assets/images/kshetraLogo.jpg";
-import BannerNext3 from "../../assets/images/Tranquil-Valley-300x207.png";
-import BannerNext4 from "../../assets/images/springlogo.png";
+import Banner from "../../assets/webp/plots for sale in shankarpally hyderabad.webp";
+import BannerNext1 from "../../assets/webp/open-plots-for-sale-in-maheshwaram  .webp";
+import BannerNext2 from "../../assets/webp/kshetraLogo.webp";
+import BannerNext3 from "../../assets/webp/hmda-approved-layouts-in-maheshwaram  _1.webp";
+import BannerNext4 from "../../assets/webp/plots in hyderabad.webp";
 import videoNext1 from "../../assets/images/legacy copy.png";
 import videoNext2 from "../../assets/images/2 image.png";
 import videoNext3 from "../../assets/images/3 images.png";
-import blog1 from "../../assets/images/ISO  1280 x 720-01.jpg";
-import blog2 from "../../assets/images/TV  1280 x 720-01.jpg";
-import blog3 from "../../assets/images/kshetra  1280 x 720-01.jpg";
+import blog1 from "../../assets/webp/property for sale in hyderabad.webp";
+import blog2 from "../../assets/webp/ventures-in-shankarpally.webp";
+import blog3 from "../../assets/webp/maheshwaram hmda plots_1.webp";
 import "./banner.css";
 
 import "../Styles/styles.css";

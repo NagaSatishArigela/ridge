@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import HomeContact from "../../components/HomeContact";
 import HomeSections from "../../components/HomeSections";
-import ContactBanner from "../../assets/images/contactBackground.png";
+import ContactBanner from "../../assets/webp/maheshwaram-plots-price .webp";
 import "../../components/Styles/styles.css";
 import WhatsAppLink from "../../components/WhatsappLink";
 import YoutubeTestimonial from "../../components/YoutubeTestimonals";
