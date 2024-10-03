@@ -19,21 +19,21 @@ import HomeBanner from "../HomeBanner";
 const bannerNext = [
   {
     image: BannerNext2,
-    text: "Where modernity embraces tradition, & life moves at a majestic pace.Where nature-centric traditions make a grand comeback.",
     link: "projects/kshetra",
+    hmda: "HMDA LP No:- 135/2024/H",
   },
   {
     image: BannerNext3,
     // text : "A project that gives you the best of both worlds. The proximity to industrial hubs ensures easy access while",
     link: "projects/tranquilvalley",
-    hmda: "HMDA No:- 055926/SMD/LT/U6/HMDA/22072022",
-    rera: "RERA:- Po2400005589",
+    hmda: "HMDA LP No:- 000038/LO/PLG/HMDA/2023",
+    rera: "RERA:- P02400005589",
   },
   {
     image: BannerNext1,
     // text : "A project located in the high-rising growth corridor of the ORR and close to one of India's leading Industrial hubs. ",
     link: "projects/sunrisecity",
-    hmda: "HMDA No:- 000186/LO/PLG/HMDA/2022",
+    hmda: "HMDA LP No:- 000186/LO/PLG/HMDA/2022",
     rera: "RERA:- P01100005222",
   },
   {
