@@ -12,7 +12,7 @@ const bannerNext = [
   {
     image: BannerNext2,
     link: "projects/kshetra",
-    hmda: "HMDA LP No:- 135/2024/H",
+    hmda: "DTCP LP No:- 135/2024/H",
   },
   {
     image: BannerNext3,
