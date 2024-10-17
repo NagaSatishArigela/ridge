@@ -50,7 +50,7 @@ const BlogContent = ({ blogs, categories }) => {
     <>
       <Header />
       <div className="w-full pb-10 bg-gray-100">
-        <div className="container mx-auto">
+        <div className="containerl mx-auto">
           <div className="grid-container">
             {/* First Column */}
             <div className="blog-content">

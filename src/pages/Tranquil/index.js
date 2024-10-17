@@ -59,7 +59,8 @@ import UnlockModal from "../../components/unlockModal";
 import "./index.css";
 
 const rightImage = {
-  heading: "Invest in Your Happiness, Future & Tranquility Villa Plots @ Maheswaram",
+  heading:
+    "Invest in Your Happiness, Future & Tranquility Villa Plots @ Maheswaram",
   description:
     "A project that gives you the best of both worlds. The proximity to industrial hubs ensures easy access while experiencing the serenity of nature simultaneously.  Located in Maheshwaram, Tranquil Valley stays true to its name. The serene surroundings make the project a great choice for families looking to settle down. Apart from being an excellent location for housing purposes, Tranquil is also a great investment opportunity for those looking to diversify. Tranquil Valley is the final product of years of industry research. Equipped with contemporary villas, and spacious plots, Tranquil Valley is yet another accomplishment in the world of Ridge.",
   image: Tranquil1,
@@ -85,8 +86,8 @@ const projectHightlights = [
 ];
 
 const highlightPoints = [
-  { text: "15 Mins Drive to Exit 14 Thukkuguda" },
-  { text: "15 Mins Drive to Exit 15 Pedda Golonda" },
+  { text: "15 Mins Drive to Exit 14 Tukkuguda" },
+  { text: "15 Mins Drive to Exit 15 Pedda Golconda" },
   { text: "15 Mins Drive to Statue of Equality" },
   { text: "10 Mins Drive to Srisailam Highway" },
   { text: "10 Mins Drive to Bangalore Highway" },
@@ -105,7 +106,8 @@ const faqs = [
   {
     question:
       "Q. What is Ridge Tranquil Valley project and where is it Located?",
-    answer: "A. Ridge Tranquil Valley is a prestigious villa plot development located in the serene environs of Maheshwaram, right next to the bustling Electronic SEZ",
+    answer:
+      "A. Ridge Tranquil Valley is a prestigious villa plot development located in the serene environs of Maheshwaram, right next to the bustling Electronic SEZ",
   },
   {
     question: "Q. What are the Location advantages of Ridge Tranquil Valley?",
@@ -119,7 +121,8 @@ const faqs = [
   },
   {
     question: "Q. What is the size of the Plot?",
-    answer: "A. Choose from a range of plot sizes, from 200 square yards to 333 square yards, perfect for building your dream villa",
+    answer:
+      "A. Choose from a range of plot sizes, from 200 square yards to 333 square yards, perfect for building your dream villa",
   },
   {
     question: "Q. How much Bank Loan Available?",
@@ -140,10 +143,11 @@ const faqs = [
       "* Water harvesting pits promoting sustainability\n" +
       "* Lush avenue and park plantation enhancing the green cover\n" +
       "* Overhead water tanks ensuring a steady water supply",
-},
+  },
   {
     question: "Q. What is the initial booking amount?",
-    answer: "A. Secure your spot in this premium community with an initial booking amount of just ₹2,00,000.",
+    answer:
+      "A. Secure your spot in this premium community with an initial booking amount of just ₹2,00,000.",
   },
   {
     question: "Q. Is the Ridge Tranquil valley registered under RERA & HMDA?",
@@ -159,20 +163,21 @@ const faqs = [
   {
     question: "Q. Which Schools and Colleges are Near Ridge Tranquil Valley?",
     answer:
-      "A. Top educational institutions nearby include"+
-      "Raintree International School"+
+      "A. Top educational institutions nearby include" +
+      "Raintree International School" +
       "Manchester Global School Providing an excellent education environment for your children",
   },
   {
     question: "Q. Are there any retail stores near Ridge Tranquil Valley?",
-    answer: "A. Yes, convenience is key with a Reliance Retail Store located just 2 kilometres away.",
+    answer:
+      "A. Yes, convenience is key with a Reliance Retail Store located just 2 kilometres away.",
   },
   {
     question: "Q. Why is Maheshwaram an Excellent choice to purchase Property?",
     answer:
-      "A.	Proximity to the Electronic SEZ enhances investment potential"+
-      "Ongoing high-quality infrastructure development, including a metro extension to Shamshabad Airport, only 30 minutes away"+
-      "Easy access to the Outer Ring Road (ORR) for seamless travel"+
+      "A.	Proximity to the Electronic SEZ enhances investment potential" +
+      "Ongoing high-quality infrastructure development, including a metro extension to Shamshabad Airport, only 30 minutes away" +
+      "Easy access to the Outer Ring Road (ORR) for seamless travel" +
       "Proven track record of property value doubling in just three years, promising great returns on investment",
   },
 ];
@@ -192,7 +197,7 @@ const images = [
   tranquil12,
   tranquil13,
   tranquil14,
-  tranquil15
+  tranquil15,
 ];
 
 const formattedImages = [
@@ -288,9 +293,11 @@ function Tranquil() {
     },
   ];
   const toggleAccordion = (index) => {
-    setOpenAccordion((prevState) =>
-      prevState.map((item, i) => (i === index ? !item : false))
-    );
+    setOpenAccordion((prev) => {
+      const newOpenState = [...prev];
+      newOpenState[index] = !newOpenState[index]; // Toggle the current index
+      return newOpenState;
+    });
   };
   const elementSize = 400;
 
@@ -307,7 +314,9 @@ function Tranquil() {
       <div className="card">
         <img src={image} alt={title} className="card-image" />
         <div className="card-content">
-          <h5 className="card-title" style={{textAlign: 'center'}}>{title}</h5>
+          <h5 className="card-title" style={{ textAlign: "center" }}>
+            {title}
+          </h5>
           {description && <p className="card-description">{description}</p>}
         </div>
       </div>
@@ -331,14 +340,14 @@ function Tranquil() {
       {/* <HomeBanner bannerImage={Kshetra2}/> */}
       <section className="tImages">
         <div className="container-m">
-          <img src={T1} alt="t1"/>
-          <img src={T2} alt="t1"/>
-          <img src={T3} alt="t1"/>
+          <img src={T1} alt="t1" />
+          <img src={T2} alt="t1" />
+          <img src={T3} alt="t1" />
         </div>
         <div className="container-m">
-          <img src={T4} alt="t1"/>
-          <img src={T5} alt="t1"/>
-          <img src={T6} alt="t1"/>
+          <img src={T4} alt="t1" />
+          <img src={T5} alt="t1" />
+          <img src={T6} alt="t1" />
         </div>
       </section>
       <button className="pdfDownload" onClick={onButtonClick}>
@@ -347,30 +356,78 @@ function Tranquil() {
       <ProjectHightlights data={projectHightlights} />
       <div style={{ overflow: "auto", maxWidth: "1200px", margin: "auto" }}>
         <h2>Price sheet:</h2>
-        <table>
+        <table
+          style={{
+            width: "100%",
+            borderCollapse: "collapse",
+            marginTop: "20px",
+          }}
+        >
           <thead>
-            <tr>
-              <th style={{ borderRight: "2px solid #DD9C37" }}>Type</th>
-              <th style={{ borderRight: "2px solid #DD9C37" }}>Area</th>
-              <th style={{ borderRight: "2px solid #DD9C37" }}>Price</th>
+            <tr style={{ backgroundColor: "#f9f9f9" }}>
+              <th
+                style={{
+                  borderRight: "2px solid #DD9C37",
+                  padding: "10px",
+                  textAlign: "left",
+                }}
+              >
+                Type
+              </th>
+              <th
+                style={{
+                  borderRight: "2px solid #DD9C37",
+                  padding: "10px",
+                  textAlign: "left",
+                }}
+              >
+                Area
+              </th>
+              <th
+                style={{
+                  borderRight: "2px solid #DD9C37",
+                  padding: "10px",
+                  textAlign: "left",
+                }}
+              >
+                Price
+              </th>
             </tr>
           </thead>
           <tbody>
             {data.map((val, key) => {
               return (
-                <tr key={key} style={{ border: "2px solid #DD9C37" }}>
-                  <td style={{ borderRight: "2px solid #DD9C37" }}>
+                <tr
+                  key={key}
+                  style={{
+                    borderBottom: "1px solid #DD9C37",
+                    backgroundColor: key % 2 === 0 ? "#f4f4f4" : "#fff",
+                  }}
+                >
+                  <td
+                    style={{
+                      borderRight: "2px solid #DD9C37",
+                      padding: "10px",
+                    }}
+                  >
                     {val.name}
                   </td>
-                  <td style={{ borderRight: "2px solid #DD9C37" }}>
+                  <td
+                    style={{
+                      borderRight: "2px solid #DD9C37",
+                      padding: "10px",
+                    }}
+                  >
                     {val.age}
                   </td>
-                  <td style={{ borderRight: "2px solid #DD9C37" }}>
+                  <td style={{ padding: "10px" }}>
                     <button
                       style={{
                         border: "none",
-                        backgroundColor: "#f4f4f4",
+                        backgroundColor: "#DD9C37",
+                        padding: "8px 16px",
                         cursor: "pointer",
+                        margin: "0",
                       }}
                       onClick={openModal}
                     >
@@ -391,49 +448,47 @@ function Tranquil() {
           />
         )}
       </div>
+
       <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
       <div className="container-m">
         <h2 style={{ padding: "0 0 30px 0", margin: "auto" }}>Developments</h2>
         <div className="card-container">
-      {formattedImages.map((image, index) => (
-        <CustomCard
-          key={index}
-          image={image.image}
-          title={image.title}
-          description={image.description}
-        />
-      ))}
-    </div>
-      </div>
-      <div className="container-m">
-        <h2>FAQ's</h2>
-        <div className="accordion">
-          {faqs.map((faq, index) => (
-            <div key={index} className="accordion-item">
-              <div
-                className={`accordion-title ${
-                  openAccordion[index] ? "open" : ""
-                }`}
-                onClick={() => toggleAccordion(index)}
-              >
-                {faq.question}
-                {openAccordion[index] ? (
-                  <span className="arrow">&#9660;</span> // Down arrow when open
-                ) : (
-                  <span className="arrow">&#9658;</span> // Right arrow when closed
-                )}
-              </div>
-              <div
-                className={`accordion-content ${
-                  openAccordion[index] ? "show" : ""
-                }`}
-              >
-                {faq.answer}
-              </div>
-            </div>
+          {formattedImages.map((image, index) => (
+            <CustomCard
+              key={index}
+              image={image.image}
+              title={image.title}
+              description={image.description}
+            />
           ))}
         </div>
       </div>
+      <div className="container-m">
+      <h2>FAQ's</h2>
+      <div className="accordion">
+        {faqs.map((faq, index) => (
+          <div key={index} className="accordion-item">
+            <div
+              className={`accordion-title ${openAccordion[index] ? "open" : ""}`}
+              onClick={() => toggleAccordion(index)}
+            >
+              {faq.question}
+              {openAccordion[index] ? (
+                <span className="arrow">&#9660;</span> // Down arrow when open
+              ) : (
+                <span className="arrow">&#9658;</span> // Right arrow when closed
+              )}
+            </div>
+            <div
+              className={`accordion-content ${openAccordion[index] ? "show" : ""}`}
+              style={{ display: openAccordion[index] ? "block" : "none" }}
+            >
+              {faq.answer}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
       <div className="map-bottom">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.0922620911792!2d78.4061244!3d17.1169983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbb10e1babfbe1%3A0xf5ccd2c4c46ce7b3!2sTranquil%20Valley!5e0!3m2!1sen!2sin!4v1668533503942!5m2!1sen!2sin"
