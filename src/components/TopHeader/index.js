@@ -7,7 +7,7 @@ const topContact = [{
   email: 'Kshetra@ridgehomes.in'
 },{
   page: 'sunrisecity',
-  mobile: '9059059392',
+  mobile: '7396897737',
   email: 'myridgehome@gmail.com'
 },{
   page: 'tranquilvalley',
