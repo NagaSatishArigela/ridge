@@ -32,18 +32,18 @@ import T5 from "../../assets/images/t5.jpg";
 import T6 from "../../assets/images/t6.jpg";
 import tranquil1 from "../../assets/images/tranquil/Water Tank.jpg";
 import tranquil2 from "../../assets/images/tranquil/Road watering.jpeg";
-import tranquil3 from "../../assets/images/tranquil/CC Roads.jpg";
+import tranquil3 from "../../assets/tranquil/maheshwaram open plots.webp";
 import tranquil4 from "../../assets/images/tranquil/Park Area.jpg";
-import tranquil5 from "../../assets/images/tranquil/Park Grills.jpg";
+import tranquil5 from "../../assets/tranquil/open plots in maheshwaram.webp";
 import tranquil6 from "../../assets/images/tranquil/Roads Rolling.jpg";
 import tranquil7 from "../../assets/images/tranquil/Site Office.jpg";
 import tranquil8 from "../../assets/images/tranquil/trees translocation.jpg";
 import tranquil9 from "../../assets/images/tranquil/Electrical Transformer.jpg";
 import tranquil10 from "../../assets/images/tranquil/overhead tank.jpg";
-import tranquil11 from "../../assets/images/tranquil/harvesting pits.jpg";
+import tranquil11 from "../../assets/tranquil/maheshwaram plots.webp";
 import tranquil12 from "../../assets/images/tranquil/Site office .jpg";
-import tranquil13 from "../../assets/images/tranquil/Site View.jpg";
-import tranquil14 from "../../assets/images/tranquil/Under ground water pipe line.jpg";
+import tranquil13 from "../../assets/tranquil/plots in maheshwaram.webp";
+import tranquil14 from "../../assets/tranquil/hmda approved plots in maheshwaram.webp";
 import tranquil15 from "../../assets/images/tranquil/Underground drainage system.jpg";
 import graph from "../../assets/images/Graph.jpg";
 import RightImageLeftText from "../../components/RightImageLeftText";
@@ -54,7 +54,6 @@ import DialogForm from "../../components/DialogForm";
 import TranquilPDF from "../../assets/Tranquil Valley_FinalFirst-9.pdf";
 import WhatsAppLink from "../../components/WhatsappLink";
 import "react-photo-view/dist/react-photo-view.css";
-import { PhotoProvider, PhotoView } from "react-photo-view";
 import UnlockModal from "../../components/unlockModal";
 import "./index.css";
 
@@ -218,7 +217,7 @@ const formattedImages = [
   //   image: images[3],
   // },
   {
-    title: "Park Area",
+    title: "Park Access Roads",
     image: images[4],
   },
   // {
@@ -242,7 +241,7 @@ const formattedImages = [
     image: images[9],
   },
   {
-    title: "Harvesting Pits",
+    title: "Site View",
     image: images[10],
   },
   {
@@ -250,11 +249,11 @@ const formattedImages = [
     image: images[11],
   },
   {
-    title: "Site View",
+    title: "Scenic Roads",
     image: images[12],
   },
   {
-    title: "Underground Water Pipeline",
+    title: "Exquisite Landscape",
     image: images[13],
   },
   {
@@ -465,29 +464,116 @@ function Tranquil() {
       </div>
       <div className="container-m">
       <h2>FAQ's</h2>
-      <div className="accordion">
-        {faqs.map((faq, index) => (
-          <div key={index} className="accordion-item">
-            <div
-              className={`accordion-title ${openAccordion[index] ? "open" : ""}`}
-              onClick={() => toggleAccordion(index)}
-            >
-              {faq.question}
-              {openAccordion[index] ? (
-                <span className="arrow">&#9660;</span> // Down arrow when open
-              ) : (
-                <span className="arrow">&#9658;</span> // Right arrow when closed
-              )}
-            </div>
-            <div
-              className={`accordion-content ${openAccordion[index] ? "show" : ""}`}
-              style={{ display: openAccordion[index] ? "block" : "none" }}
-            >
+      <div className="accordion-container">
+      {faqs.map((faq, index) => (
+        <div key={index} className="accordion-item">
+          <button
+            onClick={() => toggleAccordion(index)}
+            className={`accordion-button ${openAccordion[index] ? 'active' : ''}`}
+          >
+            <span>{faq.question}</span>
+            <i className={`fa-solid fa-chevron-down chevron ${openAccordion[index] ? 'rotate' : ''}`}></i>
+          </button>
+          
+          <div className={`accordion-content ${openAccordion[index] ? 'open' : ''}`}>
+            <div className="accordion-content-inner">
               {faq.answer}
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+
+      <style>{`
+        .accordion-container {
+          width: 100%;
+          margin: 10px auto;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .accordion-item {
+          background: white;
+          border: 1px solid #e2e2e2;
+          border-radius: 8px;
+          overflow: hidden;
+          transition: box-shadow 0.3s ease;
+        }
+
+        .accordion-item:hover {
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .accordion-button {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px 20px;
+          background: white;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 500;
+          color: #333;
+          text-align: left;
+          transition: background-color 0.3s ease;
+        }
+
+        .accordion-button:hover {
+          background-color: #f8f8f8;
+        }
+
+        .accordion-button.active {
+          background-color: #f5f5f5;
+        }
+
+        .chevron {
+          width: 20px;
+          height: 20px;
+          color: #666;
+          transition: transform 0.3s ease;
+        }
+
+        .chevron.rotate {
+          transform: rotate(180deg);
+        }
+
+        .accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-content.open {
+          max-height: 300px; /* Adjust based on your content */
+        }
+
+        .accordion-content-inner {
+          padding: 16px 20px;
+          color: #666;
+          line-height: 1.6;
+          border-top: 1px solid #eee;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+          .accordion-container {
+            padding: 0 16px;
+          }
+
+          .accordion-button {
+            padding: 14px 16px;
+            font-size: 15px;
+          }
+
+          .accordion-content-inner {
+            padding: 14px 16px;
+            font-size: 14px;
+          }
+        }
+      `}</style>
+    </div>
     </div>
       <div className="map-bottom">
         <iframe
