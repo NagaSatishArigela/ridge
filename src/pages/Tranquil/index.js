@@ -360,10 +360,11 @@ function Tranquil() {
             width: "100%",
             borderCollapse: "collapse",
             marginTop: "20px",
+            border: "2px solid rgb(221, 156, 55)"
           }}
         >
           <thead>
-            <tr style={{ backgroundColor: "#f9f9f9" }}>
+            <tr style={{ backgroundColor: "#f9f9f9", border: "2px solid rgb(221, 156, 55)"}}>
               <th
                 style={{
                   borderRight: "2px solid #DD9C37",
