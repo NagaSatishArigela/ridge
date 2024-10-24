@@ -32,7 +32,7 @@ const Blogs = ({ Blogs }) => {
           width: "100%",
           position: "relative",
           overflow: "hidden",
-          paddingTop: '70px'
+          paddingTop: "70px",
         }}
       >
         {/* <img
@@ -45,16 +45,50 @@ const Blogs = ({ Blogs }) => {
           }}
         /> */}
         <header className="bannerb">
-          <div className="banner-overlay">
-            <img src={homes} alt="blogs" className="banner-image" />
-            <div className="banner-text">
-              <h1>Welcome to Our Ridge Homes Blogs</h1>
-              <p>
-                Explore our captivating and enlightening articles, designed to
-                empower you with valuable insights as a discerning real estate
-                buyer.
-              </p>
-            </div>
+          <div style={{ position: "absolute", inset: "0" }}>
+            <img
+              src={homes}
+              alt="blogs"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              loading="lazy"
+            />
+            <div
+              style={{
+                position: "absolute",
+                inset: "0",
+                backgroundColor: "black",
+                opacity: "0.5",
+              }}
+            ></div>
+          </div>
+
+          <div
+            style={{
+              position: "absolute",
+              inset: "0",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "white",
+              textAlign: "center",
+              padding: "0 1rem",
+            }}
+          >
+            <h1
+              style={{
+                fontSize: "2.25rem",
+                fontWeight: "bold",
+                marginBottom: "1rem",
+              }}
+            >
+              Welcome to Our Ridge Homes Blogs
+            </h1>
+            <p style={{ fontSize: "1.125rem", maxWidth: "32rem" }}>
+              Explore our captivating and enlightening articles, designed to
+              empower you with valuable insights as a discerning real estate
+              buyer.
+            </p>
           </div>
         </header>
       </div>
@@ -79,41 +113,43 @@ const Blogs = ({ Blogs }) => {
               <div className="blog-card-inner">
                 <img
                   className="blog-cover"
-                  src={blog?.bannerImage.url ? blog.bannerImage.url : defaultPic}
+                  src={
+                    blog?.bannerImage.url ? blog.bannerImage.url : defaultPic
+                  }
                   alt="Blog Cover"
                 />
                 <div className="blog-content">
                   <h6 className="blog-title">{blog.title}</h6>
                   <p className="blog-description">{blog.description}</p>
-                  <div style={{ position: 'absolute', bottom: '0px', }}>
-                  <Link
-                    to={`/blog/${blog.slug}`}
-                    style={{
-                      color: "#FCB13E",
-                      textDecoration: "none",
-                      fontWeight: 700,
-                    }}
-                  >
-                    <p>READ MORE...</p>
-                  </Link>
-                </div>
+                  <div style={{ position: "absolute", bottom: "0px" }}>
+                    <Link
+                      to={`/blog/${blog.slug}`}
+                      style={{
+                        color: "#FCB13E",
+                        textDecoration: "none",
+                        fontWeight: 700,
+                      }}
+                    >
+                      <p>READ MORE...</p>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </Link>
           ))}
         </div>
         <ul id="page-numbers">
-        {pages.map((number) => (
-          <li
-            key={number}
-            id={number}
-            onClick={handleClick}
-            className={currentPage === number ? "active" : null}
-          >
-            {number}
-          </li>
-        ))}
-      </ul>
+          {pages.map((number) => (
+            <li
+              key={number}
+              id={number}
+              onClick={handleClick}
+              className={currentPage === number ? "active" : null}
+            >
+              {number}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );
