@@ -1,36 +1,33 @@
 import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
-// import Banner from "../../assets/images/Tranquil valley banner.jpg";
 import ContactBanner from "../../assets/images/contactBackground.png";
-import Banner from "../../assets/images/1800 x 600 tv banner 2-01.jpg";
-import Tranquil1 from "../../assets/images/tranquil1.png";
-import Tranquil2 from "../../assets/images/tranquil2.jpeg";
-import Image1 from "../../assets/images/tranq1.png";
-import Image2 from "../../assets/images/tranq2.png";
-import Image3 from "../../assets/images/tranq3.png";
-import Image4 from "../../assets/images/tranq4.png";
-import Image5 from "../../assets/images/tranq5.png";
-import Image6 from "../../assets/images/tranq6.png";
-import Image7 from "../../assets/images/tranq7.png";
-import Image8 from "../../assets/images/tranq8.png";
-import Image9 from "../../assets/images/tranq9.png";
-import Image10 from "../../assets/images/tranq10.png";
-import Image11 from "../../assets/images/tranq11.png";
-import Image12 from "../../assets/images/tranq12.png";
-import Image13 from "../../assets/images/cc raods.png";
-import Image14 from "../../assets/images/open amphitheatre.png";
-// import Image15 from '../../assets/images/mini club house.png';
-import Image16 from "../../assets/images/Footpath Tiles (1).png";
-import Image17 from "../../assets/images/Harvesting pits.png";
+import Banner from "../../assets/assets/Tranquil valley/anywebp/hmda approved plots in maheshwaram.webp";
+import Tranquil1 from "../../assets/assets/Tranquil valley/anywebp/open plots in maheshwaram.webp";
+import Tranquil2 from "../../assets/assets/Tranquil valley/anywebp/tranquil2.782f59c13849f19123ee.webp";
+import Image1 from "../../assets/assets/Tranquil valley/anywebp/HMDA Layout.webp";
+import Image2 from "../../assets/assets/Tranquil valley/anywebp/Well designed 40' wide Entrance & arch.webp";
+import Image3 from "../../assets/assets/Tranquil valley/anywebp/30' 40' wide Internal Roads.webp";
+import Image4 from "../../assets/assets/Tranquil valley/anywebp/Total compound wall around the layout.webp";
+import Image5 from "../../assets/assets/Tranquil valley/anywebp/100% Vasthu.webp";
+import Image6 from "../../assets/assets/Tranquil valley/anywebp/Yoga.webp";
+import Image7 from "../../assets/assets/Tranquil valley/anywebp/Sports children's park.webp";
+import Image8 from "../../assets/assets/Tranquil valley/anywebp/24_7 SECURITY.webp";
+import Image10 from "../../assets/assets/Tranquil valley/anywebp/Under Ground Electricity & Modern street lights.webp";
+import Image11 from "../../assets/assets/Tranquil valley/anywebp/Underground drainage system.webp";
+import Image12 from "../../assets/assets/Tranquil valley/anywebp/Overhead water tank with waterlines.webp";
+import Image13 from "../../assets/assets/Tranquil valley/anywebp/CC Roads.webp";
+import Image14 from "../../assets/assets/Tranquil valley/anywebp/Open amphitheatre.webp";
+import Image16 from "../../assets/assets/Tranquil valley/anywebp/Footpath Tiles.webp";
+import Image17 from "../../assets/assets/Tranquil valley/anywebp/Harvesting pits.webp";
 import HomeBanner from "../../components/HomeBanner";
 import HomeContact from "../../components/HomeContact";
 import T1 from "../../assets/images/Tranquil Valley  images-06.jpg";
-import T2 from "../../assets/images/t2.jpg";
-import T3 from "../../assets/images/t3.jpg";
-import T4 from "../../assets/images/t4.jpg";
-import T5 from "../../assets/images/t5.jpg";
-import T6 from "../../assets/images/t6.jpg";
-import tranquil1 from "../../assets/images/tranquil/Water Tank.jpg";
+import T2 from "../../assets/assets/Tranquil valley/anywebp/maheshwaram hmda plots.webp";
+import T3 from "../../assets/assets/Tranquil valley/anywebp/hmda plots in maheshwaram.webp";
+import T4 from "../../assets/assets/Tranquil valley/anywebp/hmda approved layouts in maheshwaram.webp";
+import T5 from "../../assets/assets/Tranquil valley/anywebp/plots in maheshwaram.webp";
+import T6 from "../../assets/assets/Tranquil valley/anywebp/open villa plots i maheshwaram.webp";
+import tranquil1 from "../../assets/assets/Tranquil valley/gallery images/overhead tank.jpg";
 import tranquil2 from "../../assets/images/tranquil/Road watering.jpeg";
 import tranquil3 from "../../assets/tranquil/maheshwaram open plots.webp";
 import tranquil4 from "../../assets/images/tranquil/Park Area.jpg";
@@ -39,13 +36,12 @@ import tranquil6 from "../../assets/images/tranquil/Roads Rolling.jpg";
 import tranquil7 from "../../assets/images/tranquil/Site Office.jpg";
 import tranquil8 from "../../assets/images/tranquil/trees translocation.jpg";
 import tranquil9 from "../../assets/images/tranquil/Electrical Transformer.jpg";
-import tranquil10 from "../../assets/images/tranquil/overhead tank.jpg";
+import tranquil10 from "../../assets/assets/Tranquil valley/gallery images/overhead tank.jpg";
 import tranquil11 from "../../assets/tranquil/maheshwaram plots.webp";
 import tranquil12 from "../../assets/images/tranquil/Site office .jpg";
 import tranquil13 from "../../assets/tranquil/plots in maheshwaram.webp";
 import tranquil14 from "../../assets/tranquil/hmda approved plots in maheshwaram.webp";
 import tranquil15 from "../../assets/images/tranquil/Underground drainage system.jpg";
-import graph from "../../assets/images/Graph.jpg";
 import RightImageLeftText from "../../components/RightImageLeftText";
 import "../../components/Styles/styles.css";
 import HighlightText from "../../components/HighlightText";
@@ -63,25 +59,33 @@ const rightImage = {
   description:
     "A project that gives you the best of both worlds. The proximity to industrial hubs ensures easy access while experiencing the serenity of nature simultaneously.  Located in Maheshwaram, Tranquil Valley stays true to its name. The serene surroundings make the project a great choice for families looking to settle down. Apart from being an excellent location for housing purposes, Tranquil is also a great investment opportunity for those looking to diversify. Tranquil Valley is the final product of years of industry research. Equipped with contemporary villas, and spacious plots, Tranquil Valley is yet another accomplishment in the world of Ridge.",
   image: Tranquil1,
+  altText: "open plots in maheshwaram",
 };
 
 const projectHightlights = [
-  { text: "HMDA Layout", image: Image1 },
-  { text: "Well designed 40' wide Entrance & arch", image: Image2 },
-  { text: "30' 40' wide Internal Roads", image: Image3 },
-  { text: "Total compound wall around the layout", image: Image4 },
-  { text: "100% Vasthu", image: Image5 },
-  { text: "Yoga", image: Image6 },
-  { text: "Sports children's park", image: Image7 },
-  { text: "24/7 SECURITY", image: Image8 },
-  // { text: "cricket Nets & Badminton", image: Image9 },
-  { text: "Under Ground Electricity & Modern street lights", image: Image10 },
-  { text: "Underground drainage system", image: Image11 },
-  { text: "Overhead water tank with waterlines", image: Image12 },
-  { text: "CC Roads ", image: Image13 },
-  { text: "Open amphitheatre", image: Image14 },
-  { text: "Footpath Tiles", image: Image16 },
-  { text: "Harvesting pits", image: Image17 },
+  { text: "HMDA Layout", image: Image1, altText: "HMDA Layout" },
+  {
+    text: "Well designed 40' wide Entrance & arch",
+    image: Image2,
+    altText: "Well designed 40' wide Entrance & arch",
+  },
+  { text: "30' 40' wide Internal Roads", image: Image3, altText: "30' 40' wide Internal Roads" },
+  { text: "Total compound wall around the layout", image: Image4, altText: "Total compound wall around the layout" },
+  { text: "100% Vasthu", image: Image5, altText: "100% Vasthu" },
+  { text: "Yoga", image: Image6, altText: "Yoga" },
+  { text: "Sports children's park", image: Image7, altText: "Sports children park" },
+  { text: "24/7 SECURITY", image: Image8, altText: "24/7 security" },
+  {
+    text: "Under Ground Electricity & Modern street lights",
+    image: Image10,
+    altText: "Under Ground Electricity & Modern street lights",
+  },
+  { text: "Underground drainage system", image: Image11, altText: "Underground drainage system" },
+  { text: "Overhead water tank with waterlines", image: Image12, altText: "Overhead water tank with waterlines" },
+  { text: "CC Roads ", image: Image13, altText: "CC Roads" },
+  { text: "Open amphitheatre", image: Image14, altText: "Open amphitheatre" },
+  { text: "Footpath Tiles", image: Image16, altText: "Footpath Tiles" },
+  { text: "Harvesting pits", image: Image17, altText: "Harvesting pits" },
 ];
 
 const highlightPoints = [
@@ -200,65 +204,45 @@ const images = [
 ];
 
 const formattedImages = [
-  // {
-  //   title: "Water Tank",
-  //   image: images[0],
-  // },
-  // {
-  //   title: "Watering the Roads",
-  //   image: images[1],
-  // },
   {
     title: "CC Roads",
     image: images[2],
+    altText: "CC Roads",
   },
-  // {
-  //   title: "Park Area",
-  //   image: images[3],
-  // },
   {
     title: "Park Access Roads",
     image: images[4],
+    altText: "park access roads",
   },
-  // {
-  //   title: "Work in progress",
-  //   image: images[5],
-  // },
-  // {
-  //   title: "Site View",
-  //   image: images[6],
-  // },
-  // {
-  //   title: "Trees Translocation",
-  //   image: images[7],
-  // },
-  // {
-  //   title: "Transformer",
-  //   image: images[8],
-  // },
   {
     title: "Overhead Tank",
     image: images[9],
+    altText: "overhead tank",
   },
   {
     title: "Site View",
     image: images[10],
+    altText: "site view",
   },
   {
     title: "Site Office",
     image: images[11],
+    altText: "site office",
   },
   {
     title: "Scenic Roads",
     image: images[12],
+    altText: "scenic road",
   },
   {
     title: "Exquisite Landscape",
     image: images[13],
+    altText: "exquisite landscape",
   },
   {
     title: "Underground Drainage System",
     image: images[14],
+    altText: "underground",
   },
 ];
 
@@ -298,7 +282,6 @@ function Tranquil() {
       return newOpenState;
     });
   };
-  const elementSize = 400;
 
   const openModal = () => {
     setShowForm(true);
@@ -308,10 +291,10 @@ function Tranquil() {
     setShowForm(false);
   };
 
-  function CustomCard({ image, title, description }) {
+  function CustomCard({ image, title, description, altText }) {
     return (
       <div className="card">
-        <img src={image} alt={title} className="card-image" />
+        <img src={image} alt={altText} className="card-image" loading="lazy" />
         <div className="card-content">
           <h5 className="card-title" style={{ textAlign: "center" }}>
             {title}
@@ -334,19 +317,25 @@ function Tranquil() {
           content="plots for sale in maheshwaram, open plots in maheshwaram, hmda plots in maheshwaram, plot rates in maheshwaram, plots for sale in maheshwaram hyderabad, plots in maheshwaram hyderabad , dtcp plots in maheshwaram, hmda approved plots in maheshwaram, open plots for sale in maheshwaram, ridge homes Tranquil Valley"
         />
       </Helmet>
-      <HomeBanner bannerImage={Banner} />
+      <HomeBanner
+        bannerImage={Banner}
+        altText="hmda approved plots in maheshwaram"
+      />
       <RightImageLeftText data={rightImage} />
-      {/* <HomeBanner bannerImage={Kshetra2}/> */}
       <section className="tImages">
         <div className="container-m">
-          <img src={T1} alt="t1" />
-          <img src={T2} alt="t1" />
-          <img src={T3} alt="t1" />
+          <img src={T1} alt="t1" loading="lazy" />
+          <img src={T2} alt="maheshwaram hmda plots" loading="lazy" />
+          <img src={T3} alt="hmda plots in maheshwaram" loading="lazy" />
         </div>
         <div className="container-m">
-          <img src={T4} alt="t1" />
-          <img src={T5} alt="t1" />
-          <img src={T6} alt="t1" />
+          <img
+            src={T4}
+            alt="hmda approved layouts in maheshwaram"
+            loading="lazy"
+          />
+          <img src={T5} alt="plots in maheshwaram" loading="lazy" />
+          <img src={T6} alt="open villa plots i maheshwaram" loading="lazy" />
         </div>
       </section>
       <button className="pdfDownload" onClick={onButtonClick}>
@@ -360,11 +349,16 @@ function Tranquil() {
             width: "100%",
             borderCollapse: "collapse",
             marginTop: "20px",
-            border: "2px solid rgb(221, 156, 55)"
+            border: "2px solid rgb(221, 156, 55)",
           }}
         >
           <thead>
-            <tr style={{ backgroundColor: "#f9f9f9", border: "2px solid rgb(221, 156, 55)"}}>
+            <tr
+              style={{
+                backgroundColor: "#f9f9f9",
+                border: "2px solid rgb(221, 156, 55)",
+              }}
+            >
               <th
                 style={{
                   borderRight: "2px solid #DD9C37",
@@ -449,7 +443,11 @@ function Tranquil() {
         )}
       </div>
 
-      <HighlightText data={highlightPoints} highlightImage={Tranquil2} />
+      <HighlightText
+        data={highlightPoints}
+        highlightImage={Tranquil2}
+        altText="tranquil2"
+      />
       <div className="container-m">
         <h2 style={{ padding: "0 0 30px 0", margin: "auto" }}>Developments</h2>
         <div className="card-container">
@@ -459,32 +457,41 @@ function Tranquil() {
               image={image.image}
               title={image.title}
               description={image.description}
+              altText={image.altText}
             />
           ))}
         </div>
       </div>
       <div className="container-m">
-      <h2>FAQ's</h2>
-      <div className="accordion-container">
-      {faqs.map((faq, index) => (
-        <div key={index} className="accordion-item">
-          <button
-            onClick={() => toggleAccordion(index)}
-            className={`accordion-button ${openAccordion[index] ? 'active' : ''}`}
-          >
-            <span>{faq.question}</span>
-            <i className={`fa-solid fa-chevron-down chevron ${openAccordion[index] ? 'rotate' : ''}`}></i>
-          </button>
-          
-          <div className={`accordion-content ${openAccordion[index] ? 'open' : ''}`}>
-            <div className="accordion-content-inner">
-              {faq.answer}
-            </div>
-          </div>
-        </div>
-      ))}
+        <h2>FAQ's</h2>
+        <div className="accordion-container">
+          {faqs.map((faq, index) => (
+            <div key={index} className="accordion-item">
+              <button
+                onClick={() => toggleAccordion(index)}
+                className={`accordion-button ${
+                  openAccordion[index] ? "active" : ""
+                }`}
+              >
+                <span>{faq.question}</span>
+                <i
+                  className={`fa-solid fa-chevron-down chevron ${
+                    openAccordion[index] ? "rotate" : ""
+                  }`}
+                ></i>
+              </button>
 
-      <style>{`
+              <div
+                className={`accordion-content ${
+                  openAccordion[index] ? "open" : ""
+                }`}
+              >
+                <div className="accordion-content-inner">{faq.answer}</div>
+              </div>
+            </div>
+          ))}
+
+          <style>{`
         .accordion-container {
           width: 100%;
           margin: 10px auto;
@@ -574,14 +581,15 @@ function Tranquil() {
           }
         }
       `}</style>
-    </div>
-    </div>
+        </div>
+      </div>
       <div className="map-bottom">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.0922620911792!2d78.4061244!3d17.1169983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbb10e1babfbe1%3A0xf5ccd2c4c46ce7b3!2sTranquil%20Valley!5e0!3m2!1sen!2sin!4v1668533503942!5m2!1sen!2sin"
           width="600"
           height="450"
           allowfullscreen=""
+          title="Tranquil Valley"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>

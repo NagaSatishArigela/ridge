@@ -101,6 +101,7 @@ const AboutUs = () => {
             src={aboutUs}
             alt="Company Image"
             style={{ height: "200px", width: "400px" }}
+            loading="lazy"
           />
         </div>
         <div className="content">

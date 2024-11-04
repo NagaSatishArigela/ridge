@@ -12,6 +12,7 @@ const YoutubeTestimonial = ({ videoId }) => {
           title="YouTube Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+          loading='lazy'
         ></iframe>
     </div>
   );

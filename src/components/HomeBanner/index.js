@@ -5,13 +5,13 @@ import '../Styles/styles.css';
 
 
 function HomeBanner(props) {
-    const { bannerImage, landing } = props;
+    const { bannerImage, landing, altText } = props;
 
    
 
   return (
     <section className="banner">
-        <img src={bannerImage} alt="banner image" loading='lazy'/>
+        <img src={bannerImage} alt={altText} loading='lazy'/>
         {landing && 
           <div className="landing-ads">
             <HomeContactForm srd="664456705d8deffd47ff9b89" />

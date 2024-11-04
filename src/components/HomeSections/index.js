@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Banner from "../../assets/webp/plots for sale in shankarpally hyderabad.webp";
-import BannerNext1 from "../../assets/webp/open-plots-for-sale-in-maheshwaram  .webp";
-import BannerNext2 from "../../assets/webp/kshetraLogo.webp";
-import BannerNext3 from "../../assets/webp/hmda-approved-layouts-in-maheshwaram  _1.webp";
-import BannerNext4 from "../../assets/webp/plots in hyderabad.webp";
-import videoNext1 from "../../assets/images/legacy copy.png";
-import videoNext2 from "../../assets/images/2 image.png";
-import videoNext3 from "../../assets/images/3 images.png";
-import blog1 from "../../assets/webp/property for sale in hyderabad.webp";
-import blog2 from "../../assets/webp/ventures-in-shankarpally.webp";
-import blog3 from "../../assets/webp/maheshwaram hmda plots_1.webp";
+import Banner from "../../assets/assets/Homepage/plots for sale in shankarpally hyderabad.webp";
+import BannerNext1 from "../../assets/assets/Homepage/open-plots-for-sale-in-maheshwaram.webp";
+import BannerNext2 from "../../assets/assets/Homepage/kshetraLogo.webp";
+import BannerNext3 from "../../assets/assets/Homepage/hmda-approved-layouts-in-maheshwaram  .webp";
+import BannerNext4 from "../../assets/assets/Homepage/plots in hyderabad.webp";
+import blog1 from "../../assets/assets/Homepage/property for sale in hyderabad.webp";
+import blog2 from "../../assets/assets/Homepage/ventures-in-shankarpally.webp";
+import blog3 from "../../assets/assets/Homepage/maheshwaram hmda.webp";
 import "./banner.css";
 
 import "../Styles/styles.css";
@@ -21,7 +18,8 @@ const bannerNext = [
     image: BannerNext2,
     link: "projects/kshetra",
     hmda: "DTCP LP No:- 135/2024/H",
-    rera: "Nature, Culture, Art, and Resort Living Community"
+    rera: "Nature, Culture, Art, and Resort Living Community",
+    altText: "kshetraLogo"
   },
   {
     image: BannerNext3,
@@ -29,6 +27,7 @@ const bannerNext = [
     link: "projects/tranquilvalley",
     hmda: "HMDA LP No:- 000038/LO/PLG/HMDA/2023",
     rera: "RERA:- P02400005589",
+    altText: "hmda-approved-layouts-in-maheshwaram"
   },
   {
     image: BannerNext1,
@@ -36,26 +35,13 @@ const bannerNext = [
     link: "projects/sunrisecity",
     hmda: "HMDA LP No:- 000186/LO/PLG/HMDA/2022",
     rera: "RERA:- P01100005222",
+    altText: "open-plots-for-sale-in-maheshwaram"
   },
   {
     image: BannerNext4,
     text: "The property market in Hyderabad has been growing by leaps and bounds, making it an ideal investment destination for home buyers and investors.",
     link: "projects/springcity",
-  },
-];
-
-const videoNext = [
-  {
-    image: videoNext1,
-    heading: "10 years Legacy",
-  },
-  {
-    image: videoNext2,
-    heading: "500+ Happy Clients",
-  },
-  {
-    image: videoNext3,
-    heading: "10+ Projects",
+    altText: "plots in hyderabad"
   },
 ];
 
@@ -66,6 +52,7 @@ const blogSec = [
     description:
       "Ridge Homes is proudly ISO certified, which proves our commitment to quality construction, efficient processes, and exceptional customer service. Choose Ridge Homes - where peace of mind is your standard.",
     link: "/iso-certified",
+    altText: "property for sale in hyderabad"
   },
   {
     image: blog2,
@@ -73,6 +60,7 @@ const blogSec = [
     description:
       "Welcome to Tranquil Valley, a nature-centric Premium Villa Plots in Maheshwaram, identified by application number (here comes the number). This project resembles our commitment to innovation, quality, and sustainable development. With its serene surroundings, tranquil valley promises a lifestyle of peace and convenience where we transform vision into reality, enriching communities.",
     link: "/projects/tranquilvalley",
+    altText: "ventures-in-shankarpally"
   },
   {
     image: blog3,
@@ -80,6 +68,7 @@ const blogSec = [
     description:
       "Welcome to Kshetra, a theme based villa project in Shankarpally identified by application number (here comes the number). Kshetra is about uplifting the traditions with the theme - Nature, Culture, and Art. This theme based project restores ancient practices in its surroundings and amenities. With its rich cultural heritage, Kshetra promises a lifestyle of tradition and comfort, where we make your dreams into reality, nurturing vibrant resort communities. ",
     link: "/projects/kshetra",
+    altText: "maheshwaram hmda"
   },
 ];
 
@@ -125,7 +114,7 @@ function TilesSection(props) {
                   {" "}
                   <img
                     src={item?.image}
-                    alt="blog image"
+                    alt={item?.altText}
                     className="banBorder"
                     loading="lazy"
                   />
@@ -180,7 +169,7 @@ function HomeSections() {
   return (
     <>
       <div className="hBanner">
-        <HomeBanner bannerImage={Banner} />
+        <HomeBanner bannerImage={Banner} altText="plots for sale in shankarpally hyderabad"/>
         <div className="bannerTextP">
           {randomItem.text1}{" "}
           <span>
@@ -203,7 +192,7 @@ function HomeSections() {
               <Link to={`/${item?.link}`}>
                 <img
                   src={item?.image}
-                  alt="blog"
+                  alt={item.altText}
                   loading="lazy"
                   width="200px"
                   height="100px"
@@ -224,15 +213,6 @@ function HomeSections() {
           ))}
         </div>
       </div>
-
-      {/* <section className="video-section">
-      <div className="container-m">
-        <iframe src="https://www.youtube.com/embed/fXULnoaWrMs?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-      </div>
-      </section> */}
-
-      {/* <TilesSection data={videoNext} /> */}
-
       <section className="blog-section">
         <h1 className="latestnews">Latest News</h1>
         <TilesSection data={blogSec} />

@@ -8,7 +8,7 @@ function RightImageLeftText(props) {
             <div className="container-m">
             <div className="r-image-l-text">
                 <div className='right-image'>
-                    <img src={data.image} alt="right image" />
+                    <img src={data.image} alt={data?.altText} loading='lazy'/>
                 </div> 
                 <div className='left-text'>
                     <h3 style={{fontSize: '24px'}}>{data?.heading}</h3> 

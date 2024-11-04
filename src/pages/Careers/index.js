@@ -92,7 +92,7 @@ const CareersPage = () => {
           <div className="jobs-grid">
             {careersData && careersData?.map((job, index) => (
               <div key={index} className="job-card">
-                <img src={job.image.url} alt={job.title} className="job-image" />
+                <img src={job.image.url} alt={job.title} className="job-image" loading="lazy"/>
                 <div className="job-content">
                   <h3 className="job-title">{job.title}</h3>
                   <p className="job-details">Job Title: {job.title}</p>

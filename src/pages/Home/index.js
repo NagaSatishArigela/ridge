@@ -27,28 +27,7 @@ const youtubeData = [
 ];
 
 function Home() {
-  const settings = {
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    fade: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-          fade: true,
-          arrows: false,
-        },
-      },
-    ],
-  };
+
   return (
     <>
       <Helmet>

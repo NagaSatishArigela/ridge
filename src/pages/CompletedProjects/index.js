@@ -39,7 +39,7 @@ function OnGoingProjects() {
                 {
                     bannerNext.map(item => 
                         <div className={item.title ? "banner-next banner-next-title" : "banner-next"}>
-                          <Link to={item.link}>  <img src={item?.image} alt={item?.title}/>
+                          <Link to={item.link}>  <img src={item?.image} alt={item?.title} loading='lazy'/>
                             {
                                 item.heading ? <h3>{item?.heading}</h3> 
                                 :

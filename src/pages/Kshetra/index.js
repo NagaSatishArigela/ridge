@@ -1,16 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import Banner from "../../assets/images/1800 x 600 kshetra-01.jpg";
 import ContactBanner from "../../assets/images/contact-form-backside-image.png";
-import Kshetra2 from "../../assets/images/kshetra2.png";
-import KshetraImage1 from "../../assets/images/kshetra b1.png";
-import KshetraImage2 from "../../assets/images/kshetra b2.png";
-import KshetraImage3 from "../../assets/images/kshetra b3.png";
-import KshetraImage4 from "../../assets/images/kshetra b4.png";
-import KshetraImage5 from "../../assets/images/kshetra b5.png";
-import Kshetra1 from "../../assets/images/kshetra page second section.png";
-import Kshetra3 from "../../assets/images/kshetra3.jpeg";
-import KshetraPng from "../../assets/images/kshetra 2.png";
+import KshetraImage1 from "../../assets/assets/kshetra/compressed (3)/kshetra open plots.webp";
+import KshetraImage2 from "../../assets/assets/kshetra/compressed (3)/open plots in shankarpally.webp";
+import KshetraImage3 from "../../assets/assets/kshetra/compressed (3)/plots for sale.webp";
+import KshetraImage4 from "../../assets/assets/kshetra/compressed (3)/plots in shankarpally .webp";
+import KshetraImage5 from "../../assets/assets/kshetra/compressed (3)/shankarpally open plots.webp";
+import Kshetra1 from "../../assets/assets/kshetra/compressed (3)/kshetra.webp";
+import Kshetra3 from "../../assets/assets/kshetra/compressed (3)/best realstate plots in shakarpally .webp";
 import HomeBanner from "../../components/HomeBanner";
 import HomeContact from "../../components/HomeContact";
 import RightImageLeftText from "../../components/RightImageLeftText";
@@ -29,25 +27,9 @@ const rightImage = {
   image: Kshetra1,
   elivation:
     "Welcome to RIDGE’s “Kshetra” – a community where nature-centric traditions make a grand comeback.",
+  altText: "kshetra"
 };
 
-const data = [
-  {
-    name: "East & West Facing",
-    age: "400 Square yards",
-    gender: "Unlock Price",
-  },
-  {
-    name: "East & West Facing",
-    age: "500 Square yards",
-    gender: "Unlock Price",
-  },
-  {
-    name: "East & West Facing",
-    age: "600 Square yards",
-    gender: "Unlock Price",
-  },
-];
 const highlightPoints = [
   { text: "20 Mins Drive to shankarpally" },
   { text: "20 Mins Drive to Telanagan mobility valley cluster" },
@@ -79,6 +61,7 @@ const keshtraBannerImageText = [
         text: "Globally, weather conditions are worsening day by day and pollution increasing every minute; yet city dwellers ignore the signs of warning on their health..But no worries, there are people who still care for everyone’s well-being..",
       },
     ],
+    altText: "kshetra open plots"
   },
   {
     image: KshetraImage2,
@@ -93,6 +76,7 @@ const keshtraBannerImageText = [
         text: "At Kshetra, festivals can turn into events of great merriment. Colours and flowers, lights and laughter, night-long dancing and delicacies of myriad tastes and lots more the community would come alive with revelry. Since traditions are a key theme at Kshetra, festivals like Sankranthi and Jatara would be celebrated in the authentic manner that was custom for our grandparents and ancestors. Festivities can become most frequent as Kshetra is open to people of all cultures.",
       },
     ],
+    altText: "open plots in shankarpally"
   },
   {
     image: KshetraImage3,
@@ -110,6 +94,7 @@ const keshtraBannerImageText = [
         text: "The fragrance of flowers in your garden, the swaying of trees and two hearts beating as one… can there be a more romantic setting to reignite a passion?",
       },
     ],
+    altText: "plots for sale"
   },
   {
     image: KshetraImage4,
@@ -130,6 +115,7 @@ const keshtraBannerImageText = [
         text: "Young individuals too can come here to contemplate on ways to woo their heart’s desire, and consider whether or not a ‘sage-like equanimity’ is a satisfying way to react, should they fail to get a date.",
       },
     ],
+    altText: "plots in shankarpally"
   },
   {
     image: KshetraImage5,
@@ -147,6 +133,7 @@ const keshtraBannerImageText = [
         text: "Kshetra is a place where bonds remain ever strong because we live by and cherish age-old traditions; and every family member has a special place in this happy little world.",
       },
     ],
+    altText: "shankarpally open plots"
   },
 ];
 
@@ -157,7 +144,6 @@ const kshetraCOntact = {
 
 function Kshetra() {
   const [isPDF, setIsPDF] = useState(false);
-  const inTouchRef = useRef(null);
   const handleReadMore = (i) => {
     console.log("mohan", i);
   };
@@ -170,18 +156,18 @@ function Kshetra() {
         <title>#1 HMDA Open Plots in Shankarpally Hyderabad | Kshetra</title>
         <meta
           name="description"
-          content="Live life to the fullest with Ridge Homes' open plots in Shankarpally Hyderabad Ksherta. Enjoy tranquil surroundings and create lasting memories. Book now!"
+          content="Live life to the fullest with Ridge Homes' open plots in S
+          hankarpally Hyderabad Ksherta. Enjoy tranquil surroundings and create lasting memories. Book now!"
         />
         <meta
           name="keywords"
           content="plots in shankarpally, residential plots in shankarpally, hmda open plots in shankarpally, plots for sale in shankarpally hyderabad, open plots for sale in shankarpally hyderabad, hmda approved plots in shankarpally, open plots in shankarpally hyderabad, residential plots for sale in shankarpally hyderabad, plots in shankarpally hyderabad, hmda plots in shankarpally, Ridge Homes Kshetra Shankarpally, Kshetra Hyderabad"
         />
       </Helmet>
-      <HomeBanner bannerImage={Banner} />
-      {/* <img src={KshetraPng} className="fixedImage" /> */}
+      <HomeBanner bannerImage={Banner} altText="1800 x 600 kshetra-01.jpg"/>
       <RightImageLeftText data={rightImage} />
       {keshtraBannerImageText.map((item, i) => (
-        <RightTextImage data={item} index={i} handleReadMore={handleReadMore} />
+        <RightTextImage data={item} index={i} handleReadMore={handleReadMore}/>
       ))}
       <button className="pdfDownload" onClick={onButtonClick}>
         <i className="fa fa-download"></i> Brochure
@@ -224,12 +210,13 @@ function Kshetra() {
           </tbody>
         </table>
       </div> */}
-      <HighlightText data={highlightPoints} highlightImage={Kshetra3} />
+      <HighlightText data={highlightPoints} highlightImage={Kshetra3} altText="best realstate plots in shakarpally"/>
       <div className="map-bottom">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.6703459260993!2d78.016058!3d17.523243000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbfdfd97e2f72b%3A0x4d35edd7977c529f!2sKshetra%20Farm%20Project!5e0!3m2!1sen!2sin!4v1668416729788!5m2!1sen!2sin"
           width="600"
           height="450"
+          title="kshetra"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"

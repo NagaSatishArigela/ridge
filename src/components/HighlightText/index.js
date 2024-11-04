@@ -2,7 +2,7 @@ import React from 'react';
 import '../Styles/styles.css';
 
 function HighlightText(props) {
-    const { data, highlightImage } = props;
+    const { data, highlightImage, altText } = props;
     return(
         <>
             <div className="container-m">
@@ -15,7 +15,7 @@ function HighlightText(props) {
                     </ul>
                 </div>
                 <div className='highlight-right-image'>
-                    <img src={highlightImage} alt="highlight Image" />
+                    <img src={highlightImage} alt={altText} loading='lazy'/>
                 </div> 
             </div>
         </div>

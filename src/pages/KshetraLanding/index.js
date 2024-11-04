@@ -153,7 +153,7 @@ function KshetraLanding() {
         <meta name="keywords" content="plots in shankarpally, residential plots in shankarpally, hmda open plots in shankarpally, plots for sale in shankarpally hyderabad, open plots for sale in shankarpally hyderabad, hmda approved plots in shankarpally, open plots in shankarpally hyderabad, residential plots for sale in shankarpally hyderabad, plots in shankarpally hyderabad, hmda plots in shankarpally, Ridge Homes Kshetra Shankarpally, Kshetra Hyderabad" />
         {/* <meta name="keywords" content="Ridge Homes, Ridge Homes Hyderabad, Ridge Homes real estate, kshetra by Ridge Homes, tranquil by ridge homes, sunrise city by ridge homes, plots in Maheshwaram, plots in Shankarpalle, land for sale in Shankarpalle, land in Sultanpur, plot in Sultanpur, villa plots in Hyderabad, land to invest in Hyderabad, gated community plots in maheshwaram," /> */}
     </Helmet>
-        <HomeBanner bannerImage={Banner} landing={true}/>
+        <HomeBanner bannerImage={Banner} altText="kshetrabanner1" landing={true}/>
         {/* <img src={KshetraPng} className="fixedImage" /> */}
         <RightImageLeftText data={rightImage} />
         {

@@ -117,6 +117,7 @@ const Blogs = ({ Blogs }) => {
                     blog?.bannerImage.url ? blog.bannerImage.url : defaultPic
                   }
                   alt="Blog Cover"
+                  loading="lazy"
                 />
                 <div className="blog-content">
                   <h6 className="blog-title">{blog.title}</h6>

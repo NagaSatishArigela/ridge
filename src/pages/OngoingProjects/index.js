@@ -51,7 +51,7 @@ function CompletedProjects() {
                 {
                     bannerNext.map(item => 
                         <div className={item.title ? "banner-next banner-next-title" : "banner-next"}>
-                            <Link to={`/${item?.link}`}> <img src={item?.image} alt="testimonials" /></Link> 
+                            <Link to={`/${item?.link}`}> <img src={item?.image} alt="testimonials" loading='lazy'/></Link> 
                             {
                                 item.heading ? <h3>{item?.heading}</h3> 
                                 :

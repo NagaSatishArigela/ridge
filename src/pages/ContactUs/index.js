@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import HomeContact from "../../components/HomeContact";
-import HomeSections from "../../components/HomeSections";
 import ContactBanner from "../../assets/images/contactBackground.png";
 import WhatsAppLink from "../../components/WhatsappLink";
 import '../../components/Styles/styles.css';

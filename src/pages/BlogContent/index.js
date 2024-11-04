@@ -58,6 +58,7 @@ const BlogContent = ({ blogs, categories }) => {
                 className="cover-image"
                 src={`${blog?.bannerImage?.url}`}
                 alt="Blog Cover"
+                loading="lazy"
               />
               <h1 className="font-bold text-2xl my-1 pt-5">{blog?.title}</h1>
               <div
@@ -102,6 +103,7 @@ const BlogContent = ({ blogs, categories }) => {
                             src={post.bannerImage.url}
                             alt={post.title}
                             className="related-post-image"
+                            loading="lazy"
                           />
                         )}
                         <h3 className="related-post-title">{post.title}</h3>
@@ -123,6 +125,7 @@ const BlogContent = ({ blogs, categories }) => {
                             src={post.bannerImage.url}
                             alt={post.title}
                             className="related-post-image"
+                            loading="lazy"
                           />
                         )}
                         <h3 className="related-post-title">{post.title}</h3>

@@ -10,7 +10,7 @@ function ProjectHightlights(props) {
                 <h3>Project Highlights</h3>
                 <ul>
                     {data.map(item => <li>
-                        <img src={item.image} alt="project highlight"/>
+                        <img src={item.image} alt={data?.altText} loading='lazy'/>
                         <h5>{item.text}</h5></li>)
                     }
                 </ul>

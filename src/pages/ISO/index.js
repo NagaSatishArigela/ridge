@@ -10,6 +10,7 @@ const ISOCertified = () => {
         src={isoImage}
         alt="ISO Certified"
         style={{ width: "100%", height: "auto", top:'50px', position: 'relative', padding: '50px' }}
+        loading="lazy"
       />
     </div>
     </>
