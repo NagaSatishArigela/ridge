@@ -7,24 +7,24 @@ import "../../components/Styles/styles.css";
 import WhatsAppLink from "../../components/WhatsappLink";
 import YoutubeTestimonial from "../../components/YoutubeTestimonals";
 import './homeTest.css';
-const youtubeData = [
-  {
-    id: 0,
-    yid: "TL4owvgTlfU?si=zy4Ek_JjdEJIeZqj",
-  },
-  {
-    id: 1,
-    yid: "BHtTuPmENKs?si=xZXlA5ytfbA6sa93",
-  },
-  {
-    id: 2,
-    yid: "QHApRArUdyc?si=fL8976jkQkrz0082",
-  },
-  {
-    id: 3,
-    yid: "3vQY-oZ6-aA?si=y00Ad-AxxI6_EyrC",
-  }
-];
+// const youtubeData = [
+//   {
+//     id: 0,
+//     yid: "TL4owvgTlfU?si=zy4Ek_JjdEJIeZqj",
+//   },
+//   {
+//     id: 1,
+//     yid: "BHtTuPmENKs?si=xZXlA5ytfbA6sa93",
+//   },
+//   {
+//     id: 2,
+//     yid: "QHApRArUdyc?si=fL8976jkQkrz0082",
+//   },
+//   {
+//     id: 3,
+//     yid: "3vQY-oZ6-aA?si=y00Ad-AxxI6_EyrC",
+//   }
+// ];
 
 function Home() {
 
@@ -62,13 +62,13 @@ function Home() {
       <HomeSections />
       <div className="testimonials-yt">
       <h3 className="title">Testimonials</h3>
-      <div className="flex-container">
+      {/* <div className="flex-container">
         {youtubeData.map((ydata) => (
           <div key={ydata.id} className="testimonial-item">
             <YoutubeTestimonial videoId={ydata.yid} />
           </div>
         ))}
-      </div>
+      </div> */}
       </div>
       <HomeContact page="Home" banner={ContactBanner} srd="664456705d8deffd47ff9b89"/>
       <WhatsAppLink />
