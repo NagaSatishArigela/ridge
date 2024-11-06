@@ -3,6 +3,7 @@ import "./index.css";
 import FormApi from "../../api/form-api";
 import emailjs from "@emailjs/browser";
 import axios from "axios";
+import { FaCheckCircle } from "react-icons/fa";
 
 const UnlockModal = (props) => {
   const { isOpen, onClose, page, srd } = props;
@@ -208,7 +209,7 @@ const UnlockModal = (props) => {
       <div className="modal-content">
         {send && (
           <div className="toast">
-            <i className="fa fa-check-circle"></i> Information Sent
+            <FaCheckCircle/> Information Sent
           </div>
         )}
         <span className="close" onClick={onClose}>
@@ -251,6 +252,7 @@ const UnlockModal = (props) => {
               value={page ? page : "Home"}
               placeholder="pageName"
               className="hide"
+              hidden
             />
           </div>
           <div className="form-group">

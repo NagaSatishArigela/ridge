@@ -9,7 +9,7 @@ body {
 }
 
 /*fonts*/
-@font-face {
+/* @font-face {
   font-family: "Gordita Regular";
   font-style: normal;
   font-weight: normal;
@@ -151,15 +151,15 @@ body {
   font-weight: normal;
   src: local("Georgia Bold Italic"),
     url("../../assets/fonts/georgiaz.woff") format("woff");
-}
+} */
 
 * {
   box-sizing: border-box;
   transition: 0.5s ease;
   font-family: "Inconsolata", monospace;
-  font-family: "Georgia Regular, sans-serif";
+  /* font-family: "Georgia Regular, sans-serif";
   font-family: "Gordita Regular", "Helvetica Neue", "Helvetica", sans-serif;
-  font-family: "Gordita Light", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "Gordita Light", "Helvetica Neue", "Helvetica", sans-serif; */
 }
 .container-m {
   max-width: 1200px;

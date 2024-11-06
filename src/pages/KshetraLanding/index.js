@@ -21,6 +21,7 @@ import HighlightText from "../../components/HighlightText";
 import RightTextImage from "../../components/RightTextImage";
 import DialogForm from "../../components/DialogForm";
 import WhatsAppLink from "../../components/WhatsappLink";
+import { FaFilePdf } from "react-icons/fa";
 
 const rightImage = {
     heading: "KSHETRA",
@@ -160,7 +161,7 @@ function KshetraLanding() {
             keshtraBannerImageText.map((item, i) => <RightTextImage data={item} index={i} handleReadMore={handleReadMore} />)
         }
           <button className="pdfDownload" onClick={onButtonClick}>
-            <i className="fa fa-pdf"></i> Brochure
+            <FaFilePdf/> Brochure
           </button>
         <HighlightText data={highlightPoints} highlightImage={Kshetra3} />
         <div className="map-bottom">

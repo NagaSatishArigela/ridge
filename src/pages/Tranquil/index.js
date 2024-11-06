@@ -8,7 +8,7 @@ import Image1 from "../../assets/assets/Tranquil valley/anywebp/HMDA Layout.webp
 import Image2 from "../../assets/assets/Tranquil valley/anywebp/Well designed 40' wide Entrance & arch.webp";
 import Image3 from "../../assets/assets/Tranquil valley/anywebp/30' 40' wide Internal Roads.webp";
 import Image4 from "../../assets/assets/Tranquil valley/anywebp/Total compound wall around the layout.webp";
-import Image5 from "../../assets/assets/Tranquil valley/anywebp/100% Vasthu.webp";
+import Image5 from "../../assets/assets/Tranquil valley/anywebp/100Vasthu.webp";
 import Image6 from "../../assets/assets/Tranquil valley/anywebp/Yoga.webp";
 import Image7 from "../../assets/assets/Tranquil valley/anywebp/Sports children's park.webp";
 import Image8 from "../../assets/assets/Tranquil valley/anywebp/24_7 SECURITY.webp";
@@ -52,6 +52,7 @@ import WhatsAppLink from "../../components/WhatsappLink";
 import "react-photo-view/dist/react-photo-view.css";
 import UnlockModal from "../../components/unlockModal";
 import "./index.css";
+import { FaDownload } from "react-icons/fa";
 
 const rightImage = {
   heading:
@@ -339,7 +340,7 @@ function Tranquil() {
         </div>
       </section>
       <button className="pdfDownload" onClick={onButtonClick}>
-        <i className="fa fa-download"></i> Brochure
+        <FaDownload/> Brochure
       </button>
       <ProjectHightlights data={projectHightlights} />
       <div style={{ overflow: "auto", maxWidth: "1200px", margin: "auto" }}>

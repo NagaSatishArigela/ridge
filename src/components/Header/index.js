@@ -3,6 +3,7 @@ import { NavLink, Link, ReactRouterLink } from "react-router-dom";
 import logo from "../../assets/images/ridgeNewLogo.png";
 // import logo from '../../assets/images/elivation.png';
 import "../Styles/styles.css";
+import { FaBars } from "react-icons/fa";
 
 const menuItems = [
   { title: "Home", link: "" },
@@ -120,10 +121,7 @@ const MenuItems = ({ items, depthLevel, setMenuChecked, isMobile }) => {
           9001:2015
         </NavLink> // Render "ISO Certified" as plain text
       ) : (
-        <NavLink
-          onClick={closeDropdown}
-          to={`/${items.link}`}
-        >
+        <NavLink onClick={closeDropdown} to={`/${items.link}`}>
           {items.title}
         </NavLink>
       )}
@@ -144,7 +142,7 @@ function Header() {
             <img src={logo} alt="logo" />
           </Link>
         </div>
-        <i className="fa fa-bars" onClick={handleMenu}></i>
+        <FaBars onClick={handleMenu} style={{ cursor: "pointer" }} />
         {isMobile && menuChecked && (
           <div className="menu">
             <ul>

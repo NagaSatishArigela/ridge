@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const TeamMemberCard = ({ member }) => {
   const [expanded, setExpanded] = useState(false);
@@ -39,13 +41,13 @@ const TeamMemberCard = ({ member }) => {
         </button>
         <div className="socialLinks">
           <a href={member.facebook}>
-            <i className="fa fa-facebook"></i>
+            <FaFacebook/>
           </a>
           <a href={member.linkedin}>
-            <i className="fa fa-linkedin"></i>
+            <FaLinkedin />
           </a>
           <a href={member.twitter}>
-            <i className="fa-brands fa-x-twitter"></i>
+            <FaSquareXTwitter />
           </a>
         </div>
       </div>

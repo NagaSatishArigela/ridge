@@ -19,6 +19,7 @@ import RightTextImage from "../../components/RightTextImage";
 import DialogForm from "../../components/DialogForm";
 import KeshtraPDF from "../../assets/Kshetra Digital Brochure.pdf";
 import WhatsAppLink from "../../components/WhatsappLink";
+import { FaDownload } from "react-icons/fa";
 
 const rightImage = {
   heading: "KSHETRA",
@@ -170,7 +171,7 @@ function Kshetra() {
         <RightTextImage data={item} index={i} handleReadMore={handleReadMore}/>
       ))}
       <button className="pdfDownload" onClick={onButtonClick}>
-        <i className="fa fa-download"></i> Brochure
+        <FaDownload/> Brochure
       </button>
       {/* <div style={{ overflow: "auto", maxWidth: "1200px", margin: "auto" }}>
         <h2>Price sheet:</h2>

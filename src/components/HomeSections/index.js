@@ -126,12 +126,12 @@ function TilesSection(props) {
                       <p className="truncate-description">
                         {item?.description}
                       </p>
-                      <a href={`${item.link}`} aria-label={`Read more about ${item.title}`}>Read More</a>
+                      <a href={`${item.link}`} aria-label={`Read more about ${item.title}`}>Read more about {item.title}</a>
                     </>
                   ) : (
                     <>
                       <p>{item?.text}</p>
-                      <Link to={`/${item?.link}`} aria-label={`Read more about ${item.title}`}>Read More</Link>
+                      <Link to={`/${item?.link}`} aria-label={`Read more about ${item.title}`}>Read more about {item.title}</Link>
                     </>
                   )}
                 </>
@@ -144,12 +144,12 @@ function TilesSection(props) {
                     <>
                       <h3>{item?.title}</h3>
                       <p>{item?.description}</p>
-                      <a href={`${item.link}`}>Read More</a>
+                      <a href={`${item.link}`}>Read more about {item.title}</a>
                     </>
                   ) : (
                     <>
                       <p>{item?.text}</p>
-                      <Link to={`/${item?.link}`}>Read More</Link>
+                      <Link to={`/${item?.link}`}>Read more about {item.title}</Link>
                     </>
                   )}
                 </Link>

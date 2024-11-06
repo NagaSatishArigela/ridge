@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useLocation } from "react-router-dom";
+import { FaCheckCircle } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -62,7 +63,7 @@ const Contact = () => {
       </h3>
       {send && (
         <div className="toast">
-          <i className="fa fa-check-circle"></i> Information Sent
+          <FaCheckCircle/> Information Sent
         </div>
       )}
       <form

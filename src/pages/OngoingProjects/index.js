@@ -7,6 +7,7 @@ import BannerNext2 from '../../assets/images/kshetraLogo.jpg';
 import BannerNext3 from '../../assets/images/Tranquil-Valley-300x207.png';
 import WhatsAppLink from "../../components/WhatsappLink";
 import '../../components/Styles/styles.css';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
 
 
 
@@ -35,10 +36,10 @@ function CompletedProjects() {
         <div className="container-m">
           <ul>
             <li>
-                <a href='tel:9000888152'><i className="fa fa-phone"></i> +91 9000888152</a>
+                <a href='tel:9000888152'><FaPhone/> +91 9000888152</a>
             </li>
             <li>
-            <a href='mailto:info@ridgehomes.in'><i className="fa fa-envelope"></i> info@ridgehomes.in</a>
+            <a href='mailto:info@ridgehomes.in'><FaEnvelope/> info@ridgehomes.in</a>
             
             </li>
           </ul>

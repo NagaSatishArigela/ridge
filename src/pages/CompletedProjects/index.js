@@ -5,6 +5,7 @@ import {
 import BannerNext1 from '../../assets/images/springlogo.png';
 import WhatsAppLink from "../../components/WhatsappLink";
 import '../../components/Styles/styles.css';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
 
 
 
@@ -23,10 +24,10 @@ function OnGoingProjects() {
         <div className="container-m">
           <ul>
             <li>
-                <a href='tel:9000888152'><i className="fa fa-phone"></i> +91 9000888152</a>
+                <a href='tel:9000888152'><FaPhone/> +91 9000888152</a>
             </li>
             <li>
-            <a href='mailto:info@ridgehomes.in'><i className="fa fa-envelope"></i> info@ridgehomes.in</a>
+            <a href='mailto:info@ridgehomes.in'><FaEnvelope/> info@ridgehomes.in</a>
             
             </li>
           </ul>

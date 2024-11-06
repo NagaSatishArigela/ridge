@@ -7,6 +7,7 @@ import BannerNext3 from "../../assets/webp/hmda-approved-layouts-in-maheshwaram 
 import BannerNext4 from "../../assets/webp/plots in hyderabad.webp";
 import WhatsAppLink from "../../components/WhatsappLink";
 import "../../components/Styles/styles.css";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 const bannerNext = [
   {
@@ -51,12 +52,12 @@ function AllProjects() {
           <ul>
             <li>
               <a href="tel:9000888152">
-                <i className="fa fa-phone"></i> +91 9000888152
+                <FaPhone/> +91 9000888152
               </a>
             </li>
             <li>
               <a href="mailto:info@ridgehomes.in">
-                <i className="fa fa-envelope"></i> info@ridgehomes.in
+                <FaEnvelope/> info@ridgehomes.in
               </a>
             </li>
           </ul>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import '../Styles/styles.css';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const topContact = [{
   page: 'kshetra',
@@ -30,10 +31,10 @@ function Header() {
         <div className="container-m">
           <ul>
             <li>
-                <a href={`tel:${contactDetails ? contactDetails.mobile : '9000888152'}`}><i className="fa fa-phone"></i> +91 {contactDetails ? contactDetails.mobile : '9000888152'}</a>
+                <a href={`tel:${contactDetails ? contactDetails.mobile : '9000888152'}`}><FaPhone/> +91 {contactDetails ? contactDetails.mobile : '9000888152'}</a>
             </li>
             <li>
-            <a href={`mailto:${contactDetails ? contactDetails.email : 'info@ridgehomes.in'}`}><i className="fa fa-envelope"></i> {contactDetails ? contactDetails.email : 'info@ridgehomes.in'}</a>
+            <a href={`mailto:${contactDetails ? contactDetails.email : 'info@ridgehomes.in'}`}><FaEnvelope/> {contactDetails ? contactDetails.email : 'info@ridgehomes.in'}</a>
             
             </li>
           </ul>

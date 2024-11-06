@@ -3,24 +3,24 @@ import emailjs from "@emailjs/browser";
 import "../Styles/styles.css";
 import FormApi from "../../api/form-api";
 import axios from "axios";
+import { FaCheckCircle } from "react-icons/fa";
 
 function HomeContactForm(props) {
   const { page, srd } = props;
   const form = useRef();
   const [send, setSend] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
     pageName: page,
   });
-
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -128,7 +128,13 @@ function HomeContactForm(props) {
               setSend(false);
             }, 2000);
             form.current.reset();
-            setFormData({ name: '', email: '', phone: '', message: '', pageName: page });
+            setFormData({
+              name: "",
+              email: "",
+              phone: "",
+              message: "",
+              pageName: page,
+            });
           }
         },
         (error) => {
@@ -159,7 +165,7 @@ function HomeContactForm(props) {
     const url = `https://paramantra.us/paramantra/API/genLead_v2.php?API_Key=${api_key}&action=${app_name}&customername=${name}&customerPhone=${number}&customeremail=${email}&leadNotes=${note}&leadProject=${encodeURIComponent(
       lead
     )}&channel=${page}`;
-    
+
     const url2 = `https://app.sell.do/api/leads/create?sell_do[form][lead][name]=${name}&sell_do[form][lead][email]=${email}&sell_do[form][lead][phone]=${number}&api_key=${api_key2}&sell_do[form][note][content]=${note}&sell_do[campaign][srd]=${srd};`;
 
     const headers_data = {
@@ -204,7 +210,7 @@ function HomeContactForm(props) {
         <h3>Book Your Site Visit Now</h3>
         {send && (
           <div className="toast">
-            <i className="fa fa-check-circle"></i> Information Sent
+            <FaCheckCircle /> <span>Information Sent</span>
           </div>
         )}
         <form ref={form} onSubmit={sendEmail}>
