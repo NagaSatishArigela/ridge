@@ -20,6 +20,8 @@ import DialogForm from "../../components/DialogForm";
 import KeshtraPDF from "../../assets/Kshetra Digital Brochure.pdf";
 import WhatsAppLink from "../../components/WhatsappLink";
 import { FaDownload } from "react-icons/fa";
+import { CustomCard } from "../../utils/ReComp";
+import { useFetchDevelopments } from "../../utils/useFetchDevelopment";
 
 const rightImage = {
   heading: "KSHETRA",
@@ -145,6 +147,7 @@ const kshetraCOntact = {
 
 function Kshetra() {
   const [isPDF, setIsPDF] = useState(false);
+  const developments = useFetchDevelopments();
   const handleReadMore = (i) => {
     console.log("mohan", i);
   };
@@ -211,6 +214,20 @@ function Kshetra() {
           </tbody>
         </table>
       </div> */}
+       <div className="container-m">
+        <h2 style={{ padding: "0 0 30px 0", margin: "auto" }}>Developments</h2>
+        <div className="card-container">
+          {developments[1]?.valley[0]?.images?.map((image, index) => (
+            <CustomCard
+              key={index}
+              image={image.url}
+              title={image.title}
+              description={image?.description}
+              altText={image.altText}
+            />
+          ))}
+        </div>
+      </div>
       <HighlightText data={highlightPoints} highlightImage={Kshetra3} altText="best realstate plots in shakarpally"/>
       <div className="map-bottom">
         <iframe
@@ -218,9 +235,9 @@ function Kshetra() {
           width="600"
           height="450"
           title="kshetra"
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
       <HomeContact

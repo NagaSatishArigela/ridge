@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import ContactBanner from "../../assets/images/contactBackground.png";
 import Banner from "../../assets/assets/Tranquil valley/anywebp/hmda approved plots in maheshwaram.webp";
@@ -52,7 +52,10 @@ import WhatsAppLink from "../../components/WhatsappLink";
 import "react-photo-view/dist/react-photo-view.css";
 import UnlockModal from "../../components/unlockModal";
 import "./index.css";
-import { FaDownload } from "react-icons/fa";
+import { FaChevronDown, FaDownload } from "react-icons/fa";
+import { grahcms, QUERY_DEV_IMAGES } from "../../utils/Queries";
+import { CustomCard } from "../../utils/ReComp";
+import { useFetchDevelopments } from "../../utils/useFetchDevelopment";
 
 const rightImage = {
   heading:
@@ -254,6 +257,22 @@ function Tranquil() {
   const [openAccordion, setOpenAccordion] = useState(
     Array(faqs.length).fill(false)
   );
+  const developments = useFetchDevelopments();
+
+  // useEffect(() => {
+  //   const fetchDevelopment = async () => {
+  //     try {
+  //       const data = await grahcms.request(QUERY_DEV_IMAGES);
+  //       const development = data?.developments[0]?.valley || [];
+  //       setDevImages(development);
+  //     } catch (error) {
+  //       console.error("Error fetching devImages:", error);
+  //     }
+  //   };
+
+  //   fetchDevelopment();
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   const onButtonClick = () => {
     setIsPDF(true);
@@ -292,19 +311,6 @@ function Tranquil() {
     setShowForm(false);
   };
 
-  function CustomCard({ image, title, description, altText }) {
-    return (
-      <div className="card">
-        <img src={image} alt={altText} className="card-image" loading="lazy" />
-        <div className="card-content">
-          <h5 className="card-title" style={{ textAlign: "center" }}>
-            {title}
-          </h5>
-          {description && <p className="card-description">{description}</p>}
-        </div>
-      </div>
-    );
-  }
   return (
     <>
       <Helmet>
@@ -452,12 +458,12 @@ function Tranquil() {
       <div className="container-m">
         <h2 style={{ padding: "0 0 30px 0", margin: "auto" }}>Developments</h2>
         <div className="card-container">
-          {formattedImages.map((image, index) => (
+          {developments[0]?.valley[0]?.images?.map((image, index) => (
             <CustomCard
               key={index}
-              image={image.image}
+              image={image.url}
               title={image.title}
-              description={image.description}
+              description={image?.description}
               altText={image.altText}
             />
           ))}
@@ -475,11 +481,11 @@ function Tranquil() {
                 }`}
               >
                 <span>{faq.question}</span>
-                <i
-                  className={`fa-solid fa-chevron-down chevron ${
+                <FaChevronDown
+                  className={`chevron ${
                     openAccordion[index] ? "rotate" : ""
                   }`}
-                ></i>
+                />
               </button>
 
               <div
@@ -589,10 +595,10 @@ function Tranquil() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.0922620911792!2d78.4061244!3d17.1169983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbb10e1babfbe1%3A0xf5ccd2c4c46ce7b3!2sTranquil%20Valley!5e0!3m2!1sen!2sin!4v1668533503942!5m2!1sen!2sin"
           width="600"
           height="450"
-          allowfullscreen=""
+          allowFullScreen=""
           title="Tranquil Valley"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
       <div ref={inTouchRef} id="getInTouchSection" />

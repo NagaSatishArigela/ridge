@@ -62,3 +62,11 @@ export const QUERY_SLUG_CAREERS = gql`
     }
   }
 `;
+
+export const QUERY_DEV_IMAGES = gql`
+  {
+    developments {
+      valley
+    }
+  }
+`;

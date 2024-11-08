@@ -5,7 +5,8 @@ import {
 import logo from '../../assets/images/ridgeNewLogo.png';
 // import logo from '../../assets/images/elivation.png';
 import '../Styles/styles.css';
-import { FaPhone } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 
 function Footer() {
@@ -64,11 +65,11 @@ function Footer() {
         </div>
         <div className="footer-links">
             <h3>FOLLOW ON</h3>
-            <a href="https://twitter.com/myridgehomes" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.facebook.com/MyRidgeHomes/" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com/myridgehomes/" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a>
-            <a href="https://www.youtube.com/channel/UCwZpttLAxA1j6_pmoc_MInA" target="_blank" rel="noopener noreferrer"><i className="fa fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/company/myridgehomes/" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
+            <a href="https://twitter.com/myridgehomes" target="_blank" rel="noopener noreferrer" ><FaXTwitter/></a>
+            <a href="https://www.facebook.com/MyRidgeHomes/" target="_blank" rel="noopener noreferrer"><FaFacebook/></a>
+            <a href="https://www.instagram.com/myridgehomes/" target="_blank" rel="noopener noreferrer"><FaInstagram/></a>
+            <a href="https://www.youtube.com/channel/UCwZpttLAxA1j6_pmoc_MInA" target="_blank" rel="noopener noreferrer"><FaYoutube/></a>
+            <a href="https://www.linkedin.com/company/myridgehomes/" target="_blank" rel="noopener noreferrer"><FaLinkedin/></a>
         </div>
         </div>
       </div>

@@ -169,7 +169,7 @@ function HomeSections() {
   return (
     <>
       <div className="hBanner">
-        <HomeBanner bannerImage={Banner} altText="plots for sale in shankarpally hyderabad"/>
+        <HomeBanner bannerImage="https://ridgehomes.in/images/plots-for-sale-in-shankarpally-hyderabad.webp" altText="plots for sale in shankarpally hyderabad"/>
         <div className="bannerTextP">
           {randomItem.text1}{" "}
           <span>

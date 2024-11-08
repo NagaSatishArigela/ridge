@@ -90,7 +90,7 @@ function SpringCity() {
         <ProjectHightlights data={projectHightlights} />
         <HighlightText data={highlightPoints} highlightImage={high} altText="plots"/>
         <div className="map-bottom">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15216.517678657841!2d78.3132407!3d17.5490239!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8d011d3fc611%3A0xc8fbb87cce1568ca!2sSpring%20City1%20-%20Sulthanpur!5e0!3m2!1sen!2sin!4v1669394532804!5m2!1sen!2sin" width="600" height="450" title="spring city" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15216.517678657841!2d78.3132407!3d17.5490239!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8d011d3fc611%3A0xc8fbb87cce1568ca!2sSpring%20City1%20-%20Sulthanpur!5e0!3m2!1sen!2sin!4v1669394532804!5m2!1sen!2sin" width="600" height="450" title="spring city" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
        
         <HomeContact page="Spring City" noContact={true} banner={ContactBanner} />

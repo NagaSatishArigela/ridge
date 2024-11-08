@@ -518,6 +518,11 @@ section.home-contact .container-m {
   margin-top: 50px;
 }
 
+.footer-links > a {
+  color: #fff;
+  padding: 9px;
+}
+
 .footer-links > a > i {
   padding: 9px;
   display: inline-block;

@@ -8,6 +8,7 @@ import BannerNext4 from "../../assets/webp/plots in hyderabad.webp";
 import WhatsAppLink from "../../components/WhatsappLink";
 import "../../components/Styles/styles.css";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
+import './index.css';
 
 const bannerNext = [
   {
@@ -64,8 +65,8 @@ function AllProjects() {
           {/* <label><img src={Elivation} /></label> */}
         </div>
       </div>
-      <div style={{ margin: "auto", padding: "100px 0" }}>
-        <h3 style={{ fontSize: "23px", textAlign: "center" }}>Projects</h3>
+      <div style={{ margin: "auto", padding: "180px 0" }}>
+        <h3 style={{ fontSize: "23px", textAlign: "center" }} className="project">Projects</h3>
         <div className="banner-next-section">
           {bannerNext.map((item) => (
             <div

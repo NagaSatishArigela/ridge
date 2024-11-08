@@ -2,6 +2,7 @@ import React from "react";
 import blog1 from '../../assets/images/ridge blog1.jpg';
 import WhatsAppLink from "../../components/WhatsappLink";
 import '../../components/Styles/styles.css';
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 
 function Blog1() {
@@ -11,10 +12,10 @@ function Blog1() {
         <div className="container-m">
           <ul>
             <li>
-                <a href='tel:7775857777'><i className="fa fa-phone"></i> +91 7775857777</a>
+                <a href='tel:7775857777'><FaPhone/> +91 7775857777</a>
             </li>
             <li>
-            <a href='mailto:info@ridgehomes.in'><i className="fa fa-envelope"></i> info@ridgehomes.in</a>
+            <a href='mailto:info@ridgehomes.in'><FaEnvelope/> info@ridgehomes.in</a>
             
             </li>
           </ul>
