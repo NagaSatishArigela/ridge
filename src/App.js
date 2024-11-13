@@ -33,6 +33,26 @@ const CareersPage = lazy(() => import("./pages/Careers/index.js"));
 const CategoryBlogs = lazy(() => import("./pages/Blogs/categoryBlogs.js"));
 const ISOCertified = lazy(() => import("./pages/ISO/index.js"));
 const TermsAndConditions = lazy(() => import("./pages/PrivacyPolicy/index.js"));
+const blogRedirects = {
+  "/blog/discover-your-dream-home-open-plots-for-sale-in-maheshwaram-tranquil-valley": "/blog/open-plots-for-sale-in-maheshwaram",
+  "/blog/what-is-hmda-understanding-the-hyderabad-metropolitan-development-authority": "/blog/what-is-hmda",
+  "/blog/why-west-facing-plots-are-a-smart-and-beneficial-choice-for-homebuyers": "/blog/why-west-facing-plots-are-a-smart",
+  "/blog/sustainable-living-at-ridge-homes-a-pathway-to-a-greener-future": "/blog/sustainable-living-at-ridge-homes",
+  "/blog/saving-every-drop-rainwater-harvesting-at-ridgehomes": "/blog/saving-every-drop-rainwater-harvesting",
+  "/blog/embracing-nature-and-culture-the-story-of-raavi-trees-at-ridgehomes":	"/blog/embracing-nature-and-culture-the-story-of-raavi-trees",
+  "/blog/ridgehomes-goshala-a-sanctuary-of-tradition-and-well-being": "/blog/ridgehomes-goshala-a-sanctuary-of-tradition",
+  "/blog/hyderabad-to-host-indias-largest-ai-city-orr-tranquil-valley-maheshwaram": "/blog/hyderabad-to-host-indias-largest-ai-city-orr",
+  "/blog/the-road-to-tranqility-a-journey-through-cc-roads-at-tranquil-valley": "/blog/hyderabad-to-host-indias-largest-ai-city-orr",
+  "/blog/oneplus-sets-up-factory-in-maheshwaram-amongst-other-projects-in-the-area": "/blog/oneplus-sets-up-factory-in-maheshwaram",
+  "/blog/uncovering-the-unique-architecture-of-the-manduva-house-a-traditional-home-in-andhra-pradesh": "/blog/manduva-house-a-traditional-home-in-andhra-pradesh",
+  "/blog/do-you-think-investing-on-shankarpally-villa-plots-is-a-good-idea": "/blog/investing-on-shankarpally-villa-plots-is-a-good-idea",
+  "/blog/the-rise-of-gated-communities-in-hyderabad-advantages-and-best-location": "/blog/gated-communities-in-hyderabad-advantages",
+  "/blog/upcoming-infrastructure-projects-in-hyderabad-and-their-impact-on-real-estate": "/blog/upcoming-infrastructure-projects-in-hyderabad",
+  "/blog/where-modernity-embraces-tradition-and-life-moves-at-a-majestic-pace": "/blog/where-modernity-embraces-tradition",
+  "/blog/telangana-mobility-valley-the-next-big-thing-tranquil-valley": "/blog/telangana-mobility-valley-the-next-big-thing",
+  "/blog/ridgehomes-making-hyderabad-greener-by-translocating-trees": "/blog/hyderabad-greener-by-translocating-trees",
+  "/blog/real-estate-interest-sparks-in-maheshwaram-as-malabar-sets-up-facility-worth-rs-750-crore": "/blog/real-estate-interest-sparks-in-maheshwaram"
+};
 
 function App() {
   const [pageState, setPageState] = React.useState(false);
@@ -157,6 +177,13 @@ function App() {
             path="/blog/:slug"
             element={<BlogContent blogs={posts} categories={categories} />}
           />
+          {Object.entries(blogRedirects).map(([oldPath, newPath]) => (
+            <Route
+              key={oldPath}
+              path={oldPath}
+              element={<Navigate to={newPath} replace />}
+            />
+          ))}
           <Route
             path="/blog/category/:name"
             element={<CategoryBlogs posts={posts} categories={categories} />}
