@@ -53,7 +53,7 @@ const BlogContent = ({ blogs, categories }) => {
         <div className="containerl mx-auto">
           <div className="grid-container">
             {/* First Column */}
-            <div className="blog-content">
+            <div className="blog-contents">
               <img
                 className="cover-image"
                 src={`${blog?.bannerImage?.url}`}

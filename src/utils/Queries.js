@@ -38,7 +38,7 @@ const career = `
 
 export const QUERY_SLUG_CATEGORIES = gql`
   {
-    categories {
+    categories(first: 100) {
       ${category}
     }
   }

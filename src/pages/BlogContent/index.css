@@ -12,11 +12,12 @@
     grid-template-columns: 1fr;
     grid-gap: 20px;
 }
-.blog-content {
+.blog-contents {
   border: 2px solid #333;
 }
-.blog-content * {
+.blog-contents * {
     width: 100%;
+    padding: 0 10px;
 }
 
 .pt-5 > p > a {
