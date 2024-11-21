@@ -257,7 +257,7 @@ function HomeContactForm(props) {
             id="consent"
             checked={isCheckboxChecked}
             onChange={(e) => setIsCheckboxChecked(e.target.checked)}
-            style={{ width: "30%", margin: "2px 0"  }}
+            style={{ width: "30%", margin: "2px 2px"  }}
           />
           <label
             htmlFor="consent"

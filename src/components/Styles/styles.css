@@ -409,7 +409,7 @@ section.home-contact .container-m {
 }
 
 .contact-form {
-  padding: 30px 40px;
+  padding: 30px 30px;
   background: #fff;
   margin: 20px;
   border-radius: 5px;
@@ -1048,8 +1048,8 @@ section.banner-whatsapp {
     position: absolute;
     background: #151b26;
     right: 0;
-    top: 80px;
-    max-width: 300px;
+    top: 75px;
+    /* max-width: 300px; */
     overflow-y: auto; /* Allow vertical scrolling if the menu exceeds screen height */
     z-index: 1000;
     width: 100%;

@@ -145,11 +145,11 @@ const Contact = () => {
             id="consent"
             checked={isCheckboxChecked}
             onChange={(e) => setIsCheckboxChecked(e.target.checked)}
-            style={{ width: "30%", margin: "2px 0"  }}
+            style={{ width: "30%", margin: "2px 2px"  }}
           />
           <label
             htmlFor="consent"
-            style={{ fontFamily: "sans-serif", fontSize: "12px", textAlign: 'start' }}
+            style={{ fontFamily: "sans-serif", fontSize: "11px", textAlign: 'start' }}
           >
             I authorise Ridge Homes & its representatives to contact me with
             updates and notifications via Email/SMS/WhatsApp/Call. This will
