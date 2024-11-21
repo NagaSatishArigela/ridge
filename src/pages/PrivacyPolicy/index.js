@@ -163,6 +163,17 @@ const TermsAndConditions = () => {
             specific end goal to guarantee that the privacy of individual data
             is secure and maintained.
           </li>
+          <li>
+            When you voluntarily send us electronic mail or fill up the form, we
+            will keep a record of this information so that we can respond to
+            you. We only collect information from you when you register on our
+            site or fill out a form. Also, when filling out a form on our site,
+            you may be asked to enter your: name, e-mail address, or phone
+            number. You may, however, visit our site anonymously. In case you
+            have submitted your personal information and contact details, we
+            reserve the rights to Call, SMS, Email, or WhatsApp you about our
+            products and offers, even if your number has DND activated on it.
+          </li>
         </ul>
       </div>
     </>

@@ -7,6 +7,8 @@ const Contact = () => {
   const form = useRef();
   const location = useLocation();
   const [send, setSend] = useState(false);
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
+
   const getPageName = (path) => {
     const pathSegments = path.split("/").filter(Boolean);
     return pathSegments.length > 0 && pathSegments[0] === "blog"
@@ -21,7 +23,7 @@ const Contact = () => {
         "service_pn8vf29",
         templateId,
         form.current,
-        "RIdumvJqbANv7cRbb",
+        "RIdumvJqbANv7cRbb"
       )
       .then(
         (result) => {
@@ -63,7 +65,7 @@ const Contact = () => {
       </h3>
       {send && (
         <div className="toast">
-          <FaCheckCircle/> Information Sent
+          <FaCheckCircle /> Information Sent
         </div>
       )}
       <form
@@ -87,9 +89,9 @@ const Contact = () => {
             borderStyle: "solid",
             padding: "12px 10px",
             color: "#000",
-            backgroundColor: '#fff',
-            fontFamily: 'sans-serif',
-            fontSize: '15px'
+            backgroundColor: "#fff",
+            fontFamily: "sans-serif",
+            fontSize: "15px",
           }}
         />
         <input
@@ -104,8 +106,8 @@ const Contact = () => {
             fontSize: "15px",
             padding: "12px 10px",
             color: "#000",
-            backgroundColor: '#fff',
-            fontFamily: 'sans-serif',
+            backgroundColor: "#fff",
+            fontFamily: "sans-serif",
           }}
         />
         <input
@@ -120,23 +122,55 @@ const Contact = () => {
             fontSize: "15px",
             padding: "12px 10px",
             color: "#000",
-            backgroundColor: '#fff',
-            fontFamily: 'sans-serif',
+            backgroundColor: "#fff",
+            fontFamily: "sans-serif",
           }}
         />
-         <input
-              type="pageName"
-              name="pageName"
-              value={getPageName(location.pathname) ? getPageName(location.pathname) : "Home"}
-              placeholder="pageName"
-              className="hide"
-            />
+        <input
+          type="pageName"
+          name="pageName"
+          value={
+            getPageName(location.pathname)
+              ? getPageName(location.pathname)
+              : "Home"
+          }
+          placeholder="pageName"
+          className="hide"
+          style={{display: "none"}}
+        />
         {/* <button className='btn'>Send Message</button> */}
+        <div style={{ display: "flex", alignItems: "start" }}>
+          <input
+            type="checkbox"
+            id="consent"
+            checked={isCheckboxChecked}
+            onChange={(e) => setIsCheckboxChecked(e.target.checked)}
+            style={{ width: "30%", margin: "2px 0"  }}
+          />
+          <label
+            htmlFor="consent"
+            style={{ fontFamily: "sans-serif", fontSize: "12px", textAlign: 'start' }}
+          >
+            I authorise Ridge Homes & its representatives to contact me with
+            updates and notifications via Email/SMS/WhatsApp/Call. This will
+            override DND/NDNC
+          </label>
+        </div>
         <input
           className="btn"
           type="submit"
           value="Enquire"
-          style={{ backgroundColor: "#DD9C3C", fontFamily: 'sans-serif', fontWeight: "700px", padding: '20px', fontSize: '18px', borderRadius: '3px', color: '#fff' }}
+          disabled={!isCheckboxChecked}
+          style={{
+            backgroundColor: isCheckboxChecked ? "#DD9C3C" : "#d3d3d3",
+            fontFamily: "sans-serif",
+            fontWeight: "700px",
+            padding: "20px",
+            fontSize: "18px",
+            borderRadius: "3px",
+            color: "#fff",
+            cursor: isCheckboxChecked ? "pointer" : "not-allowed",
+          }}
         />
       </form>
     </div>

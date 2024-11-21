@@ -16,6 +16,7 @@ function HomeContactForm(props) {
     message: "",
     pageName: page,
   });
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -250,7 +251,27 @@ function HomeContactForm(props) {
             value={formData.pageName}
             readOnly
           />
-          <input className="btn" type="submit" value="Send Message" />
+          <div style={{ display: "flex", alignItems: "start" }}>
+          <input
+            type="checkbox"
+            id="consent"
+            checked={isCheckboxChecked}
+            onChange={(e) => setIsCheckboxChecked(e.target.checked)}
+            style={{ width: "30%", margin: "2px 0"  }}
+          />
+          <label
+            htmlFor="consent"
+            style={{ fontFamily: "sans-serif", fontSize: "12px", textAlign: 'start' }}
+          >
+            I authorise Ridge Homes & its representatives to contact me with
+            updates and notifications via Email/SMS/WhatsApp/Call. This will
+            override DND/NDNC
+          </label>
+        </div>
+          <input className="btn" type="submit"  disabled={!isCheckboxChecked} value="Send Message" style={{
+            backgroundColor: isCheckboxChecked ? "#DD9C3C" : "#d3d3d3",
+            cursor: isCheckboxChecked ? "pointer" : "not-allowed",
+          }} />
         </form>
       </div>
     </>

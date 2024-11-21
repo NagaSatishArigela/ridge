@@ -131,8 +131,21 @@ const MenuItems = ({ items, depthLevel, setMenuChecked, isMobile }) => {
 
 function Header() {
   const [menuChecked, setMenuChecked] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
   const handleMenu = () => setMenuChecked((value) => !value);
-  const isMobile = window.innerWidth < 700;
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 700);
+      if (window.innerWidth >= 700) {
+        setMenuChecked(false); // Reset menu state when moving to desktop view
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="main-menu">
@@ -142,7 +155,7 @@ function Header() {
             <img src={logo} alt="logo" />
           </Link>
         </div>
-        <FaBars onClick={handleMenu} style={{ cursor: "pointer" }} />
+        {isMobile && <FaBars onClick={handleMenu} style={{ cursor: "pointer", color: "#fff", margin: "24px", fontSize: "25px" }} />}
         {isMobile && menuChecked && (
           <div className="menu">
             <ul>
