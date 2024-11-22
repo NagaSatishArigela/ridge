@@ -14,6 +14,7 @@ const UnlockModal = (props) => {
     phone: "",
     message: "",
   });
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
   const form = useRef();
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -264,13 +265,35 @@ const UnlockModal = (props) => {
               required
             ></textarea>
           </div>
+          <div style={{ display: "flex", alignItems: "start" }}>
+            <input
+              type="checkbox"
+              id="consent"
+              checked={isCheckboxChecked}
+              onChange={(e) => setIsCheckboxChecked(e.target.checked)}
+              style={{ width: "30%", margin: "2px 2px" }}
+            />
+            <label
+              htmlFor="consent"
+              style={{
+                fontFamily: "sans-serif",
+                fontSize: "12px",
+                textAlign: "start",
+              }}
+            >
+              I authorise Ridge Homes & its representatives to contact me with
+              updates and notifications via Email/SMS/WhatsApp/Call. This will
+              override DND/NDNC
+            </label>
+          </div>
           <button
             type="submit"
             style={{
-              backgroundColor: "#DD9C37",
               color: "#fff",
               fontSize: "16px",
               fontWeight: "bold",
+              backgroundColor: isCheckboxChecked ? "#DD9C3C" : "#d3d3d3",
+              cursor: isCheckboxChecked ? "pointer" : "not-allowed",
             }}
           >
             Submit
