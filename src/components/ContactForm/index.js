@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import "../Styles/styles.css";
 import FormApi from "../../api/form-api";
 import axios from "axios";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaTimes } from "react-icons/fa";
 
 function HomeContactForm(props) {
   const { page, srd } = props;
@@ -17,6 +17,25 @@ function HomeContactForm(props) {
     pageName: page,
   });
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [isEmailTouched, setIsEmailTouched] = useState(false);
+  const [isPhoneTouched, setIsPhoneTouched] = useState(false);
+
+  useEffect(() => {
+    const isEmailValid = formData.email.includes("@");
+    const isPhoneValid = formData.phone.length === 10;
+    const isFormFilled = formData.name && formData.email && formData.phone && formData.message;
+    setIsFormValid(isEmailValid && isPhoneValid && isFormFilled && isCheckboxChecked);
+
+    if (isEmailTouched) {
+      setEmailError(isEmailValid ? "" : "Invalid email address");
+    }
+    if (isPhoneTouched) {
+      setPhoneError(isPhoneValid ? "" : "Phone number must be 10 digits");
+    }
+  }, [formData, isCheckboxChecked, isEmailTouched, isPhoneTouched]);
 
   const handleChange = (e) => {
     setFormData({
@@ -212,6 +231,7 @@ function HomeContactForm(props) {
         {send && (
           <div className="toast">
             <FaCheckCircle /> <span>Information Sent</span>
+            <FaTimes onClick={() => setSend(false)} style={{ cursor: "pointer", marginLeft: "10px" }} />
           </div>
         )}
         <form ref={form} onSubmit={sendEmail}>
@@ -229,16 +249,26 @@ function HomeContactForm(props) {
             placeholder="Email"
             required
             value={formData.email}
-            onChange={handleChange}
+            onChange={(e) => {
+              setIsEmailTouched(true);
+              handleChange(e);
+            }}
           />
+          {emailError && <span className="error" style={{color: 'red'}}>{emailError}</span>}
           <input
             type="text"
             name="phone"
             placeholder="Phone"
             required
             value={formData.phone}
-            onChange={handleChange}
+            onChange={(e) => {
+              setIsPhoneTouched(true);
+              if (e.target.value.length <= 10) {
+                handleChange(e);
+              }
+            }}
           />
+          {phoneError && <span className="error" style={{color: 'red'}}>{phoneError}</span>}
           <textarea
             name="message"
             placeholder="Message"
@@ -268,9 +298,9 @@ function HomeContactForm(props) {
             override DND/NDNC
           </label>
         </div>
-          <input className="btn" type="submit"  disabled={!isCheckboxChecked} value="Send Message" style={{
-            backgroundColor: isCheckboxChecked ? "#DD9C3C" : "#d3d3d3",
-            cursor: isCheckboxChecked ? "pointer" : "not-allowed",
+          <input className="btn" type="submit"  disabled={!isFormValid} value="Send Message" style={{
+            backgroundColor: isFormValid ? "#DD9C3C" : "#d3d3d3",
+            cursor: isFormValid ? "pointer" : "not-allowed",
           }} />
         </form>
       </div>

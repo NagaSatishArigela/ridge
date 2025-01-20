@@ -48,3 +48,7 @@ code {
   flex-direction: column;
   justify-content: center;
 }
+
+.error {
+  color: 'red';
+}

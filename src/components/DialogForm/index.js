@@ -111,11 +111,13 @@ function DialogForm(props) {
     <>
       <div className="overlay"></div>
       <div className="contact-form pop">
+       
+        <h3>Fill Below Details</h3>
         <span
           className="fa fa-close popClose"
           onClick={() => setIsPDF(false)}
-        ></span>
-        <h3>Fill Below Details</h3>
+          style={{color: '#000'}}
+        >X</span>
         <a href={pdfUrl} download id="pdfDownoad"></a>
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="name" placeholder="Name" required />

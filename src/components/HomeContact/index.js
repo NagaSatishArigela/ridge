@@ -21,10 +21,9 @@ function HomeContact(props) {
                         <FaMarker/>
                         <div className='sec-bloc'>
                             <h5>Address</h5>
-                            <p>Trendz Trident, 2nd floor<br/>
-No.1-98/5/5/6, Plot No: 87, Survey No: 67<br/>
-Jubilee Enclave, Madhapur, Serilingampally<br/>
-Mandal, Hyderabad, Telangana 500081</p>
+                            <p>Trendz JP, 3rd floor<br/>
+                            C9X6+2G9, Chhota Anjaiah Nagar<br/>
+                            Gachibowli, Hyderabad, Telangana 500032</p>
                         </div>
                     </div>
 }

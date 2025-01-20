@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./index.css";
 import FormApi from "../../api/form-api";
 import emailjs from "@emailjs/browser";
@@ -15,7 +15,27 @@ const UnlockModal = (props) => {
     message: "",
   });
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [isEmailTouched, setIsEmailTouched] = useState(false);
+  const [isPhoneTouched, setIsPhoneTouched] = useState(false);
   const form = useRef();
+
+  useEffect(() => {
+    const isEmailValid = formData.email.includes("@");
+    const isPhoneValid = formData.phone.length === 10;
+    const isFormFilled = formData.name && formData.email && formData.phone && formData.message;
+    setIsFormValid(isEmailValid && isPhoneValid && isFormFilled && isCheckboxChecked);
+
+    if (isEmailTouched) {
+      setEmailError(isEmailValid ? "" : "Invalid email address");
+    }
+    if (isPhoneTouched) {
+      setPhoneError(isPhoneValid ? "" : "Phone number must be 10 digits");
+    }
+  }, [formData, isCheckboxChecked, isEmailTouched, isPhoneTouched]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -233,9 +253,13 @@ const UnlockModal = (props) => {
               type="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
+              onChange={(e) => {
+                setIsEmailTouched(true);
+                handleChange(e);
+              }}
               required
             />
+            {emailError && <span className="error" style={{ color: 'red' }}>{emailError}</span>}
           </div>
           <div className="form-group">
             <label>Number:</label>
@@ -243,17 +267,21 @@ const UnlockModal = (props) => {
               type="text"
               name="phone"
               placeholder="Phone"
-              value={formData.number}
-              onChange={handleChange}
+              value={formData.phone}
+              onChange={(e) => {
+                setIsPhoneTouched(true);
+                if (e.target.value.length <= 10) {
+                  handleChange(e);
+                }
+              }}
               required
             />
+            {phoneError && <span className="error" style={{ color: 'red' }}>{phoneError}</span>}
             <input
-              type="pageName"
+              type="hidden"
               name="pageName"
               value={page ? page : "Home"}
-              placeholder="pageName"
               className="hide"
-              hidden
             />
           </div>
           <div className="form-group">
@@ -288,12 +316,13 @@ const UnlockModal = (props) => {
           </div>
           <button
             type="submit"
+            disabled={!isFormValid}
             style={{
               color: "#fff",
               fontSize: "16px",
               fontWeight: "bold",
-              backgroundColor: isCheckboxChecked ? "#DD9C3C" : "#d3d3d3",
-              cursor: isCheckboxChecked ? "pointer" : "not-allowed",
+              backgroundColor: isFormValid ? "#DD9C3C" : "#d3d3d3",
+              cursor: isFormValid ? "pointer" : "not-allowed",
             }}
           >
             Submit

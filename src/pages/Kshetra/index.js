@@ -22,6 +22,7 @@ import WhatsAppLink from "../../components/WhatsappLink";
 import { FaDownload } from "react-icons/fa";
 import { CustomCard } from "../../utils/ReComp";
 import { useFetchDevelopments } from "../../utils/useFetchDevelopment";
+import AreaDivison from "./AreaDivison";
 
 const rightImage = {
   heading: "KSHETRA",
@@ -229,6 +230,7 @@ function Kshetra() {
         </div>
       </div>
       <HighlightText data={highlightPoints} highlightImage={Kshetra3} altText="best realstate plots in shakarpally"/>
+      <AreaDivison/>
       <div className="map-bottom">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.6703459260993!2d78.016058!3d17.523243000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbfdfd97e2f72b%3A0x4d35edd7977c529f!2sKshetra%20Farm%20Project!5e0!3m2!1sen!2sin!4v1668416729788!5m2!1sen!2sin"

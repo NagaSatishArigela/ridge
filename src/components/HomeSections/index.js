@@ -18,7 +18,7 @@ const bannerNext = [
     image: BannerNext2,
     link: "projects/kshetra",
     hmda: "DTCP LP No:- 135/2024/H",
-    rera: "Nature, Culture, Art, and Resort Living Community",
+    rera: "RERA:- P01100009098",
     altText: "kshetraLogo"
   },
   {

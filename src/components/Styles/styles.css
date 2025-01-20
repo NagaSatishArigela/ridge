@@ -229,7 +229,7 @@ section.blog-section .banner-next {
   top: 0;
   width: 100%;
   background-color: #fff;
-  z-index: 999999999;
+  /* z-index: 999999999; */
 }
 
 .top-header ul li {
@@ -683,7 +683,7 @@ header {
   width: 100%;
   background: #fff;
   top: 43px;
-  z-index: 99999999975;
+  z-index: 975;
 }
 
 .truncate-description {

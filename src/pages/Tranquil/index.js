@@ -56,6 +56,7 @@ import { FaChevronDown, FaDownload } from "react-icons/fa";
 import { grahcms, QUERY_DEV_IMAGES } from "../../utils/Queries";
 import { CustomCard } from "../../utils/ReComp";
 import { useFetchDevelopments } from "../../utils/useFetchDevelopment";
+import PlotAvailability from "./PlotAvailability";
 
 const rightImage = {
   heading:
@@ -93,15 +94,15 @@ const projectHightlights = [
 ];
 
 const highlightPoints = [
-  { text: "15 Mins Drive to Exit 14 Tukkuguda" },
-  { text: "15 Mins Drive to Exit 15 Pedda Golconda" },
-  { text: "15 Mins Drive to Statue of Equality" },
-  { text: "10 Mins Drive to Srisailam Highway" },
-  { text: "10 Mins Drive to Bangalore Highway" },
-  { text: "30 Mins Drive to International Airport" },
-  { text: "30 Mins Drive TCS Adibatla" },
-  { text: "45 Mins Drive to Mindspace" },
-  { text: "50 Mins Drive to Hitech City" },
+  { text: "15 Mins Drive to Exit 14 Tukkuguda", url: 'https://ridgehomes.in/images/tukkuguda.webp' },
+  { text: "15 Mins Drive to Exit 15 Pedda Golconda", url: "https://ridgehomes.in/images/golconda-fort.webp" },
+  { text: "15 Mins Drive to Statue of Equality", url:'https://ridgehomes.in/images/statue-of-equality.webp' },
+  { text: "10 Mins Drive to Srisailam Highway", url: 'https://ridgehomes.in/images/registration-office.webp' },
+  { text: "10 Mins Drive to Bangalore Highway", url: 'https://ridgehomes.in/images/bus-depo.webp' },
+  { text: "30 Mins Drive to International Airport", url: 'https://ridgehomes.in/images/airport.webp' },
+  { text: "30 Mins Drive TCS Adibatla", url: 'https://ridgehomes.in/images/tcs-adibatla.webp' },
+  { text: "45 Mins Drive to Mindspace", url: 'https://ridgehomes.in/images/4th-City.webp' },
+  { text: "50 Mins Drive to Hitech City", url: 'https://ridgehomes.in/images/financial-district.webp' },
 ];
 
 const tranquilContact = {
@@ -349,6 +350,7 @@ function Tranquil() {
         <FaDownload/> Brochure
       </button>
       <ProjectHightlights data={projectHightlights} />
+      <PlotAvailability openModal={openModal}/>
       <div style={{ overflow: "auto", maxWidth: "1200px", margin: "auto" }}>
         <h2>Price sheet:</h2>
         <table
