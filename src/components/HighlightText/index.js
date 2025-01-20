@@ -19,11 +19,11 @@ function HighlightText(props) {
                     marginBottom: "10px",
                   }}
                 >
-                  <img
+                  {altText === 'tranquil2' && <img
                     src={item.url}
                     alt={item.text}
                     style={{ marginRight: "10px" }}
-                  />
+                  />}
                   <span>{item.text}</span>
                 </li>
               ))}
