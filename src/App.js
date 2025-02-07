@@ -109,14 +109,14 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route
             path="/kshetra"
-            element={<Navigate to="/open-plots-in-shankarpally/kshetra" />}
-          />
-          <Route
-            path="/projects/kshetra"
-            element={<Navigate to="/open-plots-in-shankarpally/kshetra" />}
+            element={<Navigate to="/projects/kshetra" />}
           />
           <Route
             path="/open-plots-in-shankarpally/kshetra"
+            element={<Navigate to="/projects/kshetra" />}
+          />
+          <Route
+            path="/projects/kshetra"
             element={<Kshetra />}
           />
           <Route path="/plots-in-shankarpally" element={<KshetraLanding />} />

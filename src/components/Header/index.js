@@ -17,7 +17,7 @@ const menuItems = [
         submenu: [
           {
             title: "Kshetra",
-            link: "open-plots-in-shankarpally/kshetra",
+            link: "projects/kshetra",
           },
           {
             title: "Tranquil Valley",

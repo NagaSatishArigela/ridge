@@ -246,7 +246,7 @@ function Kshetra() {
         noContact={true}
         page="Kshetra"
         contactDetails={kshetraCOntact}
-        banner={ContactBanner}
+        banner={'https://ridgehomes.in/images/ridge-home.png'}
         srd="66448b49e11487ddcac7b45a"
       />
       {isPDF && (
