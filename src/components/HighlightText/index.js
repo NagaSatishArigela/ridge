@@ -29,7 +29,7 @@ function HighlightText(props) {
               ))}
             </ul>
           </div>
-          <div className="highlight-right-image">
+          <div className="highlight-right-image" style={{ display: "flex", alignItems: "center" }}>
             <img src={highlightImage} alt={altText} loading="lazy" />
           </div>
         </div>

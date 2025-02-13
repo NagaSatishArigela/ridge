@@ -609,7 +609,7 @@ function Tranquil() {
         page="Tranquil"
         noContact={true}
         contactDetails={tranquilContact}
-        banner={ContactBanner}
+        banner={'https://ridgehomes.in/images/ridge-home.png'}
         srd="66448b2d5d8def3216097f69"
       />
       {isPDF && (

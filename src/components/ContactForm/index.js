@@ -155,6 +155,12 @@ function HomeContactForm(props) {
               message: "",
               pageName: page,
             });
+
+            setEmailError("");
+            setPhoneError("");
+            setIsEmailTouched(false);
+            setIsPhoneTouched(false);
+            setIsCheckboxChecked(false);
           }
         },
         (error) => {
